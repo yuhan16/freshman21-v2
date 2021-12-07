@@ -371,20 +371,36 @@ time{
 
 .about{
   img{
-    height: 128px;
-    width: 128px;
-    border-radius:50%;
-    margin: 0 auto;
+    height: 200px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
+  }
+  i.fa {
+    color: $brand-top-color; //#4f67a4;
+    &:hover {
+      color: $hover-color;
+    }
   }
 }
 
-.img-about{
-  height: 128px;
-  width: 128px;
-  border-radius:50%;
-  margin: 0 auto;
-  display: block;
+.about-div{
+  min-height: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+
+  .about-colum-1{
+    float: left;
+    width: 30%;
+  }
+  .about-column-2{
+    float: left;
+    width: 70%;
+    padding-left: 10px; 
+  }
 }
 
 

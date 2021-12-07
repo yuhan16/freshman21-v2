@@ -49,7 +49,7 @@ a:hover { color: #669900; text-decoration: underline; }
 
 .post-content a:visited { color: #113f7c; }
 
-.post-content a:hover { color: #DD1144; text-decoration: none; }
+.post-content a:hover { color: #669900; text-decoration: none; }
 
 /** Blockquotes */
 blockquote { padding: 0 1em; margin: 14px 0; border: 2px dashed #d0dfda; border-radius: 5px; color: #828282; font-size: 18px; background: #f9f9f9; }
@@ -219,9 +219,17 @@ cite { font-style: italic; text-decoration: underline; }
 time { margin-left: 15px; font-style: italic; }
 
 /** Aboutme photo Style */
-.about img { height: 128px; width: 128px; border-radius: 50%; margin: 0 auto; display: block; }
+.about img { height: 200px; margin-top: 20px; margin-left: auto; margin-right: auto; display: block; }
 
-.img-about { height: 128px; width: 128px; border-radius: 50%; margin: 0 auto; display: block; }
+.about i.fa { color: #2583ad; }
+
+.about i.fa:hover { color: #669900; }
+
+.about-div { min-height: 100%; margin-right: auto; margin-left: auto; padding-right: 15px; padding-left: 15px; }
+
+.about-div .about-colum-1 { float: left; width: 30%; }
+
+.about-div .about-column-2 { float: left; width: 70%; padding-left: 10px; }
 
 /** New style for quotation. */
 q:before { content: '『'; color: #DD1144; font-weight: bold; }
