@@ -1,0 +1,22 @@
+---
+layout: page
+title: Archives
+permalink: /archives/
+---
+
+<ul class="tags-box">
+{% if site.posts != empty %}
+  {% assign current_year = 0 %}
+  {% for post in site.posts %}
+    {% capture post_year%} {{post.date | date: "%Y"}} {% endcapture %}
+    {% if post_year != current_year %}
+      <li>{{ post_year }}</li>
+      {% assign current_year = post_year %}
+    {% endif %}
+    <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
+  &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize }}</a><br />
+  {% endfor %}
+{% else %}
+  <span>No post</span>
+{% endif %}
+</ul>

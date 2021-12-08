@@ -5,8 +5,8 @@
     <h3 class="site-title-tagline">{{ site.tagline }}</h3>
   </div>
 
-  <nav class="wrapper">
-    <div class="site-nav-new">
+  <!--nav class="wrapper"-->
+    <nav class="site-nav-div">
       <div class="text-nav-column">
         {% for page in site.pages %}
           {% if page.title %}
@@ -28,7 +28,7 @@
           <a href="{{page.url | prepend: site.baseurl}}feed.xml" title="RSS feed" class="icon-link"><i class="fa fa-rss"></i></a>
         {% endif %}
       </div>
-    </div>
+    <!--/div-->
   </nav>
 
 </header>
