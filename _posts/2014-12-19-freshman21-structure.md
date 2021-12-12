@@ -6,6 +6,7 @@ categories: [articles, Howto]
 tags: 
   - structure
 comments: true
+excerpt_separator: <!--more-->
 ---
 
 
@@ -15,7 +16,7 @@ You can see the simplest way of adding a page is just to add an HTML ( or markdo
 
 All sidebar boxes html files are in the <code>_include</code> directory, their name begin with upper case. You can chose which sidebar boxes appears in the main page on the <q>sidebar.html</q> in the <code>_includes</code> directory. 
 
-
+<!--more-->
 
 ```bash
 .

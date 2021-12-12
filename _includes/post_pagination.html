@@ -11,3 +11,92 @@
   {% endif %}
 </section>
 
+<!--div class="pager-container">
+    <p>Page {{paginator.page}} of {{paginator.total_pages}}</p>
+  {% for pg in (1..paginator.total_pages) %}
+    {% if pg == paginator.page %}
+      <div class="number-circle current-page"> {{pg}} </div>
+    {% else %}
+      {% assign pgurl = site.baseurl | append: "/"%}
+      {% if pg != 1%}
+        {% assign pgurl = pgurl | append: "page" | append: pg | string %}
+      {% endif %}
+      {{pgurl}}
+      <div class="number-circle other-page"> <a href="{{pgurl}}">{{pg}}</a></div>
+    {% endif%}
+    <a href="{{pgurl}}">
+      <div class="number-circle current-page"> {{pg}} </div>
+    </a>
+  {% endfor %} 
+</div-->
+
+<!--div class="pager-container">
+  <div class="col-page-num">
+    <p>Page {{paginator.page}} of {{paginator.total_pages}}</p>
+  </div>
+  <div class="col-page-icon" align="right">
+    <ul>
+  {% for pg in (1..paginator.total_pages) %}
+    {% if pg == paginator.page %}
+      <li><div class="number-circle current-page"> {{pg}} </div></li>
+    {% else %}
+      {% assign pgurl = site.baseurl | append: "/"%}
+      {% if pg != 1%}
+        {% assign pgurl = pgurl | append: "page" | append: pg | string %}
+      {% endif %}
+      <a href="{{pgurl}}">
+        <li><div class="number-circle other-page"> {{pg}} </div></li>
+      </a>
+    {% endif%}
+  {% endfor %}
+    </ul>
+</div>  
+</div-->
+
+<!--div class="pager-container">
+  <div class="col-page-num">
+    <p>Page {{paginator.page}} of {{paginator.total_pages}}</p>
+  </div>
+  <div class="col-page-icon" align="right">
+  <table>
+    <tr>
+  {% assign pgurl = site.baseurl | append: "/"%}
+  {% for pg in (1..paginator.total_pages) %}  
+    {% if pg == paginator.page %}
+      {% if pg != 1%}
+        {% assign pgurl = pgurl | append: "page" | append: pg | string %}
+      {% endif %}
+      <td><a href="{{pgurl}}">
+        <div class="number-circle current-page"> {{pg}} </div>
+      </a></td>
+    {% else %}
+      {% if pg != 1%}
+        {% assign pgurl = pgurl | append: "page" | append: pg | string %}
+      {% endif %}
+      <td><a href="{{pgurl}}">
+        <div class="number-circle other-page"> {{pg}} </div>
+      </a></td>
+    {% endif%}
+  {% endfor %}
+    </tr></table>
+</div>  
+</div-->
+
+<div class="pager-container">
+  <div class="col-page-num">
+    <p>Page {{paginator.page}} of {{paginator.total_pages}}</p>
+  </div>
+  <div class="col-page-icon" align="right">
+    {% if paginator.total_pages <= 5 %}
+      {% include post-pagination-snippet/snippet-1.html %}
+    {% else %}
+      {% if paginator.page == 1 %}
+        {% include post-pagination-snippet/snippet-2.html %}
+      {% elsif paginator.page == paginator.total_pages %}
+        {% include post-pagination-snippet/snippet-3.html %}
+      {% else %}
+        {% include post-pagination-snippet/snippet-4.html %}
+      {% endif %}
+    {% endif %}
+  </div>
+</div>
