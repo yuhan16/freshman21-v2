@@ -21,7 +21,7 @@
       {% if pg == 1%}
         {% assign pgurl = baseurl %}
       {% else %}
-        {% assign pgurl = baseurl | append: "page" | append: pg | string %}
+        {% assign pgurl = baseurl | append: "page" | append: pg %}
       {% endif %}
       <td><a href="{{pgurl}}">
         <div class="number-circle other-page"> {{pg}} </div>
