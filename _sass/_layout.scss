@@ -338,9 +338,9 @@
 }
 
 .pager-container{
-  min-height: 40px;
-  border-top: 1px solid $grey-color-light;
-  border-bottom: 1px solid $grey-color-light;
+  //min-height: 40px;
+  //border-top: 1px solid $grey-color-light;
+  //border-bottom: 1px solid $grey-color-light;
   font-size: $small-font-size;
   
   a{
@@ -358,13 +358,19 @@
   .col-page-num{
     float: left;
     width: 50%;
-    height: 40px;
+    height: 45px;
+    padding-top: 8px;
+    border-top: 1px solid $grey-color-light;
+    border-bottom: 1px solid $grey-color-light;
   }
 
   .col-page-icon{
     float: right;
     width: 50%;
-    height: 40px;
+    height: 45px;
+    padding-top: 5px;
+    border-top: 1px solid $grey-color-light;
+    border-bottom: 1px solid $grey-color-light;
   }
 
   .number-circle{
@@ -387,6 +393,12 @@
       color: #fff;
     }
   }
+}
+
+.pager-container:after {
+  content: "";
+  display: block;
+  clear: both;
 }
 
 /**
