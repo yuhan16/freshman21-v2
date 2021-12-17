@@ -4,7 +4,7 @@ title: "jekyll notes"
 date: 2021-12-10 
 category: Notes
 tags: jekyll html
-excerpt_separator: <!--more-->
+excerpt_separator: {{site.excerpt_separator}}
 ---
 
 ## Some notes
