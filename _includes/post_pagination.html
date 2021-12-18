@@ -37,7 +37,7 @@
       var pg = parseInt('{{ paginator.page }}');
       var pg_total = parseInt('{{paginator.total_pages}}');
       const pg_col = 7;   // number of table cells for pagination display
-      const baseurl = '{{site.baseurl}}' + "/";
+      const baseurl = '{{site.baseurl}}' + "/blog/";
 
       if (pg_total <= 3){
         for (var i = 1; i <= pg_total; i++){

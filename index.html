@@ -1,41 +1,25 @@
 ---
-layout: default
+layout: single-col
+title: About
+permalink: /
 ---
 
-<div class="home">
-  <div class="post" itemscope itemtype="http://schema.org/BlogPosting" >
-    {% for post in paginator.posts %} 
-    <img src="{{ site.baseurl }}/images/husky_logo_crop.png" height="100" style="float: left; margin-right: 15px;">
-    <header class="post-header">
-      <h1 itemprop="name" class="post-title">
-        <a itemprop="url" class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h1>
-      <meta itemprop="keywords" content="{{ post.tags | join: ',' }}" />
-      <p class="post-meta">
-        Posted on
-        <time itemprop="datePublished" datetime="{{ post.date | date: '%Y-%m-%d' }}">
-          {{ post.date | date: "%b %-d, %Y" }}
-        </time>
-        &nbsp;in
-        {% for cat in post.categories %}
-          <a href="{{site.baseurl}}/categories/#{{ cat }}"><b>{{ cat }}</b></a>{% unless post.categories.last == cat%}, {% endunless %}
-        {% endfor %}
-      
-        {% comment %}
-        .Tags: 
-        {% for tag in post.tags %}
-          <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>{% unless post.tags.last == tag %}, {% endunless %}
-        {% endfor %}
-        {% endcomment %}
-      </p>
-    </header>
+<div class="about">
+  <img class="img-about" src="{{ site.baseurl }}/images/husky.jpeg">
+  <p>
+    Welcom! My name is Yuhan. I am a PhD student at <a href=""https://www.nyu.edu>New York University</a>, 
+    majored in <a href="https://engineering.nyu.edu/academics/departments/electrical-and-computer-engineering">Electrical and Computer Engineering</a>. 
+    My current research focus are <em>game theory</em>, <em>cybersecurity</em> and <em>robotics</em>.
+  </p>
 
-    <article class="post-content" itemprop="articleBody">
-      {{ post.excerpt }}
-      <p><a href="{{post.url | prepend: site.baseurl}}">(Continue reading ...)</a></p>
-    </article> <br><br><!--hr /-->
-    {% endfor %}
-  </div>
+  <p>
+    <b>HuskyDev</b> is my personal blog, where I share my research projects and learning notes (mainly in Math and CS). 
+    I also share some programming projects as personal interests. 
+  </p>
+  
+  <p>Feel free to leave a comment or reach me by: <br>
+  <a href="{{site.linkedin_page}}" title="LinkedIn: {{site.linkedin_page}}" style="border-bottom: none;"><i class="fa fa-linkedin fa-2x"></i></a> &nbsp;
+  <a href="https://github.com/{{site.github_username}}" title="GithubID: {{site.github_username}}" style="border-bottom: none;"><i class="fa fa-github fa-2x"></i></a> &nbsp;
+  <a href="mailto:{{site.email}}" title="mailto: {{site.email}}" style="border-bottom: none;"><i class="fa fa-envelope fa-2x"></i></a>
+  </p>
 </div>
-
-{% include post_pagination.html %}

@@ -21,7 +21,7 @@ google_analytics_key: UA-57979084-1 # put YOUR key here to enable tracking! (bla
 ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown where ShowContactInfo == True
 default_column: "two" # blog style: two columns, if default_column != "two", you will see a one column blog.
 default_locale: "en" # blog sidebar language set, only include: English (en), Chinese (cn), Japanese (jp), Polish (pl), Korean (kr),  Russian (ru), Turkish (tr), and Indonesian (id).
-nav_pages: ["Home", "Blog", "Topics", "Research", "Projects", "Archives"] # pages displayed in navigation bar
+nav_pages: ["home", "blog", "categories", "research", "projects", "archives"] # pages displayed in navigation bar
 
 locales:
     en:
@@ -63,4 +63,5 @@ kramdown:
         syntax_highlighter: rouge
 plugins: [jekyll-paginate]
 paginate: 5
+paginate_path: "/blog/page:num/"
 excerpt_separator: <!-- more -->

@@ -7,12 +7,24 @@
 
   <!--nav class="wrapper"-->
     <nav class="site-nav-div">
+      {% comment %}
       <div class="text-nav-column">
         {% for page in site.pages %}
           {% if page.title %}
           <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
           {% endif %}
           {% endfor %}
+      </div>
+      {% endcomment %}
+      <div class="text-nav-column">
+        {%for t in site.nav_pages%}
+          {% if t == "home"%}
+            <a class="page-link" href="{{site.baseurl}}/">{{t | capitalize}}</a>
+          {% else %}
+            {% assign pgurl = site.baseurl | append: "/" | append: t %}
+            <a class="page-link" href="{{pgurl}}/">{{t | capitalize}}</a>
+          {% endif %}
+        {%endfor%}
       </div>
       <div class="icon-nav-column">
         {% if site.linkedin_page != empty %}
