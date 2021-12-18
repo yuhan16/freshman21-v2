@@ -79,6 +79,7 @@
   .icon-nav-column {
     float: left;
     width: 20%;
+    //padding-top: 5px;
     //background-color: blue;
   
     .icon-link {
@@ -92,6 +93,7 @@
   
       &:hover {
         color: $grey-color-dark;
+        //color: $brand-top-color;
       }
     }
   }
@@ -161,7 +163,8 @@
 
 .post-link {
   display: block;
-  font-size: 38px;//42px;
+  //font-size: 38px;//42px;
+  color: $text-color;
 }
 
 
@@ -181,12 +184,12 @@
 
 .post-title {
   font-size: 36px;
-  letter-spacing: -1px;
+  //letter-spacing: -1px;
   line-height: 1;
-
+/*
   @include media-query($on-laptop) {
     font-size: 36px;
-  }
+  }*/
 }
 
 
@@ -372,7 +375,7 @@ time{
     padding: 5px;
   }
   i.fa {
-    color: $brand-top-color; //#4f67a4;
+    color: $brand-color;
     &:hover {
       color: $hover-color;
     }
