@@ -7,6 +7,7 @@
 
   <!--nav class="wrapper"-->
     <nav class="site-nav-div">
+
       {% comment %}
       <div class="text-nav-column">
         {% for page in site.pages %}
@@ -16,6 +17,7 @@
           {% endfor %}
       </div>
       {% endcomment %}
+
       <div class="text-nav-column">
         {%for t in site.nav_pages%}
           {% if t == "home"%}

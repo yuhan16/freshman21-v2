@@ -4,7 +4,7 @@ title: "jekyll notes"
 date: 2021-12-10 
 category: Notes
 tags: jekyll html
-excerpt_separator: {{site.excerpt_separator}}
+excerpt_separator: <!--more-->
 ---
 
 ## Some notes
@@ -17,12 +17,13 @@ Make entire Div Clickable:
 ```
 This is perfectly valid HTML.
 
-In liquid, we can use composite filter. The exection order is from right to left. For example.
+<!--more-->
+
+In liquid, we can use composite filter. The exection order is from left to right. For example.
 ```
 {% assign var = site.baseurl | append: "/page" | append: 2 | string %}
 ```
 Note that { int | string } convert integer to strings.
 
-<!--more-->
 
 Also, we need to find a way to write liquid in code block.
