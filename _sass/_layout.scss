@@ -106,6 +106,45 @@
   clear: both;
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+  // or do not use a when define Topic
+  a{
+    color: $grey-color;
+    text-decoration: none;
+
+    &:hover {
+      color: $text-color;
+      text-decoration: none;
+      //font-weight: bold;
+    }
+  }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  //min-width: 80px;
+  background-color: #fff;
+  border: 1px solid $grey-color-light;
+  padding: 10px 30px 10px 20px;
+  font-size: 12px;
+  a{
+    display: block;
+    text-decoration: none;
+
+    &:hover {
+      color: $text-color;
+      text-decoration: none;
+      //font-weight: bold;
+    }
+  }
+}
+
+.dropdown:hover .dropdown-content {display: block;}
 
 /**
  * Sidebar

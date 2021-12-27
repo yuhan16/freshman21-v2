@@ -20,14 +20,24 @@
 
       <div class="text-nav-column">
         {%for t in site.nav_pages%}
-          {% if t == "home"%}
+          {% if t == "home" %}
             <a class="page-link" href="{{site.baseurl}}/">{{t | capitalize}}</a>
+          {% elsif t == "topics" %}
+            <div class="dropdown">
+              <a href="javascript:void(0)">{{t | capitalize}}</a>
+              <div class="dropdown-content">
+                {% for tp in site.nav_topics %}
+                  <a href="{{site.baseurl}}/{{t}}/{{tp | downcase}}">{{tp}}</a>
+                {% endfor %}
+              </div>
+            </div>
           {% else %}
             {% assign pgurl = site.baseurl | append: "/" | append: t %}
             <a class="page-link" href="{{pgurl}}/">{{t | capitalize}}</a>
           {% endif %}
         {%endfor%}
       </div>
+
       <div class="icon-nav-column">
         {% if site.linkedin_page != empty %}
         <a href="{{site.linkedin_page}}" title="LinkedIn: {{site.linkedin_page}}" class="icon-link"><i class="fa fa-linkedin"></i></a>

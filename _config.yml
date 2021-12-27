@@ -22,7 +22,7 @@ ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on ab
 default_column: "two" # blog style: two columns, if default_column != "two", you will see a one column blog.
 default_locale: "en" # blog sidebar language set, only include: English (en), Chinese (cn), Japanese (jp), Polish (pl), Korean (kr),  Russian (ru), Turkish (tr), and Indonesian (id).
 nav_pages: ["home", "blog", "categories", "research", "projects", "topics"] # pages displayed in navigation bar
-
+nav_topics: ["articles", "Notes", "Optimization", "Deep Learning"] # existing topics
 locales:
     en:
       Aboutme: "About Me"

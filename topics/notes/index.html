@@ -1,0 +1,20 @@
+---
+layout: default
+title: Notes
+---
+
+{% if site.posts != empty %}
+<ul class="tags-box">
+  {% for cat in site.categories %}
+    {% if cat[0] == page.title %}
+      <li id="{{ cat[0] }}">{{ cat[0]}} ({{ cat[1].size }})</li>
+      {% for post in cat[1] %}
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time> &raquo;
+        <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br />
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  <span>No posts</span>
+</ul>
+{% endif %}

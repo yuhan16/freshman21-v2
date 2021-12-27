@@ -1,0 +1,52 @@
+---
+layout: default
+title: articles
+---
+
+{% if site.posts != empty %}
+<ul class="tags-box">
+  {% for cat in site.categories %}
+    {% if cat[0] == page.title %}
+      <li id="{{ cat[0] }}">{{ cat[0]}} ({{ cat[1].size }})</li>
+      {% for post in cat[1] %}
+        <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time> &raquo;
+        <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br />
+      {% endfor %}
+    {% endif %}
+  {% endfor %}
+{% else %}
+  <span>No posts</span>
+</ul>
+{% endif %}
+
+{% comment %}
+
+{% for post in paginator.posts %}
+  {% for cat in post.categories %}
+    {% if cat == page.title %}
+    <img src="{{ site.baseurl }}/images/husky_logo_crop.png" height="100" style="float: left; margin-right: 15px;">
+    <header class="post-header">
+      <h1 itemprop="name" class="post-title">
+        <a itemprop="url" class="post-link" href="{{ post.url | prepend: site.baseurl }}"><b>{{ post.title }}</b></a>
+      </h1>
+      <meta itemprop="keywords" content="{{ post.tags | join: ',' }}" />
+      <p class="post-meta">
+        Posted on
+        <time itemprop="datePublished" datetime="{{ post.date | date: '%Y-%m-%d' }}">
+          {{ post.date | date: "%b %-d, %Y" }}
+        </time>
+        &nbsp;in
+        <a href="{{site.baseurl}}/categories/#{{ cat }}"><b>{{ cat }}</b></a>
+    
+        <article class="post-content" itemprop="articleBody">
+            {{ post.excerpt }}
+            <p><a href="{{post.url | prepend: site.baseurl}}">(Continue reading ...)</a></p>
+        </article> <br><br><!--hr /-->
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% include post_pagination.html %}
+
+{% endcomment %}
