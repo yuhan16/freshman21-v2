@@ -15,7 +15,7 @@ pagination:
 <div class="home">
   <div class="post" itemscope itemtype="http://schema.org/BlogPosting" >
     {% for post in paginator.posts %} 
-    <img src="{{ site.baseurl }}/images/husky_logo_crop.png" height="100" style="float: left; margin-right: 15px;">
+    <img src="{{ site.baseurl }}/assets/img/husky_logo_crop.png" height="100" style="float: left; margin-right: 15px;">
     <header class="post-header">
       <h1 itemprop="name" class="post-title">
         <a itemprop="url" class="post-link" href="{{ post.url | prepend: site.baseurl }}"><b>{{ post.title }}</b></a>
