@@ -9,22 +9,20 @@
 
   {% include header.html %}
 
-  {% if site.default_column == "two" %}  
-
-  <div class="page-content col-sm-8">
-    {{ content }}
-    {%comment%} {% include post_pagination.html %} {%endcomment%}
-  </div>
-  {% include sidebar.html %}
+  {% if page.two_col_layout %}  
+    
+    <div class="page-content col-sm-8">
+      {{ content }}
+    </div>
+    {% include sidebar.html %}
 
   {% else %}
 
-  <div class="page-content">
-    <div class="wrapper">
-      {{ content }}
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
     </div>
-  </div>
-  {% include post_pagination.html %}
 
   {% endif %}
 

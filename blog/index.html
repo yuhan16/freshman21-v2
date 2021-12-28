@@ -1,8 +1,17 @@
 ---
 layout: default
+two_col_layout: true
 title: Blog
+permalink: /blog/
+pagination: 
+  enabled: false
+  category: posts
+  permalink: '/page:num/'
 ---
-
+{{paginator.total_pages}}
+{{paginator.total_posts}}
+{{page.url}}
+{{paginator.page_trail[1].path}}
 <div class="home">
   <div class="post" itemscope itemtype="http://schema.org/BlogPosting" >
     {% for post in paginator.posts %} 

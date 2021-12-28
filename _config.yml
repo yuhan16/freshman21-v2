@@ -61,7 +61,19 @@ markdown: kramdown
 kramdown:
         input: GFM
         syntax_highlighter: rouge
-plugins: [jekyll-paginate]
-paginate: 5
-paginate_path: "/blog/page:num/"
+#plugins: [jekyll-paginate]
+#paginate: 5
+#paginate_path: "/blog/page:num/"
 #excerpt_separator: <!-- more -->
+gems:
+  - jekyll-paginate-v2
+exclude:
+  - Gemfile
+  - Gemfile.lock
+pagination:
+  enabled: true
+  per_page: 2
+  sort_reverse: true
+  trail:
+    before: 2
+    after: 2 
