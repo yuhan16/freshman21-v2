@@ -13,7 +13,7 @@ locale: en_US
 rss_page: true  # enable rss
 github_username:  yuhan-zhao
 linkedin_page: "https://www.linkedin.com/in/yhzhao"
-favicon:     "/images/favicon.ico"
+favicon:     "/assets/images/favicon.ico"
 google_analytics_key: UA-57979084-1 # put YOUR key here to enable tracking! (blank to disable)
 
 
