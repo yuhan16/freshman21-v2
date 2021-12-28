@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<div class="post">
+
+  <header class="post-header">
+    <h2 class="post-title">Archive | {{ page.title }}</h2>
+  </header>
+
+  <article class="post-content"> 
+    {{ content }}
+  </article>
+
+  {% if page.comments %}
+  {% include comments.html %}
+  {% endif %}
+
+</div> 

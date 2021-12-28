@@ -146,6 +146,13 @@
 
 .dropdown:hover .dropdown-content {display: block;}
 
+.dropdown:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
 /**
  * Sidebar
  */
@@ -163,12 +170,6 @@
     list-style: none; 
   }
 
-}
-
-.dropdown:after {
-  content: "";
-  display: table;
-  clear: both;
 }
 
 
