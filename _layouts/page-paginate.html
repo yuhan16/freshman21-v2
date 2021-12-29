@@ -14,10 +14,30 @@ layout: default
       </header>
     {% endif %}
   {% endif %}
-  
+
   <!--step 2: print pagination post title-->
   {% for post in paginator.posts %} 
-    <img src="{{ site.baseurl }}/assets/images/husky_logo_crop.png" height="100" style="float: left; margin-right: 15px;">
+    
+    {% assign logo_suffix = ".png,.jpg,.jpeg" | split: "," %}
+    {% assign logo_file = "/assets/images/default-logo.png" %}
+    
+    {% assign f = post.date | date: '%Y-%m-%d' | append: "-logo" %}
+    {% assign year = post.date | date: '%Y' | append: "/"%}
+    {% assign flag = 0 %}
+    {% for static_file in site.static_files %}
+      {% for x in logo_suffix %}
+        {% assign file = "/assets/images/blog/" | append: year | append: f | append: x %}
+        {% if static_file.path == file %}
+          {% assign logo_file = file %}
+          {% assign flag = 1 %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      {% if flag == 1%}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+    <img src="{{ logo_file | prepend: site.baseurl }}" height="100" style="float: left; margin-right: 15px;">
     
     <header class="post-header">
       <h1 itemprop="name" class="post-title">

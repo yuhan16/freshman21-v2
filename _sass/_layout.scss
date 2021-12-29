@@ -100,6 +100,7 @@
 }
 
 .dropdown {
+  z-index: 1;
   position: relative;
   display: inline-block;
   // use page-link class for "Topic" display 
@@ -119,18 +120,18 @@
     li {
       //border: 1px solid $grey-color-light;
       padding: 8px 20px;
-      a{
-        //display: block;
-        color: $grey-color;
-        //padding: 8px 20px;
-    
-        &:hover {
-          color: $text-color;
-        }
-      }
+    }
+  }
+  a{
+    color: $grey-color;
+    //padding: 8px 20px;
+  
+    &:hover {
+    color: $text-color;
     }
   }
 }
+
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -339,6 +340,7 @@
   a{
     text-decoration: none;
     color: $text-color;
+    font-size: $small-font-size;
     &:hover{
       color: darken(rgb(172, 197, 243), 25%);
       text-decoration: none;
