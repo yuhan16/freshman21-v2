@@ -5,8 +5,8 @@ author: Yuhan Zhao
 email: yuhan-zhao@outlook.com
 description: "HuskDev is Yuhan's personal blog." # It will appear in your document head meta and in your feed.xml site description
 keywords: "Yuhan, blog, HuskyDev"
-baseurl: "/freshman21" # the subpath of your site, e.g. /blog/
-url: "https://yulijia.net/freshman21" # the base hostname & protocol for your site
+baseurl: "/freshman21-v1" # the subpath of your site, e.g. /blog/
+#url: "https://yulijia.net/freshman21" # the base hostname & protocol for your site
 
 ### Personal info and site tools info:
 rss_page: true  # enable rss
@@ -27,8 +27,8 @@ nav_topics: ["articles", "Notes", "Optimization", "Deep Learning"] # existing to
 markdown: kramdown
 #highlighter: pygments
 kramdown:
-        input: GFM
-        syntax_highlighter: rouge
+  input: GFM
+  syntax_highlighter: rouge
 #plugins: [jekyll-paginate]
 #paginate: 5
 #paginate_path: "/blog/page:num/"
