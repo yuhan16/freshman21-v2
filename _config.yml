@@ -7,7 +7,6 @@ description: "HuskDev is Yuhan's personal blog." # It will appear in your docume
 keywords: "Yuhan, blog, HuskyDev"
 baseurl: "/freshman21" # the subpath of your site, e.g. /blog/
 url: "https://yulijia.net/freshman21" # the base hostname & protocol for your site
-locale: en_US
 
 ### Personal info and site tools info:
 rss_page: true  # enable rss
@@ -22,36 +21,6 @@ ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on ab
 default_locale: "en" # blog sidebar language set, only include: English (en), Chinese (cn), Japanese (jp), Polish (pl), Korean (kr),  Russian (ru), Turkish (tr), and Indonesian (id).
 nav_pages: ["home", "blog", "categories", "research", "projects", "topics"] # pages displayed in navigation bar
 nav_topics: ["articles", "Notes", "Optimization", "Deep Learning"] # existing topics
-locales:
-    en:
-      Aboutme: "About Me"
-      Archives: "Archives"
-      Blogroll: "Blogroll"
-      Categories: "Categories"
-      Copyright_Notice: "Copyright Notice"
-      Recent_Posts: "Recent Posts"
-      Tags: "Tags"
-      Previous: "Older"
-      Next: "Newer"
-      PostedInCategories: "Posted in"
-      Taggedwith: "and tagged"
-      PostDate: "on "
-      Google_search: "Site Search"
-      Home: "Home"
-      About: "About"
-      Guestbook: "Guestbook"
-      Subscribe: "Subscribe"
-      Research: "Research"
-
-### your Blogroll info, only name can shown on the page.
-
-Blogroll:
-      - name: Freshman
-        href: http://yulijia.net/freshman
-        title: Another Jekyll blog theme
-      - name: author's website
-        href: http://yulijia.net/
-        title: Lijia Yu's website
 
 
 ### Build settings

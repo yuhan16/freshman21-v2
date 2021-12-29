@@ -44,83 +44,12 @@
   //background-color: green;
 }
 
-// no need for site-title-container
-.site-title-container{
-  padding-right: 0px;
-  padding-left: 20px; //$spacing-unit;
-  padding-top: 10px;
-  padding-bottom: 20px;
-}
-
-// no need for site-nav-div
-.site-nav-div {
-  line-height: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
-  border-top: 1px solid $grey-color-light;
-  border-bottom: 1px solid $grey-color-light;
-  //background-color: green;
-  
-  .page-link {
-    color: $grey-color;
-    line-height: $base-line-height;
-
-    // Gaps between nav items, but not on the first one
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  a{
-    text-decoration: none;
-
-    &:hover {
-      color: $text-color;
-      text-decoration: none;
-      //font-weight: bold;
-    }
-  }
-
-  .text-nav-column {
-    float: left;
-    width: 80%;
-    //background-color: yellow;
-  }
-  
-  .icon-nav-column {
-    float: left;
-    width: 20%;
-    //padding-top: 5px;
-    //background-color: blue;
-  
-    .icon-link {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  
-    i.fa {
-      color: $grey-color;
-      font-size: 24px;
-  
-      &:hover {
-        color: $grey-color-dark;
-        //color: $brand-top-color;
-      }
-    }
-  }
-}
-
-// clear floats after the text- and icon- columns
-.site-nav-div:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 .nav-container {
   min-height: 100%;
   margin: 15px 0;
   border-top: 1px solid $grey-color-light;
   border-bottom: 1px solid $grey-color-light;
+  //background-color: bisque;
 
   .page-link {
     color: $grey-color;
@@ -174,7 +103,6 @@
   position: relative;
   display: inline-block;
   // use page-link class for "Topic" display 
-
 }
 
 .dropdown-content {
@@ -207,6 +135,13 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+// clear floats after the text- and icon- columns
+.site-nav-container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 /*
 .dropdown:after {
   content: "";
@@ -214,6 +149,7 @@
   clear: both;
 }
 */
+
 
 /**
  * Topic Archive header
@@ -228,12 +164,13 @@
   }
 }
 
+
 /**
  * Sidebar
  */
 
 .sidebar-module {
-  padding: 15px;
+  padding: 0 15px 15px 15px;
   margin: 0 -20px 15px;
   font-size: 14px;
   h4{
@@ -408,11 +345,6 @@
     }
   }
 
-  table, tr, td{
-    border: none;
-  }
-  table {float: right}
-
   ul {
     list-style-type: none;
     float: right;
@@ -423,47 +355,6 @@
       display: inline;
     }
   }
-  
-
-  .col-page-num{
-    float: left;
-    width: 30%;
-    height: 45px;
-    padding-top: 8px;
-    border-top: 1px solid $grey-color-light;
-    border-bottom: 1px solid $grey-color-light;
-  }
-
-  .col-page-icon{
-    float: right;
-    width: 70%;
-    height: 45px;
-    padding-top: 5px;
-    border-top: 1px solid $grey-color-light;
-    border-bottom: 1px solid $grey-color-light;
-  }
-
-  .number-circle{
-    width: 30px;
-    border-radius: 50%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: $grey-color-light;
-    text-align: center;
-    color: $text-color;
-  }
-
-  .current-page{
-    background-color: $grey-color-light;
-  }
-
-  .other-page{
-    background-color: #fff;
-    &:hover{
-      background-color: rgb(172, 197, 243);
-      color: #fff;
-    }
-  }
 }
 
 .pager-container:after {
@@ -471,7 +362,6 @@
   display: block;
   clear: both;
 }
-
 
 .pager-text-col, .pager-icon-col{
   position: relative;
@@ -482,13 +372,10 @@
 .pager-text-col{
   float: left;
   width: 30%;
-  
-  //background-color: antiquewhite;
 }
 .pager-icon-col{
   float: right;
   width: 70%;
-  //background-color: aqua;
 }
 
 .number-circle{
@@ -511,6 +398,7 @@
     color: #fff;
   }
 }
+
 
 /**
  * Tags and Categories Style
@@ -536,12 +424,12 @@ time{
 }
 
 
-
 /**
  * Aboutme photo and icon Style
  */
 
 .about{
+  padding-top: 10px;
   img{
     float: left;
     height: 300px;

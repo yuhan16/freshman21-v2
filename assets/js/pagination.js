@@ -89,7 +89,7 @@ if (total_pages <= 3){
   }
 }
 
-  function createIcon(flag, url, content){
+function createIcon(flag, url, content){
     var mylist = document.getElementById("pager-icon-list");
     var x = document.createElement("li");
     x.style.display = "inline";
