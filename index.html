@@ -1,6 +1,6 @@
 ---
 layout: default
-use_double_column: false
+single_col_layout: true
 title: Home
 permalink: /
 ---
@@ -24,3 +24,12 @@ permalink: /
   <a href="mailto:{{site.email}}" title="mailto: {{site.email}}" style="border-bottom: none;"><i class="fa fa-envelope fa-2x"></i></a>
   </p>
 </div>
+
+{% for x in site.categories %}
+{{x[1].size}}
+{%endfor%}
+
+{% assign x = "Deep Learning -page3" | split: " -"%}
+{{x.size}}
+{% assign y = "test" | split: " -"%}
+{{y[0]}}

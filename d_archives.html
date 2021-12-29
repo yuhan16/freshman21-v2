@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page-list
 title: Archives
 permalink: /archives/
 ---
@@ -14,7 +14,8 @@ permalink: /archives/
       {% assign current_year = post_year %}
     {% endif %}
     <time datetime="{{ post.date | date:"%Y-%m-%d" }}">{{ post.date | date:"%Y-%m-%d" }}</time>
-  &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize }}</a><br />
+    &raquo; 
+    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title | capitalize }}</a><br />
   {% endfor %}
 {% else %}
   <span>No post</span>

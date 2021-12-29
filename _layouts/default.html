@@ -9,20 +9,18 @@
 
   {% include header.html %}
 
-  {% if page.two_col_layout %}  
+  {% if page.single_col_layout %}  
     
+    <div class="page-content wrapper">
+      {{ content }}
+    </div>
+
+  {% else %}
+
     <div class="page-content col-sm-8">
       {{ content }}
     </div>
     {% include sidebar.html %}
-
-  {% else %}
-
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </div>
 
   {% endif %}
 

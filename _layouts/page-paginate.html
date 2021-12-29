@@ -1,17 +1,22 @@
 ---
-layout: page-paginate
-title: Blog
-permalink: /blog/
-pagination: 
-  enabled: true
-  category: posts   # default category, means all posts
-  permalink: '/page:num/'
+layout: default
 ---
-{%comment%}
-<!--there is no "post" class in css. Only use it to group things.-->
+
+<!--No "post" class defined in css. Only used for group things.-->
 <div class="post" itemscope itemtype="http://schema.org/BlogPosting" >
-    {% for post in paginator.posts %} 
-    
+
+  <!--step 1: print pagniation title except for Blog page.-->
+  {% if page.title %}
+    {% assign x = page.title | split: " -" %}
+    {% if x[0] != "Blog" %}
+      <header class="topic-archive-header">
+        <h3 class="post-title">Archive | {{ x[0] }}</h3>
+      </header>
+    {% endif %}
+  {% endif %}
+  
+  <!--step 2: print pagination post title-->
+  {% for post in paginator.posts %} 
     <img src="{{ site.baseurl }}/assets/images/husky_logo_crop.png" height="100" style="float: left; margin-right: 15px;">
     
     <header class="post-header">
@@ -30,13 +35,15 @@ pagination:
         {% endfor %}
       </p>
     </header>
-    <p>this is a test</p>
+
+    <p>For page-paginate test only (temporary)</p>
+    <!--step 3: print pagination post excerpt content-->
     <article class="post-content" itemprop="articleBody">
       {{ post.excerpt }}
       <p><a href="{{post.url | prepend: site.baseurl}}">(Continue reading ...)</a></p>
     </article> <br><br><!--hr /-->
-    {% endfor %}
-</div>
+  {% endfor %}
+
+</div> 
 
 {% include post_pagination.html %}
-{%endcomment%}

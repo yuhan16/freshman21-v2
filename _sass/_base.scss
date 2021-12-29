@@ -52,14 +52,13 @@ ul, ol, dl, figure,
   margin-top:    30px;
   margin-bottom: 30px;
 
-  padding-right: $spacing-unit;
-  padding-left:  $spacing-unit;
-  padding-top:   30px;
+  padding-right: 40px; //$spacing-unit;
+  padding-left:  40px; //$spacing-unit;
+  padding-top:   40px;
 
   background-color: #fff;
   box-shadow: 1px 1px 10px #BBB;
 }
-
 /*for media*/
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
@@ -69,18 +68,18 @@ ul, ol, dl, figure,
 .col-sm-8,.col-sm-2{
   position: relative;
   min-height: 1px;
-  margin: 0px 20px;
-  padding-top: 20px;
+  //margin: 0px 20px;
+  //padding-top: 20px;
 }
 
 .col-sm-8 {
   float:left;
-  width:67%;
+  width:70%;
 }
 
 .col-sm-2 {
   float:right;
-  width:24%;
+  width:26%;
 }
 
 /*
@@ -239,8 +238,8 @@ pre {
   max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
   margin-right: auto;
   margin-left: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
+  //padding-right: $spacing-unit;
+  //padding-left: $spacing-unit;
   @extend %clearfix;
 
   @include media-query($on-laptop) {

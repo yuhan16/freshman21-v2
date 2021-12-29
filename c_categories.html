@@ -1,13 +1,8 @@
 ---
-layout: page
-two_col_layout: true
+layout: page-list
 title: Categories
 permalink: /categories/
 ---
-
-<p>(By Date | By Category) 
-a choice box to select different view
-</p>
 
 {% comment %}
 <ul class="tags-box">
@@ -30,17 +25,3 @@ a choice box to select different view
   <span>No posts</span>
 </ul>
 {% endif %}
-
-{% comment %}
-{% for post in paginator.posts %}
-<ul>
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    </ul>
-    {% endfor %}
-{% endcomment %}
