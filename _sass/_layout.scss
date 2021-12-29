@@ -401,9 +401,9 @@
   
   a{
     text-decoration: none;
-    //color: $text-color;
+    color: $text-color;
     &:hover{
-      color: $text-color;
+      color: darken(rgb(172, 197, 243), 25%);
       text-decoration: none;
     }
   }
@@ -413,9 +413,21 @@
   }
   table {float: right}
 
+  ul {
+    list-style-type: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    li {
+      padding: 0 5px;
+      display: inline;
+    }
+  }
+  
+
   .col-page-num{
     float: left;
-    width: 50%;
+    width: 30%;
     height: 45px;
     padding-top: 8px;
     border-top: 1px solid $grey-color-light;
@@ -424,7 +436,7 @@
 
   .col-page-icon{
     float: right;
-    width: 50%;
+    width: 70%;
     height: 45px;
     padding-top: 5px;
     border-top: 1px solid $grey-color-light;
@@ -438,6 +450,7 @@
     border-width: 2px;
     border-color: $grey-color-light;
     text-align: center;
+    color: $text-color;
   }
 
   .current-page{
@@ -463,15 +476,19 @@
 .pager-text-col, .pager-icon-col{
   position: relative;
   min-height: 1px;
-  padding: 15px 0;
+  padding-top: 10px;
+  padding-bottom: 5px;
 }
 .pager-text-col{
   float: left;
-  width: 50%;
+  width: 30%;
+  
+  //background-color: antiquewhite;
 }
 .pager-icon-col{
   float: right;
-  width: 50%;
+  width: 70%;
+  //background-color: aqua;
 }
 
 .number-circle{

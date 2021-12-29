@@ -1,9 +1,13 @@
+function mytest(curr_page, total_pages, pageurl, base){
+/*
 const curr_page = parseInt('{{paginator.page}}');
-const total_page = parseInt('{{paginator.total_pages}}');
+const total_pages = parseInt('{{paginator.total_pages}}');
 const pageurl = '{{page.url}}';
+var baseurl = '{{site.baseurl}}';
+*/
 
 // step 1: find base url for the first page according to pageurl
-var baseurl = '{{site.baseurl}}';
+var baseurl = base;
 if (curr_page == 1){
     baseurl = baseurl + pageurl.replace("index.html", "");
 }
@@ -11,97 +15,111 @@ else{
     baseurl = baseurl + pageurl.replace("page"+curr_page+"/index.html", "");
 }
 
-// step 2: discuss four cases to and generate the corresponding tabel.
-if (total_page <= 3){
-    var table_col = total_page;
-    generateTable(table_col, curr_page, baseurl);
+// step 2: create icon list
+var pager_div = document.getElementById("pager-icon-col");
+var mylist = document.createElement("ul");
+mylist.setAttribute("id", "pager-icon-list");
+pager_div.append(mylist);
 
-    for (var i = 1; i <= total_page; i++){
-      var col = pg_col - pg_total + i;
-      var flag = 1;
+// step 3: discuss four cases to and generate the corresponding tabel.
+if (total_pages <= 3){
+    for (var i = 1; i <= total_pages; i++){
+      var flag = 0;
       var pgurl = baseurl;
       // find proper flag, pgurl, content
       if (i == curr_page){ 
-        flag = 0; 
+        flag = 1; 
       }
       if (i != 1) { 
         pgurl = pgurl + "page" + i; 
       }
       content = i.toString();
-      createPageIcon(flag, content, col, pgurl);
+      createIcon(flag, pgurl, content);
     }
   }
   else{
-    if (pg <= 2){ // case 1: pg = 1 or 2, no first and pre icons
+    if (curr_page <= 2){ // case 1: curr_page = 1 or 2, no first and pre icons
       for (var i = 1; i <= 3; i++){
-        var col = pg_col - 5 + i;
-        var flag = 1;
+        var flag = 0;
         var pgurl = baseurl;
-        if (i == pg){
-          flag = 0;
+        if (i == curr_page){
+          flag = 1;
         }
         if (i != 1) { 
           pgurl = pgurl + "page" + i; 
         }
         content = i.toString();
-        createPageIcon(flag, content, col, pgurl); // plot page 1,2,3
+        createIcon(flag, pgurl, content); // page 1,2,3
       }
-      createPageIcon(flag, "&gt", 6, baseurl+"page"+4); // plot next icon
-      createPageIcon(flag, "Last &#8811;", 7, baseurl +"page"+pg_total); // plot last icon
+      
+      createIcon(0, baseurl+"page"+(curr_page+1), "&gt"); // page curr_page+1
+      createIconText(baseurl+"page"+total_pages, "Last &raquo;"); // last page
     }
-    else if (pg >= pg_total-1){ // case 2: pg = last or last-1, no last and next icons
-      for (var i = 1; i <= 3; i++){
-        var col = pg_col - 3 + i;
-        var flag = 1;
-        if (i == pg){
-          flag = 0;
+    else if (curr_page >= total_pages-1){ // case 2: curr_page = last or last-1, no last and next icons
+      createIconText(baseurl, "&laquo; First");   // first page
+      createIcon(0, baseurl+"page"+(curr_page-1), "&lt"); //  page curr_page-1
+      
+      for (var i = total_pages-2; i <= total_pages; i++){
+        var flag = 0;
+        if (i == curr_page){
+          flag = 1;
         }
-        var pgurl = baseurl + "page" + (pg_total-3+i); 
+        var pgurl = baseurl + "page" + i; 
         content = i.toString();
-        createPageIcon(flag, content, col, pgurl); // plot page 1,2,3
+        createIcon(flag, pgurl, content); // page last-2, last-1, last
       }
-      createPageIcon(1, "&lt", 4, baseurl+"page"+(pg_total-3)); // plot pre icon
-      createPageIcon(1, "&#8810; First", 3, baseurl); // plot first icon
     }
     else{ // case 3: first/last, pre/next icons all exist, current page is in the center
-      var pg_pre = parseInt('{{ paginator.previous_page }}');
-      var pg_next = parseInt('{{ paginator.next_page }}');
-      createPageIcon(1, pg_pre.toString(), 3, baseurl+"page"+pg_pre); // plot page 1,2,3
-      createPageIcon(0, pg_.toString(), 4, baseurl+"page"+pg);
-      createPageIcon(1, pg_next.toString(), 5, baseurl+"page"+pg_next);
+      createIconText(baseurl, "&laquo; First");    // first page
+      createIcon(0, baseurl+"page"+(curr_page-1), "&lt");   // curr_page-1
 
-      createPageIcon(1, "&lt", 2, baseurl+"page"+(pg_pre-1));
-      createPageIcon(1, "&#8810; First", 1, baseurl);
+      for (var i = -1; i <= 1; i++){ // curr_page is always selected
+        var flag = 0;
+        if (i == 0){
+          flag = 1;
+        }
+        var pgurl = baseurl + "page" + (curr_page+i); 
+        content = (curr_page+i).toString();
+        createIcon(flag, pgurl, content); // curr_page-1, curr_page, curr_page+1
+      }
 
-      createPageIcon(1, "&gt", 6, baseurl+"page"+(pg_next+1));
-      createPageIcon(1, "Last &#8811;", 7, baseurl+pg_total);
+      createIcon(0, baseurl+"page"+(curr_page+1), "&gt");   // curr_page+1
+      createIconText(baseurl+total_pages, "Last &raquo;");  // last page
     }
   }
-
-
-
-function generateTable(table_col, curr_page, baseurl){
-    var x = document.createElement("table");
-    x.setAttribute("id", "mytable");
-    //x.style.float = "right";
-    //x.style.border = "none";
-    
-    var y = document.createElement("tr");
-    //y.style.border = "none";
-    x.appendChild(y);
-    
-    var z = document.createElement("td");
-    //z.style.border = "none";
-    var t = document.createTextNode("testcell");
-    z.appendChild(t);
-    y.appendChild(z);
 }
 
-function createIcon(){
+  function createIcon(flag, url, content){
+    var mylist = document.getElementById("pager-icon-list");
+    var x = document.createElement("li");
+    x.style.display = "inline";
+    mylist.appendChild(x);
 
+    var a = document.createElement("a");
+    a.setAttribute("href", url);
+    x.appendChild(a);
+
+    // create Icon class
+    var mydiv = document.createElement('div');
+    mydiv.style.display = "inline-block";
+    mydiv.innerHTML = content;
+    if (flag == 1){
+        mydiv.className = "number-circle selected";
+    }
+    else{
+        mydiv.className = "number-circle unselected";
+    }
+    a.appendChild(mydiv);
 }
 
+function createIconText(url, content){
+    var mylist = document.getElementById("pager-icon-list");
+    var x = document.createElement("li");
+    //x.style.display = "inline";
+    mylist.appendChild(x);
 
-
-
-
+    var a = document.createElement("a");
+    a.setAttribute("href", url);
+    a.innerHTML = content;
+    x.appendChild(a);
+}

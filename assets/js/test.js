@@ -1,32 +1,10 @@
-<!--using JS for implementation-->
-{%comment%}
-<div class="pager-container">
-  <div class="col-page-num">
-    <p>Page {{paginator.page}} of {{paginator.total_pages}}</p>
-  </div>
-  <div class="col-page-icon">
-    <!--first create an empty table with 7 cells-->
-    <table>
-      <tr>
-        <td><a id="td1"></a></td>
-        <td><a id="td2"></a></td>
-        <td><a id="td3"></a></td>
-        <td><a id="td4"></a></td>
-        <td><a id="td5"></a></td>
-        <td><a id="td6"></a></td>
-        <td><a id="td7"></a></td>
-      </tr>
-    </table>
-    <!--then use script to modify the table cell content-->
-    <!--script src="{{site.baseurl}}/assets/js/test.js"></script-->
-    <script>
-      var pg = parseInt('{{ paginator.page }}');
+var pg = parseInt('{{ paginator.page }}');
       var pg_total = parseInt('{{paginator.total_pages}}');
       const pg_col = 7;   // number of table cells for pagination display
       //const baseurl = '{{site.baseurl}}' + "/blog/";
       var baseurl = '{{site.baseurl}}';
       var pgurl = '{{page.url}}';
-
+document.write(pgurl);
       if (pg == 1){
         baseurl = baseurl + pgurl.replace("index.html", "");   
       }
@@ -76,7 +54,7 @@
               flag = 0;
             }
             var pgurl = baseurl + "page" + (pg_total-3+i); 
-            content = (pg_total-3+i).toString();
+            content = i.toString();
             createPageIcon(flag, content, col, pgurl); // plot page 1,2,3
           }
           createPageIcon(1, "&lt", 4, baseurl+"page"+(pg_total-3)); // plot pre icon
@@ -86,7 +64,7 @@
           var pg_pre = parseInt('{{ paginator.previous_page }}');
           var pg_next = parseInt('{{ paginator.next_page }}');
           createPageIcon(1, pg_pre.toString(), 3, baseurl+"page"+pg_pre); // plot page 1,2,3
-          createPageIcon(0, pg.toString(), 4, baseurl+"page"+pg);
+          createPageIcon(0, pg_.toString(), 4, baseurl+"page"+pg);
           createPageIcon(1, pg_next.toString(), 5, baseurl+"page"+pg_next);
 
           createPageIcon(1, "&lt", 2, baseurl+"page"+(pg_pre-1));
@@ -122,28 +100,6 @@
         a_td.setAttribute("href", pgurl);
         a_td.innerHTML = content;
       }
-    </script>
-  </div>
-</div>
-{% endcomment %}
-
-<div class="pager-container">
-
-  <div class="pager-text-col">
-    <p>Page {{paginator.page}} of {{paginator.total_pages}}</p>
-  </div>
-
-  <div class="pager-icon-col" id="pager-icon-col">
-    <script src="{{site.baseurl}}/assets/js/pagination.js"></script>
-    <script>
-      curr_page, total_pages, pageurl, base
-      var curr_page = parseInt('{{paginator.page}}');
-      var total_pages = parseInt('{{paginator.total_pages}}');
-      var pageurl = '{{page.url}}';
-      var base = '{{site.baseurl}}';
-      mytest(curr_page, total_pages, pageurl, base);
-    </script>
-    
-  </div>
-</div>
-{% comment %} {% endcomment %}
+      function hello(arg){
+          document.write("hello"+arg);
+      }
