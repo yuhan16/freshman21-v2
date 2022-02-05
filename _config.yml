@@ -17,8 +17,6 @@ google_analytics_key: UA-57979084-1 # put YOUR key here to enable tracking! (bla
 defualt_logo: "/assets/image/default-logo.png"
 
 ### Site setting:
-ShowContactInfo: "True" # Personal Info (twitter,github,email) can be seen on aboutme-sidebar, those info only shown where ShowContactInfo == True
-default_locale: "en" # blog sidebar language set, only include: English (en), Chinese (cn), Japanese (jp), Polish (pl), Korean (kr),  Russian (ru), Turkish (tr), and Indonesian (id).
 nav_pages: ["home", "blog", "categories", "research", "projects", "topics"] # pages displayed in navigation bar
 nav_topics: ["articles", "Notes", "Optimization", "Deep Learning"] # existing topics
 

@@ -5,17 +5,17 @@ modified: 2014-12-19
 categories: [Programming, Web]
 tags: [web programming, jekyll, html, css]
 comments: true
+logo: https://andrejgajdos.com/wp-content/uploads/2019/09/custom-select-dropdown-html-730x350.png
 excerpt_separator: <!--more-->
 ---
 
 
 
-I have always been eager to build my personal blog from sketch. Now it comes true! This is not as simple as I thought before. So I think it is better take some notes about what I have learned along the way. Since I have zero background in web programming, some of the notes may be too easy for experts. Also, there are aubndnat reserouces in the Internet and I will refer to the ones which helped me during the learning.
-
+I have always been eager to build my personal blog from sketch. Now it comes true! This is not as simple as I thought before. So I think it is better take some notes about what I have learned along the way. 
 <!--more-->
+Since I have zero background in web programming, some of the notes may be too easy for experts. Also, there are aubndnat reserouces in the Internet and I will refer to the ones which helped me during the learning.
 
 So let me start from how to select the tools.
-
 
 
 ## Static Site Generators
