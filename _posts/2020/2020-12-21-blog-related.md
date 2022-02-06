@@ -59,6 +59,8 @@ The static site generator, as the name suggests, generates pre-written HTML file
 
 There are many SSGs available. For example, [Next.js]([https://nextjs.org](https://nextjs.org/)), [Jekyll](https://jekyllrb.com), [Hugo](https://gohugo.io/). [Gatsby](https://www.gatsbyjs.com/), [Nuxt](https://nuxtjs.org/). Any of them does a good job.
 
+[Dynamic vs Static Website](https://elextutorial.com/learn-php/dynamic-vs-static-website-static-website-dynamic-website-definition/#:~:text=The%20dynamic%20web%20page%20code%20written%20in%20the%20PHP%20server,is%20served%20to%20the%20user.)
+
 
 
 ## Jekyll
