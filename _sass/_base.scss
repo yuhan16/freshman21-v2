@@ -333,3 +333,22 @@ cite{
   font-style: italic;
   text-decoration: underline;
 }
+
+
+/**
+ * Figure and Figcaption
+ */
+ figure {
+   padding: 20px 0 20px 0;
+   margin: auto;
+   img {
+     margin-left: auto;
+     margin-right: auto;
+   }
+ }
+
+ figcaption {
+   color: $grey-color;
+   text-align: center;
+   padding: 2px;
+ }

@@ -9,21 +9,19 @@ logo:
 excerpt_separator: <!--more-->
 ---
 
-
-
 When we send HTTP requests to the web server, the web server responds to the request and sends the page file (usually with a `.html` extension) back so that we can view the entire web page in the browser. The way the web server processes and generates the web pages categorizes the web pages into **static** and **dynamic**. 
 
 <!--more-->
-
 
 
 ## Static Web Pages
 
 A static web page is a page file stored in the web server. Normally, static web pages are stored with a  `.html` file extension. Each web page has a unique URL (Uniform Resource Locator). When we request a static web page, the web server finds the page file in the file system and sends it back. The server will not do any processing of the page file. 
 
-
-
-
+<figure>
+    <img src="{{site.baseurl}}/assets/images/blog/2021/2021-12-22-static.png" height="130">
+    <figcaption>Fig.1: Static web pages served by the web server.</figcaption>
+</figure>
 
 ## Dynamic Web Pages
 
@@ -32,6 +30,11 @@ The web server responds to dynamic web pages after pre-processing. The dynamic w
 The pre-processing depends on what code the web server uses. The most common programming language for web server development is [PHP](https://www.php.net/). There are other server-side languages such as Python and C#. 
 
 We take PhP for example. A dynamic web page written with PhP language is stored in a page file with a  `.php` extension. When we request a dynamic web page, the web server first processes the PHP page file and generates the HTML file. Then the server sends the HTML file back to the user. 
+
+<figure>
+    <img src="{{site.baseurl}}/assets/images/blog/2021/2021-12-22-dynamic.png" height="180">
+    <figcaption>Fig.2: Dynamic web pages served by the web server.</figcaption>
+</figure>
 
 A simple dynamic web page file with PHP looks like this:
 
