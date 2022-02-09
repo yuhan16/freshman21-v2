@@ -6,7 +6,8 @@
 
 
 // Our variables
-$base-font-family: 'Lato', 'Open Sans', Helvetica, Arial, sans-serif !important;
+$base-font-family: 'Roboto', sans-serif;
+//$base-font-family: 'Lato', 'Open Sans', Helvetica, Arial, sans-serif !important;
 $base-font-size:   16px;
 $nav-font-size:    18px;
 $small-font-size:  $base-font-size * 0.875;  //14px
@@ -61,7 +62,8 @@ $on-laptop:        800px;
         "_syntax-highlighting-native" // "syntax-highlighting"
 ;
 
-@import url('http://fonts.googleapis.com/css?family=Open+Sans');
-@import url('http://fonts.googleapis.com/css?family=Lato');
+@import url('http://fonts.googleapis.com/css?family=Roboto&display=swap');
+//@import url('http://fonts.googleapis.com/css?family=Open+Sans');
+//@import url('http://fonts.googleapis.com/css?family=Lato');
 //@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
