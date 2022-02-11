@@ -10,7 +10,7 @@ baseurl: "/freshman21-v1" # the subpath of your site, e.g. /blog/
 
 ### Personal info and site tools info:
 rss_page: true  # enable rss
-github_username:  yuhan-zhao
+github_username:  yuhan16
 linkedin_page: "https://www.linkedin.com/in/yhzhao"
 favicon:     "/assets/images/favicon.ico"
 google_analytics_key: UA-57979084-1 # put YOUR key here to enable tracking! (blank to disable)
@@ -40,7 +40,7 @@ exclude:
 permalink: /:year/:month/:title.html
 pagination:
   enabled: true
-  per_page: 2
+  per_page: 5
   sort_reverse: true
   title: ':title -page:num'
   trail:
