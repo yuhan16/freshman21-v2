@@ -27,9 +27,10 @@ $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
-$code-backgroud-color: #29281e;
-$code-font-color:  #eee;  
-
+//$code-backgroud-color: #29281e;
+//$code-font-color:  #eee;  
+$code-backgroud-color: rgb(243,245,247);
+$code-font-color: rgb(59,59,59);
 
 // Width of the content area
 $content-width:    960px;

@@ -112,6 +112,7 @@ The above two directories are the most frequently edited ones after we set page 
 
   We show an example of `default.html` as follows. The template has to include `<html>` element to show it is a complete HTML file. However, the template does not need to include every detail. We can use `include` command to make the template more consise.
 
+  {% raw %}
   ```html
   <!DOCTYPE html>
   <html>
@@ -129,9 +130,11 @@ The above two directories are the most frequently edited ones after we set page 
   </body>
   </html>
   ```
-
+  {% endraw %}
+  
   Other template files can inherit from `default.html`. They add more details to `default.html` to form the new template. An example of `post.html` template is shown in the following. They do **not** need to be a complete HTML file.
 
+  {% raw %}
   ```html
   ---
   layout: default
@@ -152,6 +155,7 @@ The above two directories are the most frequently edited ones after we set page 
   
   </div> 
   ```
+  {% endraw %}
 
 - `_include` directory stores the frequently used HTML snippets which are used by `include` command. For example, the `footer.html` can be the following.
 
@@ -193,15 +197,15 @@ Some global variables are reserved by Jekyll, for example, `layout`, `content`, 
 
 We can also define local variables (user-defined variables) in the front matter and reference it. For example, we define `mylogo-link` variable in the following post file:
 
-```markdown
+```html
 ---
 mylogo_link: https://path/to/image/.png
 ---
 ```
 
-Then we can reference this variable in the file by writting `{{ mylogo_link }}`.
+Then we can reference this variable in the file by writting {%raw%}`{{ mylogo_link }}`{%endraw%}.
 
-We can also define variables in `_config.yml`. The variables are in the `site` domain and can be accessed by `{{site.my_variable}}`.
+We can also define variables in `_config.yml`. The variables are in the `site` domain and can be accessed by {%raw%}`{{site.my_variable}}`{%endraw%}.
 
 ### Summary
 
