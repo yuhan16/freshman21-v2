@@ -197,7 +197,7 @@ Some global variables are reserved by Jekyll, for example, `layout`, `content`, 
 
 We can also define local variables (user-defined variables) in the front matter and reference it. For example, we define `mylogo-link` variable in the following post file:
 
-```html
+```yaml
 ---
 mylogo_link: https://path/to/image/.png
 ---
