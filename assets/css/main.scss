@@ -59,8 +59,8 @@ $on-laptop:        800px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
-        "layout",
-        "_syntax-highlighting-native" // "syntax-highlighting"
+        "layout"
+        //"_syntax-highlighting-native" // "syntax-highlighting"
 ;
 
 @import url('http://fonts.googleapis.com/css?family=Roboto&display=swap');
