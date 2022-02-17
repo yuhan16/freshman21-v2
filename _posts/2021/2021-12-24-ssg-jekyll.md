@@ -78,29 +78,29 @@ We can also follow the [Quickstart](https://jekyllrb.com/docs/) in Jekyll docume
 
 Jekyll creates a series of directories. So it is important to understand the use of each directory so that we can create the pages we want. A typical jekyll directory is like the following (from Jekyll documentation):
 
-```plain
+```bash
 .
-├── _config.yml
-├── _data
-│   └── members.yml
-├── _drafts
-│   └── on-simplicity-in-technology.md
-├── _includes
-│   ├── footer.html
-│   └── header.html
-├── _layouts
-│   ├── default.html
-│   └── post.html
-├── _posts
-│   ├── 2007-10-29-why-every-programmer-should-play-nethack.md
-│   └── 2009-04-26-barcamp-boston-4-roundup.md
-├── _sass
-│   ├── _base.scss
-│   └── _layout.scss
-├── _site
-├── .jekyll-cache
-├── .jekyll-metadata
-└── index.html # can also be an 'index.md' with valid front matter
+|-- _config.yml
+|-- _data
+│   `-- members.yml
+|-- _drafts
+|   `-- on-simplicity-in-technology.md
+|-- _includes
+|   |-- footer.html
+|   `-- header.html
+|-- _layouts
+|   |-- default.html
+|   `-- post.html
+|-- _posts
+|   `-- 2007-10-29-why-every-programmer-should-play-nethack.md
+|   `-- 2009-04-26-barcamp-boston-4-roundup.md
+|-- _sass
+|   |-- _base.scss
+|   `-- _layout.scss
+|-- _site
+|-- .jekyll-cache
+|-- .jekyll-metadata
+|-- index.html    # can also be an 'index.md' with valid front matter
 ```
 
 - `_posts` is the directory where we write our blog contents. The content is usually written with [Markdown](https://www.markdownguide.org/). Each file corresponds to an individual post page and each filename should follow the convention `YEAR-MONTH-DAY-title.md`.
