@@ -229,7 +229,7 @@ blockquote{
  */
 pre,code {
   font-size: 14px;
-  border: 1px solid $grey-color-light;
+  //border: 1px solid $grey-color-light;
   border-radius: 3px;
   background-color: $code-backgroud-color;
 //  color: $code-font-color;
@@ -237,7 +237,7 @@ pre,code {
 }
 
 code {
-  padding: 0px 5px;
+  padding: 1px 5px;
 }
 /*
 pre {

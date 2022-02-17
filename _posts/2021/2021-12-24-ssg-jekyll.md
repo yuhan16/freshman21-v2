@@ -69,7 +69,7 @@ The Jekyll document is comprehensive and instructive. So I do encourage people t
 Since jekyll is software written in Ruby, we first need to make sure the Ruby programming language is installed in our computer. It comes with Linux distrirbutions. We can check it using the command 
 
 ```bash
-$ ruby -v		# display ruby version info
+$ ruby -v	# display ruby version info
 ```
 
 We can also follow the [Quickstart](https://jekyllrb.com/docs/) in Jekyll documentation to create a quick jekyll project and view it in the browser.
@@ -78,7 +78,7 @@ We can also follow the [Quickstart](https://jekyllrb.com/docs/) in Jekyll docume
 
 Jekyll creates a series of directories. So it is important to understand the use of each directory so that we can create the pages we want. A typical jekyll directory is like the following (from Jekyll documentation):
 
-```
+```plain
 .
 ├── _config.yml
 ├── _data
