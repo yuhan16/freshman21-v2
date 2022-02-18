@@ -5,7 +5,7 @@ modified: 2014-12-19
 categories: [Web]
 tags: [tutorial, static web, dynamic web, php]
 comments: true
-logo:
+logo: https://5.imimg.com/data5/WL/KD/NP/SELLER-30415248/website-designing-services-500x500.jpg
 excerpt_separator: <!--more-->
 ---
 
