@@ -129,6 +129,7 @@ you can use latex with <q>double $$ </q>
 
 $$e^{i\pi}+1=0$$
 
+Latex inline math $f(x) = \mathbb{R}$
 
 ## \<q\> tag
 
@@ -136,3 +137,21 @@ here is a \<q\> q tag \</q\>
 
 
 here is a <q> q tag </q>
+
+
+## Theorem block and remark block
+
+
+<div class="theorem-block">
+<p>This is a theorem equation:</p>
+\[ f(x)= e^{i \pi}\]
+<ol>
+  <li>g(x) \in \mathbb{R}^6 \times \mathbb{R} \to \mathbb{R}</li>
+  <li>utieurei</li>
+</ol>
+</div>
+
+{:.remark-block}
+HHH fhdjh fjdhjh fjd hfjd
+fdjkfjdkjdk
+fjdkfjkdjfdkjk
