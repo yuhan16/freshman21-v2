@@ -55,6 +55,7 @@ The New York Times <cite>(That’s a citation)</cite>.
 
 > Justification:
 > This species is listed as Extinct in the Wild, as all populations are still under captive management. The captive population in China has increased in recent years, and the possibility remains that free-ranging populations can be established some time in the near future. When that happens, its Red List status will need to be reassessed. 
+> <p class="quote-source">from: hahahahah hahahaha</p> 
 
 > I follow up the quest. Despite of day and night and death and hell.
 > <center> -- Idylls of the King, Tennyson </center>
@@ -144,14 +145,15 @@ here is a <q> q tag </q>
 
 <div class="theorem-block">
 <p>This is a theorem equation:</p>
-\[ f(x)= e^{i \pi}\]
+\[ e^{i\pi}+1=0 \]
 <ol>
   <li>$g(x) \in \mathbb{R}^6 \times \mathbb{R} \to \mathbb{R}$</li>
   <li>utieurei</li>
 </ol>
 </div>
 
-{:.remark-block}
-HHH fhdjh fjdhjh fjd hfjd
+<div class="remark-block">
+<p><b>Remark:</b> HHH fhdjh fjdhjh fjd hfjd
 fdjkfjdkjdk
-fjdkfjkdjfdkjk
+fjdkfjkdjfdkjk </p>
+</div>

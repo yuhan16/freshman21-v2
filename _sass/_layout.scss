@@ -479,12 +479,15 @@ q:after {
   border-radius: 3px;
   color: $grey-color;
   background: #f9f9f9;
+  margin: 10px 0;
+  padding: 10px 15px;
+  p {margin: 0;}
   ol{
     list-style-type:none;
   }
 
   li:before {
-    content:"(" counter(section, decimal) ") ";
+    content:"(" counter(section, decimal) ")  ";
   }
 
   li {
@@ -497,5 +500,13 @@ q:after {
   border-radius: 3px;
   color: $grey-color;
   background: #f9f9f9;
-  margin: 10px 10px;
+  margin: 10px 0;
+  padding: 10px 15px;
+  p {margin: 0;}
+}
+
+.quote-source{
+  text-align: right;
+  font-size: $small-font-size;
+  margin: 0;
 }
