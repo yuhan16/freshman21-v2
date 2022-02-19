@@ -4,7 +4,7 @@ tagline: Yuhan's Blog
 author: Yuhan Zhao
 email: yuhan-zhao@outlook.com
 description: "HuskDev is Yuhan's personal blog." # It will appear in your document head meta and in your feed.xml site description
-keywords: "Yuhan, blog, HuskyDev"
+keywords: ["Yuhan", "HuskyDev"]
 baseurl: "/freshman21-v1" # the subpath of your site, e.g. /blog/
 #url: "https://yulijia.net/freshman21" # the base hostname & protocol for your site
 
@@ -27,10 +27,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
-#plugins: [jekyll-paginate]
-#paginate: 5
-#paginate_path: "/blog/page:num/"
-#excerpt_separator: <!-- more -->
+
 gems:
   - jekyll-paginate-v2
 exclude:

@@ -1,0 +1,284 @@
+\include{config/config}
+
+\begin{document}
+% ========== Edit your name here
+\title{MATH 2901 Basic Probability Lecture Notes 6}
+\author{Instructor: Richard Kleeman}
+\date{}
+\maketitle
+
+%\medskip
+
+% ========== Contents begin here ==============
+This lecture we study the expectation of the average of $n$ i.i.d. random variables $X_i$, $i=1,\dots, n$, \ie, the expectation of $Q_n = \frac{1}{n} (X_1 + \dots + X_n)$. As $n \to \infty$, we will introduce the central limit theorem and show that $Q_n$ converges to a normal distribution provided $\Var(X_i)$ exists.
+
+
+\section{Sums of Discrete Random Variables}
+Suppose $X$ and $Y$ are two independent discrete random variables with distribution functions $p_X(x)$ and $p_Y(y)$. Let $Z = X + Y$, we want to find the the distribution function of $Z$. 
+
+Suppose that $X = k$, where $k$ is some integer. Then $Z = z$ if and only if $Y = z-k$. So the event $Z = z$ is the union of the pairwise disjoint events
+\begin{equation*}
+    (X=k) \quad  \text { and } \quad  (Y=z-k)
+\end{equation*}
+where $k$ runs over the integers. Since these events are pairwise disjoint, we have
+\begin{equation}
+    \label{eq:6.1}
+    \tag{6-1}
+    \Prob(Z=z)=\sum_{k=-\infty}^{\infty} \Prob(X=k)  \Prob(Y=z-k)
+\end{equation}
+which is the \textbf{distribution function of the random variable $Z$}.
+
+\begin{definition}
+Let $X$ and $Y$ be two independent integer-valued random variables, with distribution functions $p_X(x)$ and $p_Y(y)$ respectively. Then the \textbf{convolution} of $p_X(x)$ and $p_Y(y)$ is the distribution function $p_Z = p_X * p_Y$ given by
+\begin{equation*}
+    p_Z(z) = \sum_{x} p_X(x) p_Y(z-x)
+\end{equation*}
+for $x\in \Z$. The function $p_Z(z)$ is the distribution function of the random variable $Z = X + Y$.
+\end{definition}
+
+
+\section{Sums of Continuous Random Variables}
+\begin{definition}
+Let $X$ and $Y$ be two continuous random variables with density functions $f_X(x)$ and $f_Y(y)$ respectively. Assume that both $f_X(x)$ and $f_Y(y)$ are defined for all real numbers. Then the \textbf{convolution} $f * g$ of $f$ and $g$ is the function given by
+\begin{equation}
+    \label{eq:6.2}
+    \tag{6-2}
+    (f_X * f_Y)(z) = \int_{-\infty}^{+\infty} f_X(z-y) f_Y(y) d y = \int_{-\infty}^{+\infty} f_Y(z-x) f_X(x) d x.
+\end{equation}
+\end{definition}
+
+\begin{theorem}
+Let $X$ and $Y$ be two independent random variables with density functions $f_X(x)$ and $f_Y(y)$ defined for all $x$ and $y$. Then the sum $Z = X + Y$ is a random variable with density function $f_Z(z)$, where $f_Z$ is the convolution of $f_X$ and $f_Y$.
+\end{theorem}
+
+\begin{theorem}
+Let $\{X_i\}$, $i=1,\dots, n$ be a sequence of independent random variables with density functions $f_{X_1}(x), \dots, f_{X_n}(x)$ respectively, then we have 
+\begin{equation*}
+    f_{X_1 + \cdots + X_n}(x) = f_{X_1} * \left( f_{X_2} * ( \cdots * f_{X_n}) \right)(x).
+\end{equation*}
+\end{theorem}
+
+\begin{example}[Sum of two independent uniform random variables]
+Let $X$ and $Y$ be random variables describing our choices and $Z = X + Y$ their sum. Then we have
+\begin{equation*}
+    f_{X}(x)=f_{Y}(x)=\left\{\begin{array}{ll}{1} & {\text { if } 0 \leq x \leq 1} \\ {0} & {\text { otherwise }}\end{array}\right.
+\end{equation*}
+and the density function for the sum is given by
+\begin{equation*}
+    f_{Z}(z)=\int_{-\infty}^{+\infty} f_{X}(z-y) f_{Y}(y) d y = \int_{0}^{1} f_{X}(z-y) d y.
+\end{equation*}
+Now the integrand is $0$ unless $0 \leq z-y \leq 1$ and then it is $1$. So if $0 \leq z \leq 1$, we have 
+\begin{equation*}
+    f_{Z}(z)=\int_{0}^{z} d y=z,
+\end{equation*}
+while if $1 < z \leq 2$, we have
+\begin{equation*}
+    f_{Z}(z)=\int_{z-1}^{1} d y=2-z, 
+\end{equation*}
+and if $z < 0$ or $z > 2$ we have $f_Z(z) = 0$. Hence
+\begin{equation*}
+    f_{Z}(z)=\left\{\begin{array}{ll}{z,} & {\text { if } 0 \leq z \leq 1} \\ {2-z,} & {\text { if } 1<z \leq 2} \\ {0,} & {\text { otherwise }}\end{array}\right.
+\end{equation*}
+\end{example}
+
+\begin{example}[Sum of two independent exponential random variables]
+Let $X, Y$, and $Z = X + Y$ denote the relevant random variables, and $f_X$ , $f_Y$ , and $f_Z$ their densities. Then
+\begin{equation*}
+    f_{X}(x)=f_{Y}(x)=\left\{\begin{array}{ll}{\lambda e^{-\lambda x},} & {\text { if } x \geq 0} \\ {0,} & {\text { otherwise }}\end{array}\right.
+\end{equation*}
+If $z > 0$,
+\begin{equation*}
+    f_{Z}(z)=\int_{-\infty}^{+\infty} f_{X}(z-y) f_{Y}(y) d y =\int_{0}^{z} \lambda e^{-\lambda(z-y)} \lambda e^{-\lambda y} d y =\int_{0}^{z} \lambda^{2} e^{-\lambda z} d y =\lambda^{2} z e^{-\lambda z},
+\end{equation*}
+while if $z < 0$, $f_Z(z) = 0$. Hence 
+\begin{equation*}
+    f_{Z}(z)=\left\{\begin{array}{ll}{\lambda^{2} z e^{-\lambda z},} & {\text { if } z \geq 0} \\ {0,} & {\text { otherwise }}\end{array}\right.
+\end{equation*}
+\end{example}
+
+
+\section{Generating functions}
+A sequence $a = \{a_i \spacevert i = 0, 1 , 2, \dots \}$ of real numbers may contain a lot of information. One concise way of storing this information is to wrap up the numbers together in a ``generating function". For example, the (ordinary) \textbf{generating function} of the sequence $a$ is the function $G_a$ defined by 
+\begin{equation*}
+    G_{a}(s)=\sum_{i=0}^{\infty} a_{i} s^{i} \quad \text { for } s \in \mathbb{R} \text { for which the sum converges. }
+\end{equation*}
+In many circumstances it is easier to work with the generating function $G_a$ than with the original sequence $a$.
+
+\begin{theorem}[Abel's theorem]
+If $a_i \geq 0$ for all $i$ and $G_a(s)$ is finite for $\abs{s} < 1$, then $\lim_{s \uparrow 1} G_a (s) = \sum_{i=1}^ \infty a_i$, whether the sum is finite or equals $+\infty$. This standard result is useful when the radius of convergence $R$ satisfies $R = 1$, since then one has no a priori right to take the limit as $s \uparrow 1$.
+\end{theorem}
+
+
+\subsection{Moment generating function}
+\begin{definition}
+The \textbf{moment generating function} of the random variable $X$ is the function $M: \R \mapsto [0, \infty)$ given by the Laplace transform of the corresponding p.d.f. $f_X(s)$:
+\begin{equation*}
+    M_X(t) = \Exp \left( e^{tX} \right) = \int_{-\infty}^\infty e^{tx} f_X(x) dx,
+\end{equation*}
+or corresponding p.m.f. $p_X(k)$:
+\begin{equation*}
+    M_X(t) = \sum_{k} e^{t k} \Prob(X=k) 
+    = \sum_k \sum_{n=0}^{\infty} \frac{(t k)^{n}}{n !} \Prob(X=k)
+    = \sum_{n=0}^{\infty} \frac{t^{n}}{n !}\left(\sum_k k^{n} \Prob(X=k)\right) 
+    = \sum_{n=0}^{\infty} \frac{t^{n}}{n !} \Exp\left(X^{n}\right).
+\end{equation*}
+$M_X(-t)$ is so called \textbf{bilateral} Laplace transform of $f_X(x)$ or $p_X(k)$.
+\end{definition}
+
+Under the assumption that $M_X(t)$ is infinitely differentiable at $t=0$, the following statements are true. 
+\begin{enumerate}[(a)]
+    \item $M^\prime(0) = \Exp(0) = \mu$.
+    \item $M^{(n)}(0) = \Exp(X^n)$.
+    \item Using Taylor's theorem, $M_X(t) = \sum_{k=0}^\infty \frac{t^k}{k!} \Exp(X^k)$.
+\end{enumerate}
+
+\begin{theorem}
+If $X$ and $Y$ are independent, then
+\begin{equation*}
+    \begin{split}
+        M_{X+Y}(t) &= \int_{-\infty}^\infty e^{tz} f_{x+y}(z) dz \\
+        &= \int_{-\infty}^\infty e^{tz} \int_{-\infty}^\infty f_X(x) f_Y(z-x) dx dz \\
+        &= \int_{-\infty}^\infty e^{t(x+y)} \int_{-\infty}^\infty f_X(x) f_Y(y) dx dy \\
+        &= M_X(t) M_Y(t).
+    \end{split}
+\end{equation*}
+\end{theorem}
+
+\subsection{Characteristic functions}
+Sometimes $\Exp(e^{tX})$ may blow up. So we consider some transformations in the complex domain, which usually perform better.
+
+\begin{definition}
+The \textbf{characteristic function} of $X$ is the function $\phi: \R \mapsto \C$ defined by
+\begin{equation*}
+    \phi(t)=\Exp\left(e^{i t X}\right) \quad \text { where } \quad i=\sqrt{-1}.
+\end{equation*}
+We often write $\phi_x$ for the characteristic function of the random variable $X$. Characteristic functions are related to Fourier transforms. 
+\end{definition}
+
+\begin{theorem}
+The characteristic function $\phi$ satisfies:
+\begin{enumerate}[(a)]
+    \item $\phi(0) = 1$, $\abs{\phi(t)} \leq 1$ for all $t$.
+    \item $\phi$ is uniformly continuous on $\R$ w.r.t. $t$.
+    \item If $X \sim \mathcal{N}(0,1)$, then $\phi_{X}(t) = e^{-t^2/2}$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+We only prove the first statement.
+\begin{equation*}
+    \begin{split}
+        \abs{\phi(t)} &= \abs{\int_{-\infty}^\infty e^{itx} f(x)dx } \\
+        &\leq \int_{-\infty}^\infty \abs{e^{itx}} f(x) dx \quad \text{(triangle inequality)} \\
+        &= \int_{-\infty}^\infty f(x) dx \quad (\abs{e^{itx}}=1) \\
+        &= 1
+    \end{split}
+\end{equation*}
+\end{proof}
+
+\begin{example}[Cauchy distribution]
+If $f(x) = 
+\frac{1}{\pi(1+x^2)}$, then the corresponding characteristic function is 
+\begin{equation*}
+    \phi(t)=\frac{1}{\pi} \int_{-\infty}^{\infty} \frac{e^{i t x}}{1+x^{2}} d x = e^{-\abs{t}}.
+\end{equation*}
+\end{example}
+
+\begin{theorem}
+The following statements are true.
+\begin{enumerate}[(a)]
+    \item If $\phi^{(k)}(0)$ exists, then 
+    \begin{equation*}
+        \left\{\begin{array}{ll}{\Exp\left|X^{k}\right|<\infty} & {\text { if $k$}  \text { is even }} \\ {\Exp\left|X^{k-1}\right|<\infty} & {\text { if $k$ } \text { is odd }}\end{array}\right.
+    \end{equation*}
+    
+    \item If $\Exp(\abs{X^k}) < \infty$, then 
+    \begin{equation*}
+        \phi(t)=\sum_{j=0}^{k} \frac{\mathbb{E}\left(X^{j}\right)}{j !}(i t)^{j}+\mathrm{o}\left(t^{k}\right)
+    \end{equation*}
+    and so $\phi^{(k)}(0)=i^{k} \mathbb{E}\left(X^{k}\right)$.
+\end{enumerate}
+\end{theorem}
+\begin{theorem}
+If $X$ and $Y$ are independent then 
+\begin{equation*}
+    \phi_{X+Y}(t)=\phi_{X}(t) \phi_{Y}(t).
+\end{equation*}
+Similarly, if $X_1, \dots, X_n$ are independent, then 
+\begin{equation*}
+    \phi_{X_1 + \cdots + X_n}(t)= \prod_{i=1}^n \phi_{X_i}(t).
+\end{equation*}
+\end{theorem}
+
+\begin{theorem}
+If $a, b \in \R$ and $Y = aX+b$, then $\phi_{Y}(t)=e^{i t b} \phi_{X}(a t)$.
+\end{theorem}
+\begin{proof}
+\begin{equation*}
+    \phi_{Y}(t)=\Exp\left(e^{i t(a X+b)}\right)=\Exp\left(e^{i t b} e^{i(a t) X}\right) = e^{i t b} \Exp\left(e^{i(a t) X}\right)=e^{i t b} \phi_{X}(a t).
+\end{equation*}
+\end{proof}
+
+\begin{theorem}
+Random variables $X$ and $Y$ are independent if and only if
+\begin{equation*}
+    \phi_{X, Y}(s, t)=\phi_{X}(s) \phi_{Y}(t) \quad \text { for all } s \text { and } t.
+\end{equation*}
+\end{theorem}
+
+\begin{definition}
+We say that the sequence $F_1 , F_2, \dots $ of distribution functions converges to the distribution function $F$, written $F_n \to F$, if $F(x) = \lim_{n\to\infty} F_n(x)$ at each point $x$ where $F$ is continuous.
+\end{definition}
+
+\begin{theorem}[Continnity theorem]
+Suppose that $F_1 , F_2, \dots $ is a sequence of distribution functions 
+with corresponding characteristic functions $\phi_1 , \phi_2, \dots $.
+\begin{enumerate}[(a)]
+    \item If $F_n \to F$ for some distribution function $F$ with characteristic function $\phi$, then $\phi_n(t) \to \phi(t)$ for all $t$.
+    \item Conversely, if $\phi(t) \lim_{n\to\infty} \phi_n(t)$ exists and is continuous at $t=0$, then $\phi$ is the characteristic function of some distribution function $F$, and $F_n \to F$.
+\end{enumerate}
+\end{theorem}
+
+
+\section{Central limit theorem}
+\begin{definition}
+If $X, X_1 , X_2 , \dots$ is a sequence of random variables with respective distribution functions $F, F_1, F_2, \cdots$, we say that $X_n$ converges in distribution to $X$, written $X_{n} \stackrel{\mathrm{D}}{\rightarrow} X$, if $F_n \to F$ as $n \to\infty$.
+\end{definition}
+
+\begin{theorem}[Central limit theorem]
+Let $X_1 , X_2, \dots$ be a sequence of independent identically distributed random variables with finite mean $\mu$ and finite nonzero variance $\sigma^2$, and let $S_n = X_1 + X_2 + \cdots + X_n$. Then
+\begin{equation*}
+    \frac{S_{n}-n \mu}{\sqrt{n \sigma^{2}}} \stackrel{\mathrm{D}}{\rightarrow} N(0,1) \quad \text { as } \quad n \rightarrow \infty.
+\end{equation*}
+\end{theorem}
+
+\begin{proof}
+First, write $Y_i = \frac{X_i - \mu}{\sigma}$, and let $\phi_Y$ be the characteristic function of the $Y_i$. We have that 
+\begin{equation*}
+    \phi_{Y}(t)=1-\frac{1}{2} t^{2}+o\left(t^{2}\right).
+\end{equation*}
+Note that $Y_i$ are i.i.d. So the characteristic function of $\sum_{i=1}^n Y_i$ is
+\begin{equation*}
+    \phi_n = [\phi_{Y}(t)]^n = \left[ 1-\frac{1}{2} t^{2}+o\left(t^{2}\right) \right]^n.
+\end{equation*}
+Also, the characteristic function $\psi_n$ of
+\begin{equation*}
+    U_{n}=\frac{S_{n}-n \mu}{\sqrt{n \sigma^{2}}}=\frac{1}{\sqrt{n}} \sum_{i=1}^{n} Y_{i}
+\end{equation*}
+satisfies
+\begin{equation*}
+    \psi_{n}(t)=\left\{\phi_{Y}(t / \sqrt{n})\right\}^{n}=\left\{1-\frac{t^{2}}{2 n}+o\left(\frac{t^{2}}{n}\right)\right\}^{n} \rightarrow e^{-\frac{1}{2} t^{2}} \quad \text { as } \quad  n \rightarrow \infty,
+\end{equation*}
+where we used 
+\begin{equation*}
+    \lim_{n\to\infty} \left( 1 + \frac{a}{n} \right)^n = e^a.
+\end{equation*}
+The last function is the characteristic function of the $\mathcal{N}(0, 1)$ distribution, and an application of the continuity theorem completes the proof.
+\end{proof}
+
+\begin{corollary}
+$Q_n = \frac{1}{n}S_n \to \mathcal{N} \left(\mu, \frac{\sigma^2}{n} \right)$, $S_n \to \mathcal{N}(\mu, n \sigma^2)$. The sampling error is proportional to $\frac{1}{\sqrt{n}}$.
+\end{corollary}
+There is a generalization. If $X_i$ is not i.i.d., we can still use the central limit theorem.
+
+\end{document}

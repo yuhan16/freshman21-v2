@@ -1,0 +1,87 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[shortlabels]{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{blkarray}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+
+% setting page format
+\topmargin -.5in
+\textheight 9in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\textwidth 7in
+\setlength{\parindent}{0 in}
+\setlength{\parskip}{0.1 in}
+
+% setting new environments
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{corollary}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{question}{Question}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\newenvironment{solution}[1][Solution]{\textbf{#1:} \par}{\ $\blacksquare$}
+
+\newenvironment{newnotion}[1]{\textbf{#1.}}
+
+\newenvironment{caution}{$\bigstar\bigstar\bigstar$\textbf{Caution.}}
+
+%\newenvironment{proof}[1][Proof]{\textbf{#1:} \par}{\ \rule{0.5em}{0.5em}}
+%\newenvironment{problem}[1]{\textbf{#1:} }
+
+% define new commands
+\renewcommand{\hat}{\widehat}
+\renewcommand{\tilde}{\widetilde}
+
+\newcommand{\numpy}{{\tt numpy}}    % tt font for numpy
+\newcommand{\dom}[1]{\mathbf dom #1}
+\newcommand{\tr}{\mathbf{tr}}
+\newcommand{\sgn}{\text{sgn}}
+\newcommand{\spacevert}{\;\vert\;}
+\newcommand{\ie}{i.e.}
+\newcommand{\eg}{e.g.}
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\E}{\mathbb{{E}}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\mS}{\mathbb{S}}
+
+% for probability
+\newcommand{\Exp}{\mathbf{E}}
+\newcommand{\Var}{\mathbf{Var}}
+\newcommand{\Prob}{\mathbf{P}}
+\newcommand{\card}{\mathbf{card}}
+\newcommand{\cov}{\mathbf{cov}}
+\newcommand{\corr}{\mathbf{corr}}
+\newcommand{\1}{\mathbf{1}}
+
+
+% for optimizations
+\newcommand{\subto}{\text{s.t.}}
+
+% for norms
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\abs}[1]{\left\vert #1 \right\vert}

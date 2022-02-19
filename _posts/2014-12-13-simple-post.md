@@ -146,7 +146,7 @@ here is a <q> q tag </q>
 <p>This is a theorem equation:</p>
 \[ f(x)= e^{i \pi}\]
 <ol>
-  <li>g(x) \in \mathbb{R}^6 \times \mathbb{R} \to \mathbb{R}</li>
+  <li>$g(x) \in \mathbb{R}^6 \times \mathbb{R} \to \mathbb{R}$</li>
   <li>utieurei</li>
 </ol>
 </div>
