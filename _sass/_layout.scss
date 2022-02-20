@@ -158,11 +158,12 @@
 */
 .topic-archive-header {
   border-bottom: 1px solid $grey-color-light;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   h3{
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     color: $text-color;
+    line-height: 1;
   }
 }
 
@@ -243,14 +244,14 @@
   }
 }
 
-.post-title {
-  font-size: 32px;
-  //letter-spacing: -1px;
+/* 
+post-title class controls the post title font style in all pages.
+It does not affect the titles in the post contents.
+*/
+.post-title { 
+  font-size: 28px;
+//  letter-spacing: -1px;
   line-height: 1;
-/*
-  @include media-query($on-laptop) {
-    font-size: 36px;
-  }*/
 }
 
 
@@ -282,19 +283,19 @@
   p { padding:$spacing-unit/5 0; } 
   //margin-bottom: $spacing-unit;
   h1 { 
-    font-size: 38px;
+    font-size: 28px;
     line-height:1em;
     @include media-query($on-laptop){
-      font-size: 36px;
+      font-size: 26px;
     }
 
   }
   h2 {
-    font-size: 26px;
+    font-size: 24px;
     line-height:1em;
     padding: 10px 0 2px 0;
     @include media-query($on-laptop) {
-      font-size: 24px;
+      font-size: 22px;
     }
   }
 
@@ -309,11 +310,11 @@
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 16px;
     line-height:1em;
 
     @include media-query($on-laptop) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 }

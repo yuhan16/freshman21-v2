@@ -135,7 +135,7 @@ The above three directories are related to web page templates and display style.
 
 > A templating language basically is a language which allows defining placeholders that should later on be replaced for the purpose of implementing designs. Obviously modern template languages not only support placeholders, but also loops and conditions which are often necessary for designing a web page.
 >
-> *From [Stack Overflow: What is a templating language?](https://stackoverflow.com/questions/4026597/what-is-a-templating-language)*
+> *&#8212;From [Stack Overflow: What is a templating language?](https://stackoverflow.com/questions/4026597/what-is-a-templating-language)*
 
 Jekyll uses the [Liquid](https://shopify.github.io/liquid/) templating language to process templates. We can think the templating language as a "scripting language" in HTML files. It defines how Jekyll process the HTML files and generate the final version. 
 
