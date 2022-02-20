@@ -2,11 +2,11 @@
 layout: post
 title: Theme structure
 modified: 2014-12-19
-categories: [articles, Howto]
+categories: Miscellaneous
 tags: 
   - structure
 comments: true
-excerpt_separator: <!--more-->
+excerpt: "This post introduces the structure of freshman21 theme. It also introduces how to use pygments to highlight the code."
 ---
 
 
@@ -16,7 +16,6 @@ You can see the simplest way of adding a page is just to add an HTML ( or markdo
 
 All sidebar boxes html files are in the <code>_include</code> directory, their name begin with upper case. You can chose which sidebar boxes appears in the main page on the <q>sidebar.html</q> in the <code>_includes</code> directory. 
 
-<!--more-->
 
 ```bash
 .

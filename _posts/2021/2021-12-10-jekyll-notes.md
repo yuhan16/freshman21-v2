@@ -67,6 +67,20 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 [jekyll-gh]:   https://github.com/jekyll/jekyll
 [jekyll-talk]: https://talk.jekyllrb.com/
 
+### For excerpt
+We have two ways to display partial posts in the blog pages:
+- use `excerpt` in the front matter
+- use `excerpt_separator` in the front matter
+
+For example, 
+```yaml
+excerpt: "These pre-written contents will be displayed in the blog page instead of any content in the post."
+# or
+excerpt_separator: <!--more-->
+```
+
+The second methods displays the post content before `<!--more-->`.
+
 
 ### For testing
 <i class="fa fa-car" style="font-size:48px;"></i>
