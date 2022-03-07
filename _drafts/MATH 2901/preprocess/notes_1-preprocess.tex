@@ -11,211 +11,211 @@
 
 % ========== Contents begin here ==============
 ## Event as sets
-Probability studies the \emph{repeatable (or ideal) experiments}. The result of an experiment is called an \emph{outcome}.
+Probability studies the *repeatable (or ideal) experiments*. The result of an experiment is called an *outcome*.
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The set of all possible outcomes of an experiment is called the **sample space** and is denoted by $\Omega$.  
-\end{definition}
+</p></div>
 
 ### Cardinality of sets
 The cardinality of a set $\Omega$ refers to the number of the number of elements in this set, and is denoted by $\mathbf{card}(\Omega)$ or $\left\vert \Omega \right\vert$.
-\begin{itemize}
-    \item For finite sets, $\mathbf{card}(\Omega)$ is a natural number.
-    \item For the integer set, $\mathbf{card}(\mathbb{Z}) = \aleph_0$, which is countable.
-    \item For the real number set, $\mathbf{card}(\mathbb{R}) = \aleph_1 > \aleph_0$.
-\end{itemize}
-The \emph{power set} of a set $\Omega$ is the set of all subsets, which is denoted by $2^\Omega$.
-\begin{itemize}
-    \item For $\mathbb{Z}$, $\mathbf{card}(2^\mathbb{Z}) = \aleph_1 = \mathbf{card}(\mathbb{R})$.
-\end{itemize}
+<ul>
+    <li> For finite sets, $\mathbf{card}(\Omega)$ is a natural number.
+    <li> For the integer set, $\mathbf{card}(\mathbb{Z}) = \aleph_0$, which is countable.
+    <li> For the real number set, $\mathbf{card}(\mathbb{R}) = \aleph_1 > \aleph_0$.
+</ul>
+The *power set* of a set $\Omega$ is the set of all subsets, which is denoted by $2^\Omega$.
+<ul>
+    <li> For $\mathbb{Z}$, $\mathbf{card}(2^\mathbb{Z}) = \aleph_1 = \mathbf{card}(\mathbb{R})$.
+</ul>
 
 In practical, sets in probability are: **finite, countable, reals** and **their variants**.
 
 When we conduct an experiment, we want to know whether a subset occurs or not. For example, if we take a number from $\mathbb{R}$, the probability will be 0 because $\mathbf{card}(\mathbb{R})$ is very large. Therefore,
 \begin{center}
-\emph{we are interested in $A \subset \Omega$ in probability, where $A$ is a collection of subsets in probability.}
+*we are interested in $A \subset \Omega$ in probability, where $A$ is a collection of subsets in probability.*
 \end{center}
 
 ### Events and fields
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The **events** are subsets of the sample space $\Omega$. 
-\end{definition}
+</p></div>
 
-\begin{remark}
-$\varnothing$ is called the \emph{impossible event}. The set $\Omega$ is called the \emph{certain event}. Events $A$ and $B$ are called \emph{disjoint} if their intersection is the empty set.
-\end{remark}
+<div class="remark-block"><p><b>Remark.<b> 
+$\varnothing$ is called the *impossible event*. The set $\Omega$ is called the *certain event*. Events $A$ and $B$ are called *disjoint* if their intersection is the empty set.
+</p></div>
 
 We do **NOT** need all the subsets of $\Omega$ be events. It suffices for us to think of the collection of events as a subcollection $\mathcal{F}$ of the set of all subsets of $\Omega$.
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 Any collection $\mathcal{F}$ of subsets of $\Omega$ which satisfies the following three conditions is called a field:
-\begin{enumerate}[(a)]
-    \item if $A, B \in \mathcal{F}$, then $A \cup B \in \mathcal{F}$ and $A \cap B \in \mathcal{F}$ (actually $A\cap B \in \mathcal{F}$ is redundant); 
-    \item if $A \in \mathcal{F}$, then $A^c \in \mathcal{F}$;
-    \item the empty set $\varnothing$ belongs to $\mathcal{F}$.
-\end{enumerate}
-\end{definition}
+<ol>[(a)]
+    <li> if $A, B \in \mathcal{F}$, then $A \cup B \in \mathcal{F}$ and $A \cap B \in \mathcal{F}$ (actually $A\cap B \in \mathcal{F}$ is redundant); 
+    <li> if $A \in \mathcal{F}$, then $A^c \in \mathcal{F}$;
+    <li> the empty set $\varnothing$ belongs to $\mathcal{F}$.
+</ol>
+</p></div>
 
-\begin{remark}
+<div class="remark-block"><p><b>Remark.<b> 
 Some implications from the properties of a filed $\mathcal{F}$:
-\begin{itemize}
-    \item if $A_1, \dots, A_n \in \mathcal{F}$, then $\bigcup_{i=1}^n A_i \in \mathcal{F}$;
-    \item $\varnothing^C = \Omega \in \mathcal{F}$;
-    \item $A \cap B = (A^c \cup B^c)^C \in \mathcal{F}$.
-\end{itemize}
-\end{remark}
+<ul>
+    <li> if $A_1, \dots, A_n \in \mathcal{F}$, then $\bigcup_{i=1}^n A_i \in \mathcal{F}$;
+    <li> $\varnothing^C = \Omega \in \mathcal{F}$;
+    <li> $A \cap B = (A^c \cup B^c)^C \in \mathcal{F}$.
+</ul>
+</p></div>
 
 \begin{question}
 what if we have an $\Omega$ such that $\mathbf{card}(\Omega) = \aleph_0$? In this case, we may need $2^\Omega$ to study the probability. 
 \end{question}
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 A collection $\mathcal{F}$ of subsets of $\Omega$ is called a $\sigma$-field if it satisfies the following conditions: 
-\begin{enumerate}[(a)]
-    \item $\varnothing \in \mathcal{F}$;
-    \item if $A \in \mathcal{F}$, then $A^c \in \mathcal{F}$;
-    \item if $A_1, A_2, \dots \in \mathcal{F}$, then $\bigcup_{i=1}^\infty A_i \in \mathcal{F}$.
-\end{enumerate}
-\end{definition}
+<ol>[(a)]
+    <li> $\varnothing \in \mathcal{F}$;
+    <li> if $A \in \mathcal{F}$, then $A^c \in \mathcal{F}$;
+    <li> if $A_1, A_2, \dots \in \mathcal{F}$, then $\bigcup_{i=1}^\infty A_i \in \mathcal{F}$.
+</ol>
+</p></div>
 
-\begin{remark}
+<div class="remark-block"><p><b>Remark.<b> 
 $\sigma$-fields are closed under the operation of taking countable intersections.
-\end{remark}
+</p></div>
 
-\begin{example}
+<div class="remark-block"><p><b>Example.<b> 
 The smallest $\sigma$-field associated with $\Omega$ is the collection $\mathcal{F} = \{\varnothing, \Omega \}$.
-\end{example}
+</p></div>
 
-\begin{example}
+<div class="remark-block"><p><b>Example.<b> 
 If $A \subset \Omega$, then $\mathcal{F} = \{\varnothing, A, A^c, \Omega \}$ is a $\sigma$-field. 
-\end{example}
+</p></div>
 
-\begin{example}
+<div class="remark-block"><p><b>Example.<b> 
 The power set of $\Omega$ is a $\sigma$-field.
-\end{example}
+</p></div>
 
-With any experiment we may associate a pair $\{\Omega, \mathcal{F}\}$, where $\Omega$ is the set of all possible outcomes or elementary events and $\mathcal{F}$ is a $\sigma$-field of subsets of $\Omega$ which contains \emph{all the events in whose occurrences we may be interested}; henceforth, to call a set $A$ an event is equivalent to asserting that $A$ belongs to the $\sigma$-field in question. 
+With any experiment we may associate a pair $\{\Omega, \mathcal{F}\}$, where $\Omega$ is the set of all possible outcomes or elementary events and $\mathcal{F}$ is a $\sigma$-field of subsets of $\Omega$ which contains *all the events in whose occurrences we may be interested*; henceforth, to call a set $A$ an event is equivalent to asserting that $A$ belongs to the $\sigma$-field in question. 
 
 
 ## Probability
 Assume we have a ``repeatable" experiment and we repeat the experiment a large number $N$ of times. Let $A \in \Omega$ and $N(A)$ be the number of $A$ occurs in the $N$ trails. Intuitively, the ratio $N(A)/ N$ appears to converge to a constant limit as $N$ increases. In practice, we have 
-\begin{itemize}
-    \item $0 \leq N(A)/ N \leq 1$;
-    \item if $A, B$ are disjoint, then $N(A \cup B) = N(A) + N(B)$. (finite additive and countably additive)
-\end{itemize}
+<ul>
+    <li> $0 \leq N(A)/ N \leq 1$;
+    <li> if $A, B$ are disjoint, then $N(A \cup B) = N(A) + N(B)$. (finite additive and countably additive)
+</ul>
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 A **probability measure** $\mathbf{P}$ on $\{ \Omega, \mathcal{F} \}$ is a function $\mathbf{P} : \mathcal{F} \to [0,1]$ satisfying
-\begin{enumerate}[(a)]
-    \item $\mathbf{P}(\varnothing) = 0$;
-    \item $\mathbf{P}(\Omega) = 1$;
-    \item  if $A_1, A2, \dots$ is a collection of disjoint members of $\mathcal{F}$, in that $A_i \cap A_j = \varnothing$ for all pairs $i, j$ satisfying $i \neq j$, then
-    \begin{equation*}
+<ol>[(a)]
+    <li> $\mathbf{P}(\varnothing) = 0$;
+    <li> $\mathbf{P}(\Omega) = 1$;
+    <li>  if $A_1, A2, \dots$ is a collection of disjoint members of $\mathcal{F}$, in that $A_i \cap A_j = \varnothing$ for all pairs $i, j$ satisfying $i \neq j$, then
+    $$\begin{equation}
         \mathbf{P}\left( \bigcup_{i=1}^\infty A_i \right) = \sum_{i=1}^\infty \mathbf{P} (A_i).
-    \end{equation*}
-\end{enumerate}
-\end{definition}
+    \end{equation}$$
+</ol>
+</p></div>
 The triple $\{ \Omega, \mathcal{F}, \mathbf{P} \}$, comprising a set $\Omega$, a $\sigma$-field $\mathcal{F}$ of subsets of $\Omega$, and a probability measure $\mathbf{P}$ on $\{\Omega, \mathcal{F}\}$, is called a **probability space**. We can associate a probability space $\{ \Omega, \mathcal{F}, \mathbf{P} \}$ with any experiment, and all questions associated with the experiment can be reformulated in terms of this space. 
 
-\begin{remark}
-A probability measure is a special example of what is called a \emph{measure} on the pair $\{\Omega, \mathcal{F}\}$. A measure is a function $\mu: \mathcal{F} \to [0, \infty)$ satisfying $\mu(\varnothing) = 0$ together with (c) above. A measure $\mu$ is a probability measure if $\mu(\Omega) = 1$. 
-\end{remark}
+<div class="remark-block"><p><b>Remark.<b> 
+A probability measure is a special example of what is called a *measure* on the pair $\{\Omega, \mathcal{F}\}$. A measure is a function $\mu: \mathcal{F} \to [0, \infty)$ satisfying $\mu(\varnothing) = 0$ together with (c) above. A measure $\mu$ is a probability measure if $\mu(\Omega) = 1$. 
+</p></div>
 
-\begin{lemma}
+<div class="theorem-block"><p><b>Lemma.<b> 
 We can deduce some lemmas from the definition.
-\begin{enumerate}[(a)]
-    \item $\mathbf{P}(A^c) = 1 - \mathbf{P}(A)$;
-    \item if $A \subseteq B$, then $\mathbf{P}(B) = \mathbf{P}(A) + \mathbf{P}(B\backslash A) \geq \mathbf{P}(A)$;
-    \item $\mathbf{P}(A \cup B) = \mathbf{P}(A) + \mathbf{P}(B) - \mathbf{P}(A \cap B)$;
-    \item more generally, if $A_1, A_2, \dots, A_n$ are events, then 
-    \begin{equation*}
+<ol>[(a)]
+    <li> $\mathbf{P}(A^c) = 1 - \mathbf{P}(A)$;
+    <li> if $A \subseteq B$, then $\mathbf{P}(B) = \mathbf{P}(A) + \mathbf{P}(B\backslash A) \geq \mathbf{P}(A)$;
+    <li> $\mathbf{P}(A \cup B) = \mathbf{P}(A) + \mathbf{P}(B) - \mathbf{P}(A \cap B)$;
+    <li> more generally, if $A_1, A_2, \dots, A_n$ are events, then 
+    $$\begin{equation}
         \begin{split}
         \mathbf{P}\left( \bigcup_{i=1}^n A_i \right) =& \sum_{i}\mathbf{P}(A_i) - \sum_{i < j} \mathbf{P}(A_i \cap A_j) + \sum_{i<j<k} \mathbf{P}(A_i \cap A_j \cap A_k) - \cdots \\
         & +(-1)^{n+1} \mathbf{P}(A_1 \cap A_2 \cap \cdots \cap A_n)
         \end{split}
-    \end{equation*}
-\end{enumerate}
-\end{lemma}
+    \end{equation}$$
+</ol>
+</p></div>
 
-\begin{lemma}
+<div class="theorem-block"><p><b>Lemma.<b> 
 Let $A_1, A_2, \dots$ be an increasing sequence of events, so that $A_1 \subset A_2 \subset A_3 \subset \cdots$, and write $A$ for their limit:
-\begin{equation*}
+$$\begin{equation}
     A = \bigcup_{i=1}^\infty A_i = \lim_{i \to \infty} A_i.
-\end{equation*}
+\end{equation}$$
 Then $\mathbf{P}(A) = \lim_{i\to\infty} \mathbf{P}(A_i)$. 
 
 Similarly, if $B_1, B_2, \dots$ is a decreasing sequence of events, so that $B_1 \supseteq  B_2 \supseteq B_3 \supseteq \cdots$, then 
-\begin{equation*}
+$$\begin{equation}
     B = \bigcap_{i=1}^\infty B_i = \lim_{i \to \infty} B_i
-\end{equation*}
+\end{equation}$$
 satisfies $\mathbf{P}(B) = \lim_{i\to\infty} \mathbf{P}(B_i)$
-\end{lemma}
+</p></div>
 
 
 ## Some useful concepts
 ### Conditional probability
 What if we only care how many times does $A$ occur only when $B$ occurs? $N(A\cap B) / N(B)$, the universe is changed. 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 If $\mathbf{P}(B) > 0$, then the **conditional probability** that $A$ occurs given that $B$ occurs is defined to be
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P}(A \;\vert\; B) = \frac{\mathbf{P}(A \cap B)}{\mathbf{P}(B)}.
-\end{equation*}
-\end{definition}
+\end{equation}$$
+</p></div>
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 Suppose $\{B_i\}$ is a finite set. If $B_i$ are all disjoint and $\bigcup_{i=1}^n B_i = \Omega$, then $\{B_i\}$ is called a **partition** of $\Omega$.
-\end{definition}
+</p></div>
 
-\begin{lemma}
+<div class="theorem-block"><p><b>Lemma.<b> 
 For any events $A$ and $B$ such that $0 < \mathbf{P}(B) < 1$,
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P}(A) = \mathbf{P}(A \;\vert\; B) \mathbf{P}(B) + \mathbf{P}(A \;\vert\; B^c) \mathbf{P}(B^c).
-\end{equation*}
+\end{equation}$$
 More generally, let $B_1,  B_2, \dots, B_n$ be a partition of $\Omega$ such that $\mathbf{P}(B_i) > O$ for all $i$. Then 
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P}(A) = \sum_i \mathbf{P}(A \;\vert\; B_i) \mathbf{P}(B_i).
-\end{equation*}
-\end{lemma}
+\end{equation}$$
+</p></div>
 
 ### Independence
 Intuition: an event $A$ occurs doesn't affect the probability of $A$ occurs when $B$ occurs, which means $\mathbf{P}(A) = \mathbf{P}(A\;\vert\; B)$.
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 Events $A$ and $B$ are called **independent** if 
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P}(A \cap B) = \mathbf{P}(A) \mathbf{P}(B).
-\end{equation*}
+\end{equation}$$
 More generally, a family $\{A_i \;\vert\; i \in I\}$ is called independent if
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P} \left( \bigcap_{i \in J} A_i \right) = \prod_{i\in J} \mathbf{P}(A_i)
-\end{equation*}
+\end{equation}$$
 for all finite subsets $J$ of $I$. 
-\end{definition}
+</p></div>
 
 \begin{caution}
-A common \emph{student error} is to make the fallacious statement that $A$ and $B$ are independent if $A \cap B = \varnothing$.
+A common *student error* is to make the fallacious statement that $A$ and $B$ are independent if $A \cap B = \varnothing$.
 \end{caution}
 
-\begin{remark}
+<div class="remark-block"><p><b>Remark.<b> 
 If the family $\{A_i \;\vert\; i \in I\}$ has the property that 
 for all 
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P}(A_i \cap A_j) = \mathbf{P}(A_i) \mathbf{P}(A_j) \quad \forall i\neq j, 
-\end{equation*}
-then it is called \emph{pairwise independent}. **Pairwise-independent families are not necessarily independent.** 
-\end{remark}
+\end{equation}$$
+then it is called *pairwise independent*. **Pairwise-independent families are not necessarily independent.** 
+</p></div>
 
 ## Completeness and product space
-\begin{lemma}
+<div class="theorem-block"><p><b>Lemma.<b> 
 If $\mathcal{F}$ and $\mathcal{G}$ are two $\sigma$-fields of subsets of $\Omega$, then their intersection $\mathcal{F} \cap \mathcal{G}$ is a $\sigma$-field also. More generally, if $\{ \mathcal{F}_i \;\vert\;  i \in I \}$ is a family of $\sigma$-fields of subsets of $\Omega$, then $\mathcal{G} = \bigcap_{i\in I} \mathcal{F}_i $ is a $\sigma$-field also. 
-\end{lemma}
+</p></div>
 
 \begin{newnotion}{Completeness}
-Let $\{\Omega, \mathcal{F}, \mathbf{P}\}$ be a probability space. Any event $A$ which has zero probability, that is $\mathbf{P}(A) = 0$, is called \emph{null}. It may seem reasonable to suppose that any subset $B$ of a null set $A$ will itself be null, but this may be without meaning since $B$ may not be an event, and thus $\mathbf{P}(B)$ may not be defined. 
+Let $\{\Omega, \mathcal{F}, \mathbf{P}\}$ be a probability space. Any event $A$ which has zero probability, that is $\mathbf{P}(A) = 0$, is called *null*. It may seem reasonable to suppose that any subset $B$ of a null set $A$ will itself be null, but this may be without meaning since $B$ may not be an event, and thus $\mathbf{P}(B)$ may not be defined. 
 \end{newnotion}
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 A probability space $\{\Omega, \mathcal{F}, \mathbf{P}\}$ is called **complete** if all subsets of null sets are events. 
-\end{definition}
+</p></div>
 
 Any incomplete space can be completed thus. Let $\mathcal{N}$ be the collection of all subsets of null sets in $\mathcal{F}$ and let $\mathcal{G} = \sigma (\mathcal{F} \cup \mathcal{N})$ be the smallest $\sigma$-field which contains all sets in $\mathcal{F}$ 
 and $\mathcal{N}$. It can be shown that the domain of $\mathbf{P}$ may be extended in an obvious way from $\mathcal{F}$ to $\mathcal{G}$; $\{\Omega, \mathcal{G}, \mathbf{P}\}$ is called the completion of $\{\Omega, \mathcal{F}, \mathbf{P}\}$. 
@@ -224,17 +224,17 @@ and $\mathcal{N}$. It can be shown that the domain of $\mathbf{P}$ may be extend
 Suppose two experiments have associated probability spaces $\{ \Omega_1, \mathcal{F}_1, \mathbf{P}_1 \}$ and  $\{ \Omega_2, \mathcal{F}_2, \mathbf{P}_2 \}$ respectively. The sample space of the pair of experiments, considered jointly, is the collection $\Omega_1 \times \Omega_2 = \{ (\omega_1 , \omega_2) \;\vert\; w_1 \in \Omega_1, \omega_2 \in \Omega_2 \}$ of ordered pairs. The appropriate $\sigma$-field of events is **more complicated** to construct. **The family of all such sets, $\mathcal{F}_1 \times \mathcal{F}_2 = \{A_1 \times A_2 \;\vert\; A_1 \in \mathcal{F}_1 , A_1 \in \mathcal{F}_2 \}$, is NOT in general a $\sigma$-field.**
 \end{newnotion}
 
-\begin{remark}
+<div class="remark-block"><p><b>Remark.<b> 
 There exists a unique smallest $\sigma$-field $\mathcal{G} = \sigma(\mathcal{F}_1 \times \mathcal{F}_2)$ of subsets of $\Omega_1 \times \Omega_2$ which contains $\mathcal{F}_1 \times \mathcal{F}_2$. All we require now is a suitable probability function on $( \Omega1 \times \Omega_2, \mathcal{G} )$. Let $\mathbf{P}_{12}: \mathcal{F}_1 \times \mathcal{F}_2 \to [0, 1]$ be given by: 
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P}(A_1 \times A_2) = \mathbf{P}_1(A_1) \times \mathbf{P}_2(A_2) \quad \text{for $A_1 \in \mathcal{F}_1, A_2 \in \mathcal{F}_2$}.
-\end{equation*}
+\end{equation}$$
 It can be shown that the domain of $\mathbf{P}_{12}$ can be extended from $\mathcal{F}_1 \times \mathcal{F}_2$ to the whole of $\mathcal{G} = \sigma(\mathcal{F}_1 \times \mathcal{F}_2)$.
-\end{remark}
+</p></div>
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The probability space $(\mathcal{F}_1 \times \mathcal{F}_2, \mathcal{G}, \mathbf{P}_{12})$ is called the **product space** of $(\Omega_1, \mathcal{F}_1, \mathbf{P}_1)$ and  $(\Omega_2, \mathcal{F}_2, \mathbf{P}_2)$. The measure $\mathbf{P}_{12}$ is sometimes called the `product measure'. 
-\end{definition}
+</p></div>
 
 
 \end{document}

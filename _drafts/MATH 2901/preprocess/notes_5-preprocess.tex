@@ -14,152 +14,152 @@
 Note that in section, we are dealing with random variables with **independent, identical distribution**, also written as **i.i.d.** The law of large numbers aims to study the convergence of the average sum of large **i.i.d.** random variables.
 
 We first prove the following important lemma.
-\begin{lemma}[Chebyshev Inequality]
+<div class="theorem-block"><p><b>Lemma.<b> [Chebyshev Inequality]
 Let $X$ be a random variable with $\mathbf{E}(X) < \infty$ and $\mathbf{Var}(X) < \infty$, then for any $\epsilon > 0$, we have
-\begin{equation}
+$$$$\begin{equation}
     \label{eq:5.1}
     \tag{5-1}
     \mathbf{P}\left( \left\vert X-\mathbf{E}(X) \right\vert \geq \epsilon \right) \leq \frac{\mathbf{Var}(X)}{\epsilon^2}.
-\end{equation}
+\end{equation}$$$$
 In other words, we have
-\begin{equation}
+$$$$\begin{equation}
     \label{eq:5.2}
     \tag{5-2}
     \mathbf{P}(\left\vert X-\mathbf{E}(X) \right\vert < \epsilon) \geq 1-\frac{\mathbf{Var}(X)}{\epsilon^2}.
-\end{equation}
-\end{lemma}
+\end{equation}$$$$
+</p></div>
 
 \begin{proof}
 We assume $X$ is a discrete random variable. It can be easily extend to the case where $X$ is continuous. We denote $\mathbf{E}(X) = \mu$ and $f(x)$ as the p.m.f. of $X$.
 
 We first expand the LHS of \eqref{eq:5.1} and obtain
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P}(\left\vert X-\mu \right\vert \geq \epsilon)  = \sum_{\left\vert x-\mu \right\vert\geq \epsilon} f(x).
-\end{equation*}
+\end{equation}$$
 On the other hand, we have
-\begin{equation*}
+$$\begin{equation}
     \begin{split}
         \mathbf{Var}(X) &= \sum_{x} (x-\mu)^2 f(x) \\
         &\geq \sum_{\left\vert x-\mu \right\vert \geq \epsilon} (x-\mu)^2 f(x) \\
         &\geq \sum_{\left\vert x-\mu \right\vert \geq \epsilon} \epsilon^2 f(x) \\
         &= \epsilon^2 \sum_{\left\vert x-\mu \right\vert \geq \epsilon} f(x) \\ &= \epsilon^2 \mathbf{P}(\left\vert X-\mu \right\vert \geq \epsilon).
     \end{split}
-\end{equation*}
+\end{equation}$$
 Therefore, we have 
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P}(\left\vert X-\mu \right\vert \geq \epsilon) \leq \frac{\mathbf{Var}(X)}{\epsilon^2}.
-\end{equation*}
+\end{equation}$$
 \end{proof}
 
 Chebyshev’s Inequality is the best possible inequality in the sense that, for any $\epsilon > 0$, it is possible to give an example of a random variable for which Chebyshev’s Inequality is in fact an equality. 
-\begin{example}
+<div class="remark-block"><p><b>Example.<b> 
 Suppose we have a random variable $X$ such that for any $\epsilon > 0$, $f(-\epsilon) = f(\epsilon) = \frac{1}{2}$. Clearly, $\mathbf{E}(X) = 0 < \infty$ and $\mathbf{Var}(X) = \mathbf{E}(X^2) = \epsilon^2 < \infty$. Therefore,
-\begin{equation*}
+$$\begin{equation}
     \frac{\mathbf{Var}(X)}{\epsilon^2} = 1.
-\end{equation*}
+\end{equation}$$
 Also note that $\mathbf{P}(\left\vert X-\mu \right\vert \geq \epsilon) = 1$. The equality sign of Chebyshev inequality holds. We cannot get better result.
-\end{example}
+</p></div>
 
-\begin{theorem}[Law of large numbers]
+<div class="theorem-block"><p><b>Theorem.<b> [Law of large numbers]
 Consider a sequence of i.i.d. random variables $X_i$ with finite mean and variance. Denote $\mathbf{E}(X) = \mu$ and $\mathbf{Var}(X) = \sigma^2$. Define 
-\begin{equation*}
+$$\begin{equation}
     Q_n = \frac{1}{n}\left( X_1 + X_2 + \cdots + X_n \right),
-\end{equation*}
+\end{equation}$$
 then for any $\epsilon > 0$, 
-\begin{equation*}
+$$\begin{equation}
     \lim_{n\to\infty} \mathbf{P}(\left\vert Q_n - \mu \right\vert \geq \epsilon ) = 0,
-\end{equation*}
+\end{equation}$$
 or 
-\begin{equation*}
+$$\begin{equation}
     \lim_{n\to\infty} \mathbf{P}(\left\vert Q_n - \mu \right\vert < \epsilon) = 1.
-\end{equation*}
+\end{equation}$$
 This means $Q_n$ converges to $\mu$ in probability.
-\end{theorem}
+</p></div>
 
 \begin{proof}
 We notice that 
-\begin{equation*}
+$$\begin{equation}
     \mathbf{E}(Q_n) = \sum_{i=1}^n \mathbf{E}\left( \frac{1}{n} X_i \right) = \frac{1}{n} \sum_{i=1}^n \mathbf{E}(X_i) = \frac{1}{n} n\mu = \mu,
-\end{equation*}
+\end{equation}$$
 which shows that the expectation of $Q_n$ is the same as the expectation of $X_i$. We also have
-\begin{equation*}
+$$\begin{equation}
     \mathbf{Var}(Q_n) = \mathbf{Var} \left( \frac{1}{n} \left(X_1 + \cdots + X_n \right) \right) = \frac{1}{n^2} \sum_{i=1}^n \mathbf{Var}(X_i) = \frac{\sigma^2}{n}.
-\end{equation*}
+\end{equation}$$
 Using Chebyshev inequality, for any $\epsilon > 0$, we have
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P}(\left\vert Q_n-\mu \right\vert\geq \epsilon) \leq \frac{\mathbf{Var}(Q_n)}{\epsilon^2} = \frac{\sigma^2}{n\epsilon^2}.
-\end{equation*}
+\end{equation}$$
 Therfore,
-\begin{equation*}
+$$\begin{equation}
     \lim_{n\to\infty} \mathbf{P}(\left\vert Q_n-\mu \right\vert\geq \epsilon) \leq \lim_{n\to\infty} \frac{\sigma^2}{n\epsilon^2} = 0.
-\end{equation*}
+\end{equation}$$
 Since the probability is nonnegative, we must have
-\begin{equation*}
+$$\begin{equation}
     \lim_{n\to\infty} \mathbf{P}(\left\vert Q_n-\mu \right\vert\geq \epsilon) = 0.
-\end{equation*}
+\end{equation}$$
 This finishes the proof.
 \end{proof}
 
 This result is significant from the view of frequentist statistics. Recall the probability of an event $A$ is motivated by $\mathbf{P}(A) \approx N(A) / N$ where $N(A)$ and $N$ the number of occurrence of $A$ and the number of total experiments respectively. Now we can let $X_i = \mathbf{1}_A$, which is the indicator of the event $A$. Since each experiment is independent, we are actually perform a series Bernoulli trails and $X_i$ is the simple Bernoulli variable. Then we can write $N(A) = X_1 + \cdots + X_n$. Now 
-\begin{equation*}
+$$\begin{equation}
     \frac{N(A)}{N} = \frac{1}{n} \left( X_1 + \cdots + X_n \right) = Q_n.
-\end{equation*}
+\end{equation}$$
 Note that $E(X) = \mathbf{P}(A)$ and $\mathbf{Var}(X) = \mathbf{P}(A) - \mathbf{P}(A)^2$. Therefore, 
-\begin{equation*}
+$$\begin{equation}
     \frac{N(A)}{N} \to \mathbf{P}(A) \quad \text{ as } n\to\infty.
-\end{equation*}
+\end{equation}$$
 
 \begin{caution}
 For the law of large numbers to work, $\mathbf{Var}(X)$ must be finite. Otherwise, the law may fail as the following example shows.
 \end{caution}
 
-\begin{example}[Cauchy distribution]
+<div class="remark-block"><p><b>Example.<b> [Cauchy distribution]
 The Cauchy distribution is given by
-\begin{equation*}
+$$\begin{equation}
     f(x) = \frac{1}{\pi (1+x^2)},
-\end{equation*}
+\end{equation}$$
 where $\pi$ is the normalization parameter. Let $X$ be the random variable which has the Cauchy distribution. Note that although the Cauchy distribution is very like the normal distribution, $X$ doesn't have the variance. This is because the Cauchy distribution has a long tail as $\left\vert x \right\vert\to\infty$ and it converges slowly. But $X$ has a mean which is $\mu = 0$. So the question is: does $Q_n$ converges to $\mu$? The answer is negative. This example shows that if the variance is not finite, the law of large numbers fails.
-\end{example}
+</p></div>
 
-%\begin{remark}
+%<div class="remark-block"><p><b>Remark.<b> 
 %It is interesting to note that if $X$ and $Y$ are bernoulli, then $X/Y$ is Cauchy.
-%\end{remark}
+%</p></div>
 
 
 ## Conditional distributions and conditional expectation
 (This section is the supplement of the lecture.)
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The **conditional distribution function** of $Y$ given $X = x$ is the function $F_{Y\vert X} (\cdot \vert x)$ given by
-\begin{equation*}
+$$\begin{equation}
     F_{Y | X}(y | x)=\int_{-\infty}^{y} \frac{f(x, v)}{f_{X}(x)} d v
-\end{equation*}
+\end{equation}$$
 for any $x$ such that $f_X(x) > 0$. It is sometimes denoted $\mathbf{P} (Y \leq y \vert X = x)$. 
-\end{definition}
+</p></div>
 
 Remembering that distribution functions are integrals of density functions, we are led to the following definition. 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The conditional density function of $F_{Y\vert X}$, written $f_{Y\vert X}$, is given by
-\begin{equation*}
+$$\begin{equation}
     f_{Y | X}(y | x)=\frac{f(x, y)}{f_{X}(x)} = \frac{f(x, y)}{\int_{-\infty}^{\infty} f(x, y) d y}
-\end{equation*}
+\end{equation}$$
 for any $x$ such that $f_X(x) > 0$. 
-\end{definition}
+</p></div>
 
-\begin{theorem}
+<div class="theorem-block"><p><b>Theorem.<b> 
 The **conditional expectation** $\psi(X) = \mathbf{E}(Y \vert X)$ satisfies 
-\begin{equation*}
+$$\begin{equation}
     \mathbf{E}(\psi(X)) = \mathbf{E}(Y).
-\end{equation*}
-\end{theorem}
+\end{equation}$$
+</p></div>
 
-\begin{theorem}
+<div class="theorem-block"><p><b>Theorem.<b> 
 The **conditional expectation** $\psi(X) = \mathbf{E}(Y \vert X)$ satisfies 
-\begin{equation*}
+$$\begin{equation}
     \mathbf{E}\left( \psi(X) g(X) \right) = \mathbf{E}(Y g(X))
-\end{equation*}
+\end{equation}$$
 for any function $g$ for which both expectations exist.
-\end{theorem}
+</p></div>
 
 
 
@@ -168,148 +168,148 @@ for any function $g$ for which both expectations exist.
 
 Let $X$ be a random variable with density function $f$, and let $g : \mathbb{R} \to \mathbb{R}$ be a sufficiently nice 
 function. Then $y = g(X)$ is a random variable also. In order to calculate the distribution of $Y$, we proceed thus
-\begin{equation*}
+$$\begin{equation}
     \begin{aligned} 
         \mathbf{P}(Y \leq y) &= \mathbf{P}\left(g(X) \leq y\right) = \mathbf{P}\left((g(X) \in(-\infty, y] \right) \\
         &=\mathbf{P}\left(X \in g^{-1}(-\infty, y]\right)=\int_{g^{-1}(-\infty, y]} f(x) d x\end{aligned}.
-\end{equation*}
+\end{equation}$$
 The $g^{-1}$ is defined as follows. If $A \subseteq \mathbb{R}$ then $g^{-1} A=\{x \in \mathbb{R}: g(x) \in A\}$.
 
-\begin{example}
+<div class="remark-block"><p><b>Example.<b> 
 Let $g(x) = ax + b$ for fixed $a, b \in \mathbb{R}$. Then $Y = g (X) = aX + b$ has distribution function 
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P}(Y \leq y) = \mathbf{P}(a X+b \leq y) = \left\{\begin{array}{ll}
     {\mathbf{P}(X \leq(y-b) / a)} & {\text { if } a>0} \\
     {\mathbf{P}(X \geq(y-b) / a)} & {\text { if } a<0}\end{array}\right.
-\end{equation*}
+\end{equation}$$
 Differentiate to obtain $f_{Y}(y)=|a|^{-1} f_{X}((y-b) / a)$.
-\end{example}
+</p></div>
 
 More generally, if $X_1$ and $X_2$ have joint density function $f$, and $g, h$ are two functions mapping $\mathbb{R}^2 \to \mathbb{R}$, then we can use the Jacobian to find the density the joint density function of the pair $Y_1 = g(X_1 , X_2)$, $Y_2 = h(X_1 , X_2)$. 
 
 Let $y_1 = y_1 (x_1 , x_2)$, $y_2 = y_2(x_1 , x_2)$ 
 be a one-one mapping $T : (x_1 , x_2) \mapsto (y_1 , y_2)$ taking some domain $D \subseteq \mathbb{R}^2$ onto some 
 range $R \subseteq \mathbb{R}^2$. The transformation can be inverted as $x_1 = x_1(y_1 , y_2)$, $x_2 = x_2(y_1 , y_2)$; the Jacobian of this inverse is defined to be the determinant 
-\begin{equation*}
+$$\begin{equation}
     J=\left|\begin{array}{ll}{\frac{\partial x_{1}}{\partial y_{1}}} & {\frac{\partial x_{2}}{\partial y_{1}}} \\ {\frac{\partial x_{1}}{\partial y_{2}}} & {\frac{\partial x_{2}}{\partial y_{2}}}\end{array}\right|=\frac{\partial x_{1}}{\partial y_{1}} \frac{\partial x_{2}}{\partial y_{2}}-\frac{\partial x_{1}}{\partial y_{2}} \frac{\partial x_{2}}{\partial y_{1}}
-\end{equation*}
+\end{equation}$$
 which express as a function $J = J(y_1, y_2)$. We assume the **partial derivatives are continuous**.
 
-\begin{theorem}
+<div class="theorem-block"><p><b>Theorem.<b> 
 If $g : \mathbb{R}^2 \to \mathbb{R}$, and $T$ maps the set $A \subseteq D$ onto the set $B \subseteq R$, then 
-\begin{equation*}
+$$\begin{equation}
     \iint_{A} g\left(x_{1}, x_{2}\right) d x_{1} d x_{2}=\iint_{B} g\left(x_{1}\left(y_{1}, y_{2}\right), x_{2}\left(y_{1}, y_{2}\right)\right)\left|J\left(y_{1}, y_{2}\right)\right| d y_{1} d y_{2}.
-\end{equation*}
-\end{theorem}
+\end{equation}$$
+</p></div>
 
 \begin{corollary}
 If $X_1$, $X_2$ have joint density function $f$, then the pair $Y_1,Y_2$ given by $(Y_1 , Y_2) = T (X_1, X_2)$ has joint density function 
-\begin{equation*}
+$$\begin{equation}
     f_{Y_{1}, Y_{2}}\left(y_{1}, y_{2}\right)=\left\{\begin{array}{ll}{f\left(x_{1}\left(y_{1}, y_{2}\right), x_{2}\left(y_{1}, y_{2}\right)\right)\left|J\left(y_{1}, y_{2}\right)\right|} & {\text { if }\left(y_{1}, y_{2}\right) \text { is in the range of } T} \\ {0} & {\text { otherwise. }}\end{array}\right.
-\end{equation*}
+\end{equation}$$
 \end{corollary}
 
 A similar result holds for mappings of $\mathbb{R}^n$ into $\mathbb{R}^n$. This technique is sometimes referred to as the method of **change of variables**. 
 
-\begin{example}
+<div class="remark-block"><p><b>Example.<b> 
 Suppose that 
-\begin{equation*}
+$$\begin{equation}
     X_{1}=a Y_{1}+b Y_{2}, \quad X_{2}=c Y_{1}+d Y_{2}
-\end{equation*}
+\end{equation}$$
 where $ad-bc \neq 0$. Check that 
-\begin{equation*}
+$$\begin{equation}
     f_{Y_{1}, Y_{2}}\left(y_{1}, y_{2}\right) = |a d-b c| f_{X_{1}, X_{2}}\left(a y_{1}+b y_{2}, c y_{1}+d y_{2}\right).
-\end{equation*}
-\end{example}
+\end{equation}$$
+</p></div>
 
 
 ## Multivariate normal distribution
 (This section is the supplement of the lecture.)
 ### Definition and properties
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The vector $\mathbf{X} = (X_1 , X_2 , \dots , X_n )$ has the **multivariate normal distribution** (or **multinormal distribution**), written $N(\boldsymbol{\mu}, \mathbf{V})$, if its joint density function is 
-\begin{equation*}
+$$\begin{equation}
     f(\mathbf{x})=\frac{1}{\sqrt{(2 \pi)^{n}|\mathbf{V}|}} \exp \left[-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^T \mathbf{V}^{-1}(\mathbf{x}-\boldsymbol{\mu}) \right], \quad \mathbf{x} \in \mathbb{R}^{n}
-\end{equation*}
+\end{equation}$$
 where $\mathbf{V}$ is a positive definite symmetric matrix. 
-\end{definition}
+</p></div>
 
-\begin{theorem}
+<div class="theorem-block"><p><b>Theorem.<b> 
 If $\mathbf{X}$ is $N(\boldsymbol{\mu}, \mathbf{V})$, then 
-\begin{enumerate}[(a)]
-    \item $\mathbf{E}(\mathbf{X}) = \boldsymbol{\mu}$, which is to say that $\mathbf{E}(X_i) = \mu_i$ for all $i$,
-    \item $\mathbf{V} = (v_{ij})$ is called the covariance matrix, because $v_{ij} = \mathbf{cov}(X_i , X_j)$. 
-\end{enumerate}
-\end{theorem}
+<ol>[(a)]
+    <li> $\mathbf{E}(\mathbf{X}) = \boldsymbol{\mu}$, which is to say that $\mathbf{E}(X_i) = \mu_i$ for all $i$,
+    <li> $\mathbf{V} = (v_{ij})$ is called the covariance matrix, because $v_{ij} = \mathbf{cov}(X_i , X_j)$. 
+</ol>
+</p></div>
 
-\begin{theorem}
+<div class="theorem-block"><p><b>Theorem.<b> 
 If $\mathbf{X}=\left(X_{1}, X_{2}, \dots, X_{n}\right)$ is $N(\boldsymbol{\mu}, \mathbf{V})$ and $\mathbf{Y}=\left(Y_{1}, Y_{2}, \dots, Y_{m}\right)$ is given by $\mathbf{Y} = \mathbf{XD}$ for some matrix $\mathbf{D}$ of rank $m \leq n$, then $\mathbf{Y}$ is $N\left(\mathbf{0}, \mathbf{D}^T \mathbf{V} \mathbf{D}\right)$.
-\end{theorem}
+</p></div>
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The vector $\mathbf{X}=\left(X_{1}, X_{2}, \dots, X_{n}\right)$ of random variables is said to have the 
 **multivariate normal distribution** whenever, for all $\mathbf{a} \in \mathbb{R}^n$, the linear combination $\mathbf{Xa}^T = a_1 X_1 + \dots + a_n X_n$ has a normal distribution.
-\end{definition}
+</p></div>
 
 ### Distributions arising from the normal distribution
 Suppose that $X_1, X_2, \dots , X_n$ is a collection 
 of independent $N(\mu, \sigma^2)$ variables for some fixed but unknown values of $\mu$ and $\sigma^2$. We can use them to estimate $\mu$ and $\sigma^2$.
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The **sample mean** of a sequence of random variables $X_1, X_2, \dots , X_n$ is 
-\begin{equation*}
+$$\begin{equation}
     \bar{X} = \frac{1}{n} \sum_{i=1}^n X_i.
-\end{equation*}
+\end{equation}$$
 It is usually used as a guess at the value of $\mu$.
-\end{definition}
+</p></div>
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The **sample variance** of a sequence of random variables $X_1, X_2, \dots , X_n$ is 
-\begin{equation*}
+$$\begin{equation}
     S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2.
-\end{equation*}
+\end{equation}$$
 It is usually used as a guess at the value of $\sigma^2$.
-\end{definition}
+</p></div>
 
-\begin{remark}
+<div class="remark-block"><p><b>Remark.<b> 
 The sample mean and the sample variance have the property of being 'unbiased' in that $\mathbf{E}(\bar{X}) = \mu$ and $\mathbf{E}(S^2) = \sigma^2$. Note that in some texts the sample variance is defined with $n$ in place of $(n - 1)$. 
-\end{remark}
+</p></div>
 
-\begin{theorem}
+<div class="theorem-block"><p><b>Theorem.<b> 
 If $X_1, X_2, \dots , X_n$ are independent $N(\mu, \sigma^2)$ variables, then $\bar{X}$ and $S^2$ are independent. We have that $\bar{X}$ is $N(\mu, \sigma^2/n)$ and $(n-1)S^2 / \sigma^2$ is $\chi^{(n-1)}$.
-\end{theorem}
+</p></div>
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 If $X_1, X_2, \dots , X_n$ are standard normal random variables, then the sum of their squares,
-\begin{equation*}
+$$\begin{equation}
     Q = \sum_{i=1}^n X_i^2
-\end{equation*}
+\end{equation}$$
 is distributed according to the $\chi^2$ distribution with $n$ **degrees of freedom**. This is usually denoted as
-\begin{equation*}
+$$\begin{equation}
     Q \sim \chi^2(k) \quad \text{or} \quad Q \sim \chi^2_k.
-\end{equation*}
+\end{equation}$$
 The probability density function (p.d.f.) of the $\chi^2$ distribution is
-\begin{equation*}
+$$\begin{equation}
     f(x ; k)=\left\{\begin{array}{ll}
     {\frac{x^{\frac{k}{2}-1} e^{-\frac{x}{2}}}{2^{\frac{k}{2}} \Gamma\left(\frac{k}{2}\right)}} & {x>0} \\ 
     {0} & {\text { otherwise }}\end{array}\right.
-\end{equation*}
-\end{definition}
+\end{equation}$$
+</p></div>
 
 
 ### Sampling from a distribution
 A basic way of generating a random variable with given distribution function is to use the following theorem. 
-\begin{theorem}[Inverse transform technique]
+<div class="theorem-block"><p><b>Theorem.<b> [Inverse transform technique]
 Let $F$ be a distribution function, and let $U$ be uniformly distributed on the interval $[0, 1]$. 
-\begin{enumerate}[(a)]
-    \item If $F$ is a continuous function, the random variable $X = F^{-1} (U)$ has distribution function $F$.
-    \item Let $F$ be the distribution function of a random variable taking non-negative integer values. The random variable $X$ given by 
-    \begin{equation*}
+<ol>[(a)]
+    <li> If $F$ is a continuous function, the random variable $X = F^{-1} (U)$ has distribution function $F$.
+    <li> Let $F$ be the distribution function of a random variable taking non-negative integer values. The random variable $X$ given by 
+    $$\begin{equation}
         X = k \quad \text{if and only if} \quad F(k-1) < U \leq F(k)
-    \end{equation*}
+    \end{equation}$$
     has distribution function $F$. 
-\end{enumerate}
-\end{theorem}
+</ol>
+</p></div>
 
 
 

@@ -14,107 +14,107 @@ Most of our study of probability has dealt with independent trials processes, in
 
 ## Markov chains: basic definitions
 Consider a countable sequence $X_1, X_2, \dots, X_n, \dots$ which 
-\begin{itemize}
-    \item the subscript represents time, thus we have discrete time sequence;
-    \item each $X_i$ has finite outcomes.
-\end{itemize}
+<ul>
+    <li> the subscript represents time, thus we have discrete time sequence;
+    <li> each $X_i$ has finite outcomes.
+</ul>
 In other words, each $X_i$ is a discrete random variable that takes one of $N$ possible values, where 
 $N = \mathbf{card}(S)$ and $S$ is the outcome space; it may be the case that $N = \infty$.
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The process $X$ is a **Markov chain** if it satisfies the **Markov condition**:
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P}\left(X_{n}=s | X_{1}=x_{1}, X_{2}=x_{2}, \ldots, X_{n-1}=x_{n-1}\right)=\mathbf{P}\left(X_{n}=s | X_{n-1}=x_{n-1}\right)
-\end{equation*}
+\end{equation}$$
 for all $n\geq 1$ ans all $s, x_1, \dots, x_{n-1} \in S$.
-\end{definition}
+</p></div>
 Since $S$ is assumed countable, it can be put in one-to-one correspondence with some subset $S'$ of the integers, and without loss of generality we can assume that $S$ is this set $S'$ of integers. Then the evolution of a chain is described by its **transition probabilities** 
-\begin{equation}
+$$$$$$$$\begin{equation}
     \label{eq:7.1}
     \tag{7-1}
     \mathbf{P}(X_{n} = j \;\vert\; X_{n-1} = i) := p_{ij}(n-1).
-\end{equation}
+\end{equation}$$$$$$$$
 
-\begin{theorem}
+<div class="theorem-block"><p><b>Theorem.<b> 
 The transition matrix $P$ is a **stochastic matrix**, which is to say that: 
-\begin{enumerate}[(a)]
-    \item $P$ has non-negative entries, or $p_{ij} \geq 0$ for all $i, j$, 
-    \item $P$ has row sums equal to one, or $\sum_j p_{ij} = 1$ for all $i$.
-\end{enumerate}
-\end{theorem}
+<ol>[(a)]
+    <li> $P$ has non-negative entries, or $p_{ij} \geq 0$ for all $i, j$, 
+    <li> $P$ has row sums equal to one, or $\sum_j p_{ij} = 1$ for all $i$.
+</ol>
+</p></div>
 
 %Note that the Markov property is equivalent to the following stipulation, which is also called **$k$-step transition probabilities**.
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The **$k$-step transition probabilities** is defined as
-\begin{equation}
+$$$$$$$$\begin{equation}
     \label{eq:7.2}
     \tag{7-2}
     \mathbf{P}(X_{n+k-1} = j \;\vert\; X_{n-1} = i) := p_{ij}^{(k)}(n-1) \quad \text{for any } n, k \geq 1.
-\end{equation}
-\end{definition}
+\end{equation}$$$$$$$$
+</p></div>
 
 %Based on this, we can define
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The **transition matrix** $P(n-1) = (p_{ij}(n-1))$ is the $\left\vert S \right\vert \times \left\vert S \right\vert$ matrix of **transition probabilities** $p_{ij}(n-1)$. The **$k$-step transition matrix** $P^{(k)}(n-1) = (p_{ij}^{(k)}(n-1))$ is the matrix of **$k$-step transition probabilities** $p_{ij}^{(k)}(n-1)$.
-\end{definition}
+</p></div>
 
-\begin{remark}
+<div class="remark-block"><p><b>Remark.<b> 
 We can check that the Markov property is equivalent to each of the following two stipulations: for each $s \in S$ and for every sequence $\{ x_i \;\vert\; i \geq 0\}$ in $S$,
-\begin{equation}
+$$$$$$$$\begin{equation}
     \label{eq:7.3a}
     \tag{7-3a}
     \begin{split}
         \mathbf{P}\left(X_{n+1}=s | X_{n_{1}}=x_{n_{1}}, X_{n_{2}}=x_{n_{2}}, X_{n_{k}}=x_{n_{k}}\right)=\mathbf{P}\left(X_{n+1}=s | X_{n_{k}}=x_{n_{k}}\right) \\
         \text{for all } n_1 < n_2 < \cdots < n_k \leq n.
     \end{split}
-\end{equation}
-\begin{equation}
+\end{equation}$$$$$$$$
+$$$$$$$$\begin{equation}
     \label{eq:7.3b}
     \tag{7-3b}
     \begin{split}
         \mathbf{P}\left(X_{m+n}=s | X_{0}=x_{0}, X_{1}=x_{1}, \ldots, X_{m}=x_{m}\right)=\mathbf{P}\left(X_{m+n}=s | X_{m}=x_{m}\right) \\ 
         \text{for any } m, n \geq 0.
     \end{split}
-\end{equation}
-\end{remark}
+\end{equation}$$$$$$$$
+</p></div>
 
 Next we introduce another assumption:
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 The chain $X$ is called **homogeneous** if
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P}(X_n = j \;\vert\; X_{n-1} = i) = \mathbf{P}(X_2 = j \;\vert\; X_1 = i), \quad \text{for all } n, i, j.
-\end{equation*}
-\end{definition}
+\end{equation}$$
+</p></div>
 
-\begin{remark}
+<div class="remark-block"><p><b>Remark.<b> 
 Note the following two remarks.
-\begin{enumerate}[(a)]
-    \item Markov property and homogeneity property are **independent**. There are also Markov chains which are not homogeneous. 
-    \item If a Markov chain $X$ is homogeneous, then $p_{ij}(n-1)$ doesn't depends on the time $(n-1)$, i.e., the probability transition matrix $P$ is **fixed** at each step.
-\end{enumerate}
-\end{remark}
+<ol>[(a)]
+    <li> Markov property and homogeneity property are **independent**. There are also Markov chains which are not homogeneous. 
+    <li> If a Markov chain $X$ is homogeneous, then $p_{ij}(n-1)$ doesn't depends on the time $(n-1)$, i.e., the probability transition matrix $P$ is **fixed** at each step.
+</ol>
+</p></div>
 
 ## Properties of Markov chains
 By the assumption of homogeneity, we know $P(n-1) = P$. That $P^{(k)}(n-1)$ doesn't depend on $(n-1)$ is a consequence of the following important fact.
 
-\begin{theorem}[Chapman-Kolmogorov equations]
-\begin{equation*}
+<div class="theorem-block"><p><b>Theorem.<b> [Chapman-Kolmogorov equations]
+$$\begin{equation}
     p_{ij}^{(n+r)}(m) = \sum_{k} p_{ik}^{(n)}(m) p_{kj}^{(r)}(m+n).
-\end{equation*}
+\end{equation}$$
 Therefore, 
-\begin{equation*}
+$$\begin{equation}
     P^{(n+r)}(m) = P^{(n)}(m) P^{(r)}(m+n).
-\end{equation*}
+\end{equation}$$
 Furthermore, if we have homogeneity, then 
-\begin{equation*}
+$$\begin{equation}
     P^{n}(m) = P^n,
-\end{equation*}
+\end{equation}$$
 the $n$th power of $P$.
-\end{theorem}
+</p></div>
 
 \begin{proof}
-    \begin{equation*}
+    $$\begin{equation}
         \begin{split}
             p_{ij}^{n+r}(m) &= \mathbf{P}(X_{m+n+r} = j \;\vert\; X_m = i) \\ 
             &= \sum_{k} \mathbf{P}(X_{m+n+r} = j, X_{m+n} = k \;\vert\; X_m = i) \\
@@ -122,30 +122,30 @@ the $n$th power of $P$.
             &= \sum_{k} \mathbf{P}(X_{m+n+r} = j \;\vert\; X_{m+n} = k) \mathbf{P}(X_{m+n} = k \;\vert\; X_m = i) \quad \text{(Markov property)} \\
             &= \sum_{k} p_{kj}^{(r)}(m+n) p_{ik}^{(n)}(m) . 
         \end{split}
-    \end{equation*}
+    \end{equation}$$
     The marginalization step uses the fact that 
-    \begin{equation*}
+    $$\begin{equation}
         \mathbf{P}(A \cap B \;\vert\; C) = \mathbf{P}(A \;\vert\; B \cap C) \mathbf{P}(B \;\vert\; C).
-    \end{equation*}
+    \end{equation}$$
     The Markov property step uses \eqref{eq:7.3a}. The $n$th power is obtained by iteration.
 \end{proof}
 
 One consequence of the preceding theorem is that $P^{(n)}(m) = P^{(n)}(0)$. Note that this consequence is obtained **with homogeneous assumption**. We write $P_n$ for $P^{(n)}(m)$ and $p_{ij}(n)$ for $p_{ij}^{(n)}(m)$. This theorem relates long-term development to short-term development, and tells us how $X_n$ depends on the initial variable $X_0$. Let $\mu_i^{(n)} = \mathbf{P}(X_n = i)$ be the mass function of $X_n$, and write $\mu^{(n)}$ for the **row vector** with entries $(\mu_i^{(n)} : i \in S)$. Then we have the following lemma.
 
-\begin{lemma}
+<div class="theorem-block"><p><b>Lemma.<b> 
 $\mu^{(m+n)} = \mu^{(m)}P_n$, and hence $\mu^{(n)} = \mu^{(0)}P^n$.
-\end{lemma}
+</p></div>
 
 \begin{proof}
     We have that
-    \begin{equation*}
+    $$\begin{equation}
         \begin{split}
             \mu_j^{(m+n)} &= \mathbf{P}(X_{m+n} = j) \\
             &= \sum_{i} \mathbf{P}(X_{m+n} = j \;\vert\; X_m = i) \mathbf{P}(X_m = i) \\
             &= \sum_{i} \mu_i^{(m)} p_{ij}(n) \\
             &= (\mu^{(m)} P_n)_j
         \end{split}
-    \end{equation*}
+    \end{equation}$$
     and the result follows from the preceding theorem.
 \end{proof}
 
@@ -155,17 +155,17 @@ The random evolution of the chain is determined by the transition matrix $P$ and
 ## Absorbing Markov chains
 An absorbing Markov chain is a special type of Markov chains.
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 A state $s_i$ of a Markov chain is called **absorbing** if it is impossible to leave it (i.e., $p_{ii} = 1$). A Markov chain is **absorbing** if it has at least one absorbing state, and if from every state it is possible to go to an absorbing state (not necessarily in one step).
-\end{definition}
+</p></div>
 
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 In an absorbing Markov chain, a state which is not absorbing is called **transient**.
-\end{definition}
+</p></div>
 
 ### Canonical form of absorbing Markov chains
 Consider an arbitrary absorbing Markov chain. Renumber the states so that the transient states come first. If there are $r$ absorbing states and $t$ transient states, the transition matrix will have the following canonical form
-\begin{equation*}
+$$\begin{equation}
     P = 
     \begin{blockarray}{rcc}
         & TR. & ABS. \\
@@ -174,11 +174,11 @@ Consider an arbitrary absorbing Markov chain. Renumber the states so that the tr
         ABS. & 0 &  I \\
     \end{block}
     \end{blockarray}
-\end{equation*}
+\end{equation}$$
 Here $I$ is an $r\times r$ identity matrix, $0$ is an $r\times t$ zero matrix, $R$ is a nonzero $t\times r$ matrix, and $Q$ is an $t\times t$ matrix. The first $t$ states are transient and the last $r$ states are absorbing.
 
 A standard matrix algebra argument shows that $P^n$ is of the form
-\begin{equation*}
+$$\begin{equation}
     P^n = 
     \begin{blockarray}{rcc}
         & TR. & ABS. \\
@@ -187,93 +187,93 @@ A standard matrix algebra argument shows that $P^n$ is of the form
         ABS. & 0 &  I \\
     \end{block}
     \end{blockarray}
-\end{equation*}
+\end{equation}$$
 where the asterisk $*$ stands for the $t\times r$ matrix in the upper right-hand corner of $P^n$. 
 
 The entries of $Q_n$ give the probabilities for being in each of the transient states after $n$ steps for each possible transient starting state. The following theorem will show that every entry of $Q_n$ will approach zero as $n$ approaches infinity (i.e., $Q_n \to 0$).
 
-\begin{theorem}
+<div class="theorem-block"><p><b>Theorem.<b> 
 In an absorbing Markov chain, the probability that the process will be absorbed is 1 (i.e., $Q_n \to 0$ as $n \to \infty$).
-\end{theorem}
+</p></div>
 
 \begin{proof}
 From each non-absorbing state $s_j$ it is possible to reach an absorbing state. Let $m_j$ be the minimum number of steps required to reach an absorbing state, starting from $s_j$. Let $p_j$ be the probability that, starting from $s_j$, the process will not reach an absorbing state in $m_j$ steps. Then $p_j < 1$. Let $m$ be the largest of the $m_j$ and let $p$ be the largest of $p_j$. The probability of not being absorbed in $m$ steps is less than or equal to $p$, in $2m$ steps less than or equal to $p^2$, etc. Since $p < 1$, these probabilities tend to 0. Since the probability of not being absorbed in $n$ steps is monotone decreasing, these probabilities also tend to 0, hence $\lim_{n\to\infty} Q_n = 0$.
 \end{proof}
 
 ### The fundamental matrix
-\begin{definition}
+<div class="theorem-block"><p><b>Definition.<b> 
 For an absorbing Markov chain $P$, the matrix $N = (I-Q)^{-1}$ is called the **fundamental matrix** for $P$. The entry $n_{ij}$ of $N$ gives the expected number of times that the process is in the transient state $s_j$ if it is started in the transient state $s_i$.
-\end{definition}
+</p></div>
 
-\begin{theorem}
+<div class="theorem-block"><p><b>Theorem.<b> 
 For an absorbing Markov chain the matrix $I-Q$ has an inverse $N$ and $N = I + Q + Q^2 + \cdots$. The $ij$-entry $n_{ij}$ of the matrix $N$ is the expected number of times the chain is in state $s_j$, given that it starts in state $s_i$. The initial state is counted if $i = j$.
-\end{theorem}
+</p></div>
 
 \begin{proof}
 Let $(I-Q)x = 0$; that is $x = Qx$. Then, iterating this we see that $x = Q^n x$. Since $Q_n \to 0$, we have $Q_n x \to 0$, so $x = 0$. Thus $(I-Q)^{-1} = N$
 exists. Note next that
-\begin{equation*}
+$$\begin{equation}
     (I-Q)(I+Q + Q^2 + \cdots + Q^n) = I - Q^{n+1}.
-\end{equation*}
+\end{equation}$$
 Thus multiplying both sides by $N$ gives
-\begin{equation*}
+$$\begin{equation}
     I + Q + Q^2 + \cdots + Q^n = N(I-Q^{n+1}) .
-\end{equation*}
+\end{equation}$$
 Letting $n$ tend to infinity we have
-\begin{equation*}
+$$\begin{equation}
     N = I + Q + Q^2 + \cdots .
-\end{equation*}
+\end{equation}$$
 Let $s_i$ and $s_j$ be two transient states, and assume throughout the remainder of the proof that $i$ and $j$ are fixed. Let $X^{(k)}$ be a random variable which equals 1 if the chain is in state $s_j$ after $k$ steps, and equals 0 otherwise. For each $k$, this random variable depends upon both $i$ and $j$; we choose not to explicitly show this dependence in the interest of clarity. We have
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P} \left(X^{(k)}=1\right)=q_{i j}^{(k)},
-\end{equation*}
+\end{equation}$$
 and 
-\begin{equation*}
+$$\begin{equation}
     \mathbf{P} \left(X^{(k)}=0\right)=1-q_{i j}^{(k)},
-\end{equation*}
+\end{equation}$$
 where $q_{i j}^{(k)}$ is the $ij$th entry of $Q^k$. These equations hold for $k = 0$ since $Q^0 = I$. Therefore, since $X^{(k)}$ is a 0-1 random variable, $\mathbf{E}(X^{(k)}) = q_{i j}^{(k)}$.
 
 The expected number of times the chain is in state $s_j$ in the first $n$ steps, given that it starts in state $s_i$, is clearly
-\begin{equation*}
+$$\begin{equation}
     \mathbf{E}\left(X^{(0)}+X^{(1)}+\cdots+X^{(n)}\right)=q_{i j}^{(0)}+q_{i j}^{(1)}+\cdots+q_{i j}^{(n)}.
-\end{equation*}
+\end{equation}$$
 Letting $n$ tend to infinity we have
-\begin{equation*}
+$$\begin{equation}
     \mathbf{E}\left(X^{(0)}+X^{(1)}+\cdots\right)=q_{i j}^{(0)}+q_{i j}^{(1)}+\cdots=n_{i j}.
-\end{equation*}
+\end{equation}$$
 \end{proof}
 
 
 ### Time to absorption
 Given that the chain starts in state $s_i$, what is the expected number of steps before the chain is absorbed? The following theorem gives the answer.
-\begin{theorem}
+<div class="theorem-block"><p><b>Theorem.<b> 
 Let $t_i$ be the expected number of steps before the chain is absorbed, given that the chain starts in state $s_i$, and let $t$ be the **column vector** whose $i$th entry is $t_i$. Then
-\begin{equation*}
+$$\begin{equation}
     t = N \mathbf{1}
-\end{equation*}
+\end{equation}$$
 where $\mathbf{1}$ is a column vector all of whose entries are 1.
-\end{theorem}
+</p></div>
 
 \begin{proof}
 If we add all the entries in the $i$th row of $N$, we will have the expected number of times in any of the transient states for a given starting state $s_i$, that is, the expected time required before being absorbed. Thus, $t_i$ is the sum of the entries in the $i$th row of $N$. If we write this statement in matrix form, we obtain the theorem.
 \end{proof}
 
 ### Absorption probabilities
-\begin{theorem}
+<div class="theorem-block"><p><b>Theorem.<b> 
 Let $b_{ij}$ be the probability that an absorbing chain will be absorbed in the absorbing state $s_j$ if it starts in the transient state $s_i$. Let $B$ be the matrix with entries $b_{ij}$ . Then $B$ is an $t\times r$ matrix, and
-\begin{equation*}
+$$\begin{equation}
     B = NR,
-\end{equation*}
+\end{equation}$$
 where $N$ is the fundamental matrix and $R$ is as in the canonical form.
-\end{theorem}
+</p></div>
 
 \begin{proof}
 We have 
-\begin{equation*}
+$$\begin{equation}
     \begin{aligned} 
         B_{i j} &=\sum_{n} \sum_{k} q_{i k}^{(n)} r_{k j} \\ &=\sum_{k} \sum_{n} q_{i k}^{(n)} r_{k j} \\ &=\sum_{k} n_{i k} r_{k j} \\ &=(N R)_{i j}.
     \end{aligned}
-\end{equation*}
+\end{equation}$$
 This completes the proof.
 \end{proof}
 
