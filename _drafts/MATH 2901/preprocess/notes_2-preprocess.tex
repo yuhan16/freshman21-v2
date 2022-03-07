@@ -11,11 +11,11 @@
 
 % ========== Contents begin here ==============
 ## Random variables
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 **A random variable** is a function $X: \Omega \to \mathbb{R}$ with the property that $\{ \omega\in \Omega \;\vert\; X(\omega) \leq x\} \in \mathcal{F}$ for each $x \in \mathbb{R}$. Such a function is said to be $\mathbf{\mathcal{F}}$**-measurable**. 
 </p></div>
 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 Tossing two dice. We define 
 $$\begin{equation}
     X = \begin{cases} 1 & \text{get double ($i=j$)} \\ 0 & \text{not double $(i\neq j)$} \end{cases}.
@@ -23,16 +23,16 @@ $$\begin{equation}
 Then $X = (i,j) \in \mathbb{R}$.
 </p></div>
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 We are interested in $g(x) = \mathbf{P}\{ \omega \;\vert\; X(\omega) = x \}$. But sometimes it doesn't work very well. Probability triplet is defined as $\{ \Omega, \mathcal{F}, \mathbf{P} \}$. If $\Omega$ is countable, then $g(x)$ is okay. But if $\Omega$ is uncountable like intervals, then $\mathbf{P}(X=x)$ doesn't make much sense because the cardinality is too large.
 </p></div>
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **distribution function** of a random variable $X$ is the function $F: \mathbb{R} \to 
 [0, 1]$ given by $F(x) = \mathbf{P}(X \leq x)$. 
 </p></div>
 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 The distribution function of preceeding example is 
 $$\begin{equation}
     F(x) = \begin{cases} 0 & x \leq 0, \\ \frac{30}{36} & 0 < x \leq 1, \\ 1 & x > 1. \end{cases}
@@ -49,7 +49,7 @@ Tow points worth noting:
     <li> $A(x)$ should **belongs to** $\mathcal{F}$. Otherwise, we cannot talk about the probability of $\mathbf{P}(A(x))$. Then the definition of distribution function is meaningless.
 </ol>
 
-<div class="theorem-block"><p><b>Lemma.<b> 
+<div class="theorem-block"><p><b>Lemma.</b> 
 A distribution function $F$ has the following properties:
 <ol>[(a)]
     <li> $\lim_{x \to -\infty}F(x) = 0$, $\lim_{x\to\infty} F(x) = 1$,
@@ -58,7 +58,7 @@ A distribution function $F$ has the following properties:
 </ol>
 </p></div>
 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 **Indicator functions.** A particular class of Bernoulli variables is very useful in probability theory. Let $A$ be an event and let $I_A : \Omega \to \mathbb{R}$ be the indicator function of $A$; that is,
 $$\begin{equation}
     I_A(\omega) = \begin{cases} 1 & \text{if $\omega \in A$}, \\ 0 & \text{if $\omega \in A^c$}. \end{cases}
@@ -70,7 +70,7 @@ $$\begin{equation}
 an identity which is often useful.
 </p></div>
 
-<div class="theorem-block"><p><b>Lemma.<b> 
+<div class="theorem-block"><p><b>Lemma.</b> 
 Let $F$ be the distribution function of $X$. Then
 <ol>[(a)]
     <li> $\mathbf{P}(X>x) = 1-F(x)$, 
@@ -88,14 +88,14 @@ where $x$ is large and positive. The rates at which the $T_i$ decay to zero as $
 
 ## Different random variables
 ### Discrete random variables
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The random variable $X$ is called **discrete** if it takes values in some **countable** subset $\{ x_1, x_2, \dots \}$, only, of $\mathbb{R}$. The discrete random variable $X$ has **(probability) mass function** $f : \mathbb{R} \to [0, 1]$ given by $f(x) = \mathbf{P}(X = x)$. 
 </p></div>
 We shall see that the distribution function of a discrete variable has jump discontinuities 
 at the values $x_1 , x_2, \dots$ and is constant in between; such a distribution is called *atomic*.
 
 ### Continuous random variables
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The random variable $X$ is called **continuous** if its distribution function can 
 be expressed as 
 $$\begin{equation}
@@ -119,15 +119,15 @@ The random vector is a function $X : \Omega \to \mathbb{R}^n$. For example, $\ma
     By definition, $(x_1, y_1) < (x_2, y_2)$ if and only if $x_1 < x_2$  **AND**  $y_1 < y_2$.
 \end{center}
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **joint distribution function** of a random vector $\mathbf{X} = (X_1, X_2 \dots, X_n)$ on the probability space $\{ \Omega, \mathcal{F}, \mathbf{P} \}$ is the function $F_{\mathbf{X}} : \mathbb{R}^n \to [0, 1]$ given by $F_{\mathbf{X}}(x) = \mathbf{P}(\mathbf{X} \leq \mathbf{x})$ for $\mathbf{x} \in \mathbb{R}^n$. 
 </p></div>
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 The joint probability $\mathbf{P}(\mathbf{X} \leq \mathbf{x}) = \mathbf{P}(X_1 \leq x_1, \dots, X_n \leq x_n)$. $\{\mathbf{X} \leq \mathbf{x} \}$ is an abbreviation for the event $\{\omega \in \Omega \;\vert\; \mathbf{X}(w) \leq \mathbf{x}\}$.
 </p></div>
 
-<div class="theorem-block"><p><b>Lemma.<b> 
+<div class="theorem-block"><p><b>Lemma.</b> 
 The joint distribution function $F_{X, Y}$ of the random vector $(X, Y)$ has the following properties: 
 <ol>[(a)]
     <li> $\lim_{x, y\to -\infty} F_{X, Y}(x, y) = 0, \lim_{x,y\to\infty} F_{X, Y}(x,y) = 1$,
@@ -147,11 +147,11 @@ The joint distribution function $F_{X, Y}$ of the random vector $(X, Y)$ has the
 The functions $F_X$ and $F_Y$ are called the ``marginal" distribution functions of $F_{X,Y}$. $F_{X,Y}$ can determine two marginals $F_X$ and $F_Y$, but **converse is NOT true**.
 
 ### Discrete and continuous distribution
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The random variables $X$ and $Y$ on the probability space $\{ \Omega, \mathcal{F}, \mathbf{P} \}$ are called **(jointly) discrete** if the vector $(X, Y)$ takes values in some **countable** subset of $\mathbb{R}^2$ only. The jointly discrete random variables $X, Y$ have **joint (probability) mass function** $f : \mathbb{R}^2 \to [0,1]$ given by $f(x, y) = \mathbf{P}(X = x, Y = y)$. 
 </p></div>
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The random variables $X$ and $Y$ on the probability space $\{ \Omega, \mathcal{F}, \mathbf{P} \}$ are called **(jointly) continuous** if their joint distribution function can be expressed as 
 $$\begin{equation}
     F_{X,Y}(x,y) = \int_{u = -\infty}^x \int_{v = -\infty}^y f(u,v)du dv \qquad x, y\in\mathbb{R},

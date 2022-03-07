@@ -11,7 +11,7 @@
 
 % ========== Contents begin here ==============
 ## Probability mass functions
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **(probability) mass function** (p.m.f.) of a discrete random variable $X$ is the function $f: \mathbb{R} \to[0, 1]$ given by $f(x) = \mathbf{P}(X = x)$. 
 </p></div>
 
@@ -20,7 +20,7 @@ $$\begin{equation}
     F(x) = \sum_{i: x_i \leq x} f(x_i), \quad f(x) = F(x) - \lim_{y\uparrow x} F(y).
 \end{equation}$$
 
-<div class="theorem-block"><p><b>Lemma.<b> 
+<div class="theorem-block"><p><b>Lemma.</b> 
 The probability mass function $f: \mathbb{R} \to [0, 1]$ satisfies: 
 <ol>[(a)]
     <li> the set of $x$ such that $f(x) \neq 0$ is **countable**,
@@ -28,7 +28,7 @@ The probability mass function $f: \mathbb{R} \to [0, 1]$ satisfies:
 </ol>
 </p></div>
 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 **Binomial distribution.** A coin is tossed $n$ times, and a head turns up each time with probability $p (= 1 - q)$. Then $\Omega = \{H, T\}^n \}$. The total number $X$ of heads takes values in the set $\{0, 1, 2, \dots , n\}$ and is a discrete random variable. Its probability mass function $f(x) = \mathbf{P}(X = x)$ satisfies 
 $$\begin{equation}
     f(k)= \binom{n}{k} p^{k}(1-p)^{n-k}, \quad k=0,1, \ldots, n.
@@ -36,7 +36,7 @@ $$\begin{equation}
 The random variable $X$ is said to have the **binomial distribution** with parameters $n$ and $p$, It is the sum $X = Y_1 + Y_2 + \dots + Y_n$ of $n$ Bernoulli variables.
 </p></div>
 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 **Poisson distribution.** If a random variable $X$ takes values in the set $\{O, 1, 2, \dots \}$ with mass function
 $$\begin{equation}
     f(k) = \frac{\lambda^k}{k!} e^{-\lambda}, \quad k = 0, 1, 2, \dots, 
@@ -49,7 +49,7 @@ where $\lambda > 0$, then $X$ is said to have the **Poisson distribution** with 
     \label{fig:poisson}
 \end{figure}
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 The interpretation of Poisson distribution can be found via this link: \href{https://towardsdatascience.com/the-poisson-distribution-and-poisson-process-explained-4e2cb17d459}{The Poisson Distribution and Poisson Process Explained}.
 </p></div>
 </p></div>
@@ -58,17 +58,17 @@ The interpretation of Poisson distribution can be found via this link: \href{htt
 ## Independence of discrete random variables
 Recall that events $A$ and $B$ are called ``independent" if and only if $\mathbf{P}(A \cap B) = \mathbf{P}(A)\mathbf{P}(B)$. 
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 Discrete variables $X$ and $Y$ are **independent** if the events $\{X = x\}$ and $\{Y = y\}$ are independent for **all** $x$ and $y$. 
 </p></div>
 
 Let $A: = \{ \omega \;\vert\; X(\omega) = x \}$ and $B:= \{ \omega \;\vert\; Y(\omega) = y \}$. Then we can write $P(A) = f_X(x), P(B) = f_Y(y)$ and $P(A \cap B) = f(x, y)$. Therefore, $A$ and $B$ are independent if and only if $f(x,y) = f_X(x) f_Y(y)$ for all $x$ and $y$.
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 The equality $f(x,y) = f_X(x) f_Y(y)$ can be used as the criterion to determine whether two discrete random variables $X$ and $Y$ are independent or not. But **we need to be careful with it when dealing with continuous random variables** as there will be additional assumptions to determine the independence of continuous random variables using this equality.
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 If $X$ and $Y$ are independent and $g, h: \mathbb{R} \to \mathbb{R}$, then $g(X)$ and $h(Y)$ are independent also. 
 </p></div>
 
@@ -86,11 +86,11 @@ $$\begin{equation}
 \end{equation}$$
 for some integrable $f: \mathbb{R} \to [0, \infty)$.
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The function $f$ is called the **(probability) density function** (p.d.f.) of the continuous random variable $X$. 
 </p></div>
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 The function $f$ is **NOT** unique. We can add some separate points or a countable set of points which has zero measure to $f$. This doesn't change the value of the integral. However, if $F$ is differentiable at $u$ then we shall normally set $f(u) = F'(u)$. 
 </p></div>
 
@@ -110,7 +110,7 @@ $$\begin{equation}
 \end{equation}$$
 Since $dx$ is a very small interval rather a number, we cannot say $f(x)$ is the probability of something.
 
-<div class="theorem-block"><p><b>Lemma.<b> 
+<div class="theorem-block"><p><b>Lemma.</b> 
 If $X$ has density function $f$, then
 <ol>[(a)]
     <li> $\int_{-\infty}^\infty f(x)dx = 1$,
@@ -121,7 +121,7 @@ If $X$ has density function $f$, then
 
 ## Independence of continuous random variables
 ### Independence of general random variables
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 Random variables $X$ and $Y$ are called **independent** if $\{ X \leq x\}$ and $\{Y \leq y\}$ are independent events for all $x, y \in \mathbb{R}$. 
 </p></div>
 Note that this definition is the **general** definition of the independence of any two variables $X$ and $Y$, **regardless of their types**. The independence of discrete random variables is included in this definition. 
@@ -156,11 +156,11 @@ $$$$\begin{equation}
     f(x,y) = \frac{\partial^2 F(x,y)}{\partial x \partial y} = \frac{\partial}{\partial x \partial y} F_X(x) F_Y(y) = f_X(x) f_Y(y).
 \end{equation}$$$$
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 Note that the prerequisite of \eqref{eq:**} is that **$f(x,y)$ is continuous**.
 </p></div>
 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 **Uniform distribution.** The random variable $X$ is uniform on $[a, b]$ if it has distribution function
 $$\begin{equation}
     F(x) = \begin{cases} 
@@ -173,7 +173,7 @@ $$\begin{equation}
 \end{equation}$$
 </p></div>
 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 **Exponential distribution**. The random variable $X$ is exponential with parameter $\lambda(> 0)$ if it has distribution function 
 $$\begin{equation}
     F(x) = 1 - e^{-\lambda x}, \quad x \geq 0.
@@ -191,12 +191,12 @@ Note that $F(x)$ is not differentiable at $x=0$. This means $f$ has discontinuit
     \label{fig:exponential}
 \end{figure}
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 The interpretation of Exponential distribution can be found via \href{https://www.probabilitycourse.com/chapter4/4_2_2_exponential.php}{Exponential distribution 1} and \href{https://www.statlect.com/probability-distributions/exponential-distribution}{Exponential distribution 2}. Pay attention to the connection between Exponential distribution and Poisson distribution.
 </p></div>
 </p></div>
 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 **Normal (or Gaussian) distribution.** The most important continuous distribution, which has two parameters $\mu$ and $\sigma^2$ and density function
 $$\begin{equation}
     f(x) = \frac{1}{\sqrt{2\pi\sigma^2}} \exp \left( -\frac{(x-\mu)^2}{2\sigma^2} \right), \quad x\in\mathbb{R}. 
@@ -210,7 +210,7 @@ $$\begin{equation}
     f(\mathbf{x}) = \frac{1}{\sqrt{(2\pi)^n} \det(\mathbf{\sigma}^2)} \exp \left( -\frac{1}{2} (\mathbf{x}-\mathbf{\mu})^T (\mathbf{\sigma}^2)^{-1} (\mathbf{x}-\mathbf{\mu}) \right), \quad \mathbf{x} \in \mathbb{R}^n.
 \end{equation}$$
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 For 2D case, if $\sigma^2$ is diagonal, then $f(x,y) = f(x)f(y)$. Therefore, $\sigma^2$ is a measure of independence. For multivariable cases, if $\sigma^2$ is diagonal, then all random variables are independent with each other.
 </p></div>
 </p></div>

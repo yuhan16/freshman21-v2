@@ -20,7 +20,7 @@ $$\begin{equation}
     m \approx \frac{1}{N}\sum_{x} freq(x)x = \sum_x f(x)x
 \end{equation}$$
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **mean value**, or **expectation**, or **expected value** of the random variable $X$ with mass function $f$ is defined to be 
 $$\begin{equation}
     \mathbf{E}(X) = \sum_{x:f(x)>0} xf(x)
@@ -28,17 +28,17 @@ $$\begin{equation}
 whenever this sum is absolutely convergent.
 </p></div>
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 <ol>[(a)]
     <li> For notation convenience, we also write $\mathbf{E}(X) = \sum_x xf(x)$.
     <li> We require **absolute convergence** in order that $\mathbf{E}(X)$ be unchanged by reordering the $x_i$. 
 </ol>
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> [Riemann Rearrangement Theorem] \href{https://en.wikipedia.org/wiki/Riemann_series_theorem}{See this: Riemann series theorem}.
+<div class="theorem-block"><p><b>Theorem.</b> [Riemann Rearrangement Theorem] \href{https://en.wikipedia.org/wiki/Riemann_series_theorem}{See this: Riemann series theorem}.
 </p></div>
 
-<div class="theorem-block"><p><b>Lemma.<b> 
+<div class="theorem-block"><p><b>Lemma.</b> 
 If $X$ has mass function $f$ and $g:\mathbb{R}\to\mathbb{R}$, then
 $$\begin{equation}
     \mathbf{E}(g(x)) = \sum_x g(x) f(x)
@@ -46,14 +46,14 @@ $$\begin{equation}
 whenever this sum is absolutely convergent.
 </p></div>
 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 If $X$ is a random variable with mass function f, and $g(x) = x^2$, then 
 $$\begin{equation}
     \mathbf{E}(X^2) = \sum_x g(x)f(x) = x^2 f(x).
 \end{equation}$$
 </p></div>
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 If $k$ is a positive integer, the $k$th \text{moment} $m_k$ of $X$ is defined to be 
 $$\begin{equation}
     m_k = \mathbf{E}(X^k).
@@ -81,7 +81,7 @@ $$$$$$$$\begin{equation}
     \mathbf{Var}(X) = \mathbf{E}\left( (X-E(X))^2 \right) = \mathbf{E}(X^2) - \mathbf{E}(X)^2.
 \end{equation}$$$$$$$$
 
-<div class="remark-block"><p><b>Example.<b> [Binomial variables]
+<div class="remark-block"><p><b>Example.</b> [Binomial variables]
 Let $X$ be a random variable with binomial distribution. The p.m.f. is 
 $$\begin{equation}
     f(k) = \binom{n}{k} p^k q^{n-k} \quad k = 0,\dots, n,
@@ -107,7 +107,7 @@ We substitute $x = p / q$ to obtain $\mathbf{E}(X) = np$. A similar argument sho
 
 We can think of the process of calculating expectations as a **linear operator** on the space of random variables. 
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 The expectation operator $\mathbf{E}$ has the following properties: 
 <ol>[(a)]
     <li> if $X\geq 0$, then $\mathbf{E}(X) \geq 0$,
@@ -135,7 +135,7 @@ where $f_X(x)$ and $f_Y(y)$ are marginal p.m.f. of $X$ and $Y$ respectively.
 It is **NOT** in general true that $\mathbf{E}(XY)$ is the same as $\mathbf{E}(X)\mathbf{E}(Y)$. 
 \end{caution}
 
-<div class="theorem-block"><p><b>Lemma.<b> 
+<div class="theorem-block"><p><b>Lemma.</b> 
 If $X$ and $Y$ are independent, then $\mathbf{E}(XY) = \mathbf{E}(X)\mathbf{E}(Y)$. 
 </p></div>
 \begin{proof}
@@ -145,7 +145,7 @@ $$\begin{equation}
 \end{equation}$$
 \end{proof}
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 $X$ and $Y$ are called **uncorrelated** if $\mathbf{E}(XY) = \mathbf{E}(X)\mathbf{E}(Y)$.
 </p></div>
 
@@ -153,7 +153,7 @@ $X$ and $Y$ are called **uncorrelated** if $\mathbf{E}(XY) = \mathbf{E}(X)\mathb
 Independent variables are uncorrelated. But the converse is **NOT** true.
 \end{caution}
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 For random variables $X$ and $Y$, 
 <ol>[(a)]
     <li> $\mathbf{Var}(aX) = a^2 \mathbf{Var}(X)$ for $a \in \mathbb{R}$,
@@ -161,14 +161,14 @@ For random variables $X$ and $Y$,
 </ol>
 </p></div>
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 The above theorem shows that the variance operator $\mathbf{Var}$ is **NOT** a linear operator, even when it 
 is applied only to uncorrelated variables. 
 </p></div>
 
 %==============================================
 Sometimes the sum $S = \sum xf(x)$ does not converge absolutely, which means the mean of the distribution does not exist. Here is an example. 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 **A distribution without a mean.** Let $X$ have mass function 
 $$\begin{equation}
     f(k) = Ak^{-1} \quad k = \pm 1, \pm 2, \dots,
@@ -187,7 +187,7 @@ In addition, we have $\mathbf{E}(I_A) = \mathbf{P}(A)$.
 %==============================================
 
 ## Dependence of discrete random variables
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **joint distribution function** $F:\mathbb{R}^2 \to [0,1]$ of $X$ and $Y$, where $X$ and $Y$ are discrete variables, is given by 
 $$\begin{equation}
     F(x, y) = \mathbf{P}(X\leq x \text{ and } Y \leq y). 
@@ -203,7 +203,7 @@ $$\begin{equation}
     f(x,y) = \mathbf{P}(A_x \cap B_y).
 \end{equation}$$
 
-<div class="theorem-block"><p><b>Lemma.<b> 
+<div class="theorem-block"><p><b>Lemma.</b> 
 The discrete random variables $X$ and $Y$ are **independent** if and only if 
 $$$$$$$$\begin{equation}
     \label{eq:4.4}
@@ -212,17 +212,17 @@ $$$$$$$$\begin{equation}
 \end{equation}$$$$$$$$
 More generally, $X$ and $Y$ are independent if and only if $f_{X,Y}(x, y)$ can be **factorized as the product** $g(x)h (y)$ of a function of $x$ alone and a function of $y$ alone. 
 </p></div>
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 We stress that the factorization \eqref{eq:4.4} must hold for all $x$ and $y$ in order that $X$ and $Y$ be independent. 
 </p></div>
 
-<div class="theorem-block"><p><b>Lemma.<b> 
+<div class="theorem-block"><p><b>Lemma.</b> 
 $$\begin{equation}
     \mathbf{E}(g(X, Y))=\sum_{x, y} g(x, y) f_{X, Y}(x, y).
 \end{equation}$$
 </p></div>
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **covariance** of $X$ and $Y$ is
 $$\begin{equation}
     \mathbf{cov}(X,Y) = \mathbf{E}\left( (X-\mathbf{E}(X))(Y-\mathbf{E}(Y)) \right).
@@ -234,7 +234,7 @@ $$\begin{equation}
 as long as the variances are non-zero. 
 </p></div>
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 Notice the following two equations.
 <ol>
     <li> $\mathbf{cov}(X,X) = \mathbf{Var}(X)$,
@@ -244,7 +244,7 @@ Notice the following two equations.
 
 Covariance itself is not a satisfactory measure of dependence because the scale of values which $\mathbf{cov}(X, Y)$ may take contains no points which are clearly interpretable in terms of the relationship between $X$ and $Y$.
 
-<div class="theorem-block"><p><b>Theorem.<b> [Cauchy-Schwarz inequality] For random variables $X$ and $Y$, 
+<div class="theorem-block"><p><b>Theorem.</b> [Cauchy-Schwarz inequality] For random variables $X$ and $Y$, 
 $$\begin{equation}
     \mathbf{E}(XY)^2 \leq \mathbf{E}(X^2) \mathbf{E}(Y^2)
 \end{equation}$$ 
@@ -277,7 +277,7 @@ $$\begin{equation}
 \end{equation}$$
 which gives the following lemma.
 
-<div class="theorem-block"><p><b>Lemma.<b> 
+<div class="theorem-block"><p><b>Lemma.</b> 
 The correlation coefficient $\rho$ satisfies $\left\vert \rho (X, Y)  \right\vert \leq 1$ with equality if and only if $\mathbf{P}(aX + bY = c) = 1$ for some $a, b, c \in \mathbb{R}$. 
 </p></div>
 
@@ -294,7 +294,7 @@ $$\begin{equation}
 \end{equation}$$
 
 ### Expectation
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **expectation** of a continuous random variable $X$ with density function $f$ is given by 
 $$\begin{equation}
     \mathbf{E}(X) = \int_{-\infty}^\infty xf(x) dx
@@ -302,13 +302,13 @@ $$\begin{equation}
 whenever this integral exists.
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 If $X$ and $g(X)$ are continuous random variables, then $$\begin{equation}
     \mathbf{E}\left( g(X) \right) = \int_{-\infty}^\infty g(x)f(x) dx.
 \end{equation}$$
 </p></div>
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The $k$th **moment** of a continuous variable $X$ is defined as
 $$\begin{equation}
     \mathbf{E}(X^k) = \int_{-\infty}^\infty x^k f(x) dx
@@ -316,7 +316,7 @@ $$\begin{equation}
 whenever the integral converges.
 </p></div>
 
-<div class="remark-block"><p><b>Example.<b> [Cauchy distribution] The random variable $X$ has the Cauchy distribution t if it has density 
+<div class="remark-block"><p><b>Example.</b> [Cauchy distribution] The random variable $X$ has the Cauchy distribution t if it has density 
 function 
 $$\begin{equation}
     f(x) = \frac{1}{\pi (1+x^2)}, \quad x \in \mathbb{R}.
@@ -325,14 +325,14 @@ This distribution is notable for having **no moments**.
 </p></div>
 
 ## Dependence of continuous random variables
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **joint distribution function** of $X$ and $Y$ is the function $F: \mathbb{R}^2 \to [0, 1]$ given by 
 $$\begin{equation}
     F(x,y) = \mathbf{P}(X\leq x, Y \leq y).
 \end{equation}$$
 </p></div>
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The random variables $X$ and $Y$ are **(jointly) continuous** with **joint (probability) density function** $f : \mathbb{R}^2 \to [0, \infty)$ if
 $$\begin{equation}
     F(x, y)=\int_{v=-\infty}^{y} \int_{u=-\infty}^{x} f(u, v) d u d v \quad \text{for each } x, y\in\mathbb{R}. 
@@ -390,7 +390,7 @@ $$\begin{equation}
 \end{equation}$$
 \end{newnotion}
  
-<div class="theorem-block"><p><b>Theorem.<b> [Cauchy-Schwarz inequality] For any pair $X, Y$ of jointly continuous variables, we have that 
+<div class="theorem-block"><p><b>Theorem.</b> [Cauchy-Schwarz inequality] For any pair $X, Y$ of jointly continuous variables, we have that 
 $$\begin{equation}
     \mathbf{E}(XY)^2 \leq \mathbf{E}(X^2) \mathbf{E}(Y^2), 
 \end{equation}$$

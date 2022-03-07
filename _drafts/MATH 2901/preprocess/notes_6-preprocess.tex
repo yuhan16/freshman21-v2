@@ -28,7 +28,7 @@ $$$$\begin{equation}
 \end{equation}$$$$
 which is the **distribution function of the random variable $Z$**.
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 Let $X$ and $Y$ be two independent integer-valued random variables, with distribution functions $p_X(x)$ and $p_Y(y)$ respectively. Then the **convolution** of $p_X(x)$ and $p_Y(y)$ is the distribution function $p_Z = p_X * p_Y$ given by
 $$\begin{equation}
     p_Z(z) = \sum_{x} p_X(x) p_Y(z-x)
@@ -38,7 +38,7 @@ for $x\in \mathbb{Z}$. The function $p_Z(z)$ is the distribution function of the
 
 
 ## Sums of Continuous Random Variables
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 Let $X$ and $Y$ be two continuous random variables with density functions $f_X(x)$ and $f_Y(y)$ respectively. Assume that both $f_X(x)$ and $f_Y(y)$ are defined for all real numbers. Then the **convolution** $f * g$ of $f$ and $g$ is the function given by
 $$$$\begin{equation}
     \label{eq:6.2}
@@ -47,18 +47,18 @@ $$$$\begin{equation}
 \end{equation}$$$$
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 Let $X$ and $Y$ be two independent random variables with density functions $f_X(x)$ and $f_Y(y)$ defined for all $x$ and $y$. Then the sum $Z = X + Y$ is a random variable with density function $f_Z(z)$, where $f_Z$ is the convolution of $f_X$ and $f_Y$.
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 Let $\{X_i\}$, $i=1,\dots, n$ be a sequence of independent random variables with density functions $f_{X_1}(x), \dots, f_{X_n}(x)$ respectively, then we have 
 $$\begin{equation}
     f_{X_1 + \cdots + X_n}(x) = f_{X_1} * \left( f_{X_2} * ( \cdots * f_{X_n}) \right)(x).
 \end{equation}$$
 </p></div>
 
-<div class="remark-block"><p><b>Example.<b> [Sum of two independent uniform random variables]
+<div class="remark-block"><p><b>Example.</b> [Sum of two independent uniform random variables]
 Let $X$ and $Y$ be random variables describing our choices and $Z = X + Y$ their sum. Then we have
 $$\begin{equation}
     f_{X}(x)=f_{Y}(x)=\left\{\begin{array}{ll}{1} & {\text { if } 0 \leq x \leq 1} \\ {0} & {\text { otherwise }}\end{array}\right.
@@ -81,7 +81,7 @@ $$\begin{equation}
 \end{equation}$$
 </p></div>
 
-<div class="remark-block"><p><b>Example.<b> [Sum of two independent exponential random variables]
+<div class="remark-block"><p><b>Example.</b> [Sum of two independent exponential random variables]
 Let $X, Y$, and $Z = X + Y$ denote the relevant random variables, and $f_X$ , $f_Y$ , and $f_Z$ their densities. Then
 $$\begin{equation}
     f_{X}(x)=f_{Y}(x)=\left\{\begin{array}{ll}{\lambda e^{-\lambda x},} & {\text { if } x \geq 0} \\ {0,} & {\text { otherwise }}\end{array}\right.
@@ -104,13 +104,13 @@ $$\begin{equation}
 \end{equation}$$
 In many circumstances it is easier to work with the generating function $G_a$ than with the original sequence $a$.
 
-<div class="theorem-block"><p><b>Theorem.<b> [Abel's theorem]
+<div class="theorem-block"><p><b>Theorem.</b> [Abel's theorem]
 If $a_i \geq 0$ for all $i$ and $G_a(s)$ is finite for $\left\vert s \right\vert < 1$, then $\lim_{s \uparrow 1} G_a (s) = \sum_{i=1}^ \infty a_i$, whether the sum is finite or equals $+\infty$. This standard result is useful when the radius of convergence $R$ satisfies $R = 1$, since then one has no a priori right to take the limit as $s \uparrow 1$.
 </p></div>
 
 
 ### Moment generating function
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **moment generating function** of the random variable $X$ is the function $M: \mathbb{R} \mapsto [0, \infty)$ given by the Laplace transform of the corresponding p.d.f. $f_X(s)$:
 $$\begin{equation}
     M_X(t) = \mathbf{E} \left( e^{tX} \right) = \int_{-\infty}^\infty e^{tx} f_X(x) dx,
@@ -132,7 +132,7 @@ Under the assumption that $M_X(t)$ is infinitely differentiable at $t=0$, the fo
     <li> Using Taylor's theorem, $M_X(t) = \sum_{k=0}^\infty \frac{t^k}{k!} \mathbf{E}(X^k)$.
 </ol>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 If $X$ and $Y$ are independent, then
 $$\begin{equation}
     \begin{split}
@@ -147,7 +147,7 @@ $$\begin{equation}
 ### Characteristic functions
 Sometimes $\mathbf{E}(e^{tX})$ may blow up. So we consider some transformations in the complex domain, which usually perform better.
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **characteristic function** of $X$ is the function $\phi: \mathbb{R} \mapsto \mathbb{C}$ defined by
 $$\begin{equation}
     \phi(t)=\mathbf{E}\left(e^{i t X}\right) \quad \text { where } \quad i=\sqrt{-1}.
@@ -155,7 +155,7 @@ $$\begin{equation}
 We often write $\phi_x$ for the characteristic function of the random variable $X$. Characteristic functions are related to Fourier transforms. 
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 The characteristic function $\phi$ satisfies:
 <ol>[(a)]
     <li> $\phi(0) = 1$, $\left\vert \phi(t) \right\vert \leq 1$ for all $t$.
@@ -176,7 +176,7 @@ $$\begin{equation}
 \end{equation}$$
 \end{proof}
 
-<div class="remark-block"><p><b>Example.<b> [Cauchy distribution]
+<div class="remark-block"><p><b>Example.</b> [Cauchy distribution]
 If $f(x) = 
 \frac{1}{\pi(1+x^2)}$, then the corresponding characteristic function is 
 $$\begin{equation}
@@ -184,7 +184,7 @@ $$\begin{equation}
 \end{equation}$$
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 The following statements are true.
 <ol>[(a)]
     <li> If $\phi^{(k)}(0)$ exists, then 
@@ -199,7 +199,7 @@ The following statements are true.
     and so $\phi^{(k)}(0)=i^{k} \mathbb{E}\left(X^{k}\right)$.
 </ol>
 </p></div>
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 If $X$ and $Y$ are independent then 
 $$\begin{equation}
     \phi_{X+Y}(t)=\phi_{X}(t) \phi_{Y}(t).
@@ -210,7 +210,7 @@ $$\begin{equation}
 \end{equation}$$
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 If $a, b \in \mathbb{R}$ and $Y = aX+b$, then $\phi_{Y}(t)=e^{i t b} \phi_{X}(a t)$.
 </p></div>
 \begin{proof}
@@ -219,18 +219,18 @@ $$\begin{equation}
 \end{equation}$$
 \end{proof}
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 Random variables $X$ and $Y$ are independent if and only if
 $$\begin{equation}
     \phi_{X, Y}(s, t)=\phi_{X}(s) \phi_{Y}(t) \quad \text { for all } s \text { and } t.
 \end{equation}$$
 </p></div>
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 We say that the sequence $F_1 , F_2, \dots $ of distribution functions converges to the distribution function $F$, written $F_n \to F$, if $F(x) = \lim_{n\to\infty} F_n(x)$ at each point $x$ where $F$ is continuous.
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> [Continnity theorem]
+<div class="theorem-block"><p><b>Theorem.</b> [Continnity theorem]
 Suppose that $F_1 , F_2, \dots $ is a sequence of distribution functions 
 with corresponding characteristic functions $\phi_1 , \phi_2, \dots $.
 <ol>[(a)]
@@ -241,11 +241,11 @@ with corresponding characteristic functions $\phi_1 , \phi_2, \dots $.
 
 
 ## Central limit theorem
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 If $X, X_1 , X_2 , \dots$ is a sequence of random variables with respective distribution functions $F, F_1, F_2, \cdots$, we say that $X_n$ converges in distribution to $X$, written $X_{n} \stackrel{\mathrm{D}}{\rightarrow} X$, if $F_n \to F$ as $n \to\infty$.
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> [Central limit theorem]
+<div class="theorem-block"><p><b>Theorem.</b> [Central limit theorem]
 Let $X_1 , X_2, \dots$ be a sequence of independent identically distributed random variables with finite mean $\mu$ and finite nonzero variance $\sigma^2$, and let $S_n = X_1 + X_2 + \cdots + X_n$. Then
 $$\begin{equation}
     \frac{S_{n}-n \mu}{\sqrt{n \sigma^{2}}} \stackrel{\mathrm{D}}{\rightarrow} N(0,1) \quad \text { as } \quad n \rightarrow \infty.

@@ -14,7 +14,7 @@
 Note that in section, we are dealing with random variables with **independent, identical distribution**, also written as **i.i.d.** The law of large numbers aims to study the convergence of the average sum of large **i.i.d.** random variables.
 
 We first prove the following important lemma.
-<div class="theorem-block"><p><b>Lemma.<b> [Chebyshev Inequality]
+<div class="theorem-block"><p><b>Lemma.</b> [Chebyshev Inequality]
 Let $X$ be a random variable with $\mathbf{E}(X) < \infty$ and $\mathbf{Var}(X) < \infty$, then for any $\epsilon > 0$, we have
 $$$$\begin{equation}
     \label{eq:5.1}
@@ -52,7 +52,7 @@ $$\begin{equation}
 \end{proof}
 
 Chebyshev’s Inequality is the best possible inequality in the sense that, for any $\epsilon > 0$, it is possible to give an example of a random variable for which Chebyshev’s Inequality is in fact an equality. 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 Suppose we have a random variable $X$ such that for any $\epsilon > 0$, $f(-\epsilon) = f(\epsilon) = \frac{1}{2}$. Clearly, $\mathbf{E}(X) = 0 < \infty$ and $\mathbf{Var}(X) = \mathbf{E}(X^2) = \epsilon^2 < \infty$. Therefore,
 $$\begin{equation}
     \frac{\mathbf{Var}(X)}{\epsilon^2} = 1.
@@ -60,7 +60,7 @@ $$\begin{equation}
 Also note that $\mathbf{P}(\left\vert X-\mu \right\vert \geq \epsilon) = 1$. The equality sign of Chebyshev inequality holds. We cannot get better result.
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> [Law of large numbers]
+<div class="theorem-block"><p><b>Theorem.</b> [Law of large numbers]
 Consider a sequence of i.i.d. random variables $X_i$ with finite mean and variance. Denote $\mathbf{E}(X) = \mu$ and $\mathbf{Var}(X) = \sigma^2$. Define 
 $$\begin{equation}
     Q_n = \frac{1}{n}\left( X_1 + X_2 + \cdots + X_n \right),
@@ -113,7 +113,7 @@ $$\begin{equation}
 For the law of large numbers to work, $\mathbf{Var}(X)$ must be finite. Otherwise, the law may fail as the following example shows.
 \end{caution}
 
-<div class="remark-block"><p><b>Example.<b> [Cauchy distribution]
+<div class="remark-block"><p><b>Example.</b> [Cauchy distribution]
 The Cauchy distribution is given by
 $$\begin{equation}
     f(x) = \frac{1}{\pi (1+x^2)},
@@ -121,7 +121,7 @@ $$\begin{equation}
 where $\pi$ is the normalization parameter. Let $X$ be the random variable which has the Cauchy distribution. Note that although the Cauchy distribution is very like the normal distribution, $X$ doesn't have the variance. This is because the Cauchy distribution has a long tail as $\left\vert x \right\vert\to\infty$ and it converges slowly. But $X$ has a mean which is $\mu = 0$. So the question is: does $Q_n$ converges to $\mu$? The answer is negative. This example shows that if the variance is not finite, the law of large numbers fails.
 </p></div>
 
-%<div class="remark-block"><p><b>Remark.<b> 
+%<div class="remark-block"><p><b>Remark.</b> 
 %It is interesting to note that if $X$ and $Y$ are bernoulli, then $X/Y$ is Cauchy.
 %</p></div>
 
@@ -129,7 +129,7 @@ where $\pi$ is the normalization parameter. Let $X$ be the random variable which
 ## Conditional distributions and conditional expectation
 (This section is the supplement of the lecture.)
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **conditional distribution function** of $Y$ given $X = x$ is the function $F_{Y\vert X} (\cdot \vert x)$ given by
 $$\begin{equation}
     F_{Y | X}(y | x)=\int_{-\infty}^{y} \frac{f(x, v)}{f_{X}(x)} d v
@@ -138,7 +138,7 @@ for any $x$ such that $f_X(x) > 0$. It is sometimes denoted $\mathbf{P} (Y \leq 
 </p></div>
 
 Remembering that distribution functions are integrals of density functions, we are led to the following definition. 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The conditional density function of $F_{Y\vert X}$, written $f_{Y\vert X}$, is given by
 $$\begin{equation}
     f_{Y | X}(y | x)=\frac{f(x, y)}{f_{X}(x)} = \frac{f(x, y)}{\int_{-\infty}^{\infty} f(x, y) d y}
@@ -146,14 +146,14 @@ $$\begin{equation}
 for any $x$ such that $f_X(x) > 0$. 
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 The **conditional expectation** $\psi(X) = \mathbf{E}(Y \vert X)$ satisfies 
 $$\begin{equation}
     \mathbf{E}(\psi(X)) = \mathbf{E}(Y).
 \end{equation}$$
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 The **conditional expectation** $\psi(X) = \mathbf{E}(Y \vert X)$ satisfies 
 $$\begin{equation}
     \mathbf{E}\left( \psi(X) g(X) \right) = \mathbf{E}(Y g(X))
@@ -175,7 +175,7 @@ $$\begin{equation}
 \end{equation}$$
 The $g^{-1}$ is defined as follows. If $A \subseteq \mathbb{R}$ then $g^{-1} A=\{x \in \mathbb{R}: g(x) \in A\}$.
 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 Let $g(x) = ax + b$ for fixed $a, b \in \mathbb{R}$. Then $Y = g (X) = aX + b$ has distribution function 
 $$\begin{equation}
     \mathbf{P}(Y \leq y) = \mathbf{P}(a X+b \leq y) = \left\{\begin{array}{ll}
@@ -195,7 +195,7 @@ $$\begin{equation}
 \end{equation}$$
 which express as a function $J = J(y_1, y_2)$. We assume the **partial derivatives are continuous**.
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 If $g : \mathbb{R}^2 \to \mathbb{R}$, and $T$ maps the set $A \subseteq D$ onto the set $B \subseteq R$, then 
 $$\begin{equation}
     \iint_{A} g\left(x_{1}, x_{2}\right) d x_{1} d x_{2}=\iint_{B} g\left(x_{1}\left(y_{1}, y_{2}\right), x_{2}\left(y_{1}, y_{2}\right)\right)\left|J\left(y_{1}, y_{2}\right)\right| d y_{1} d y_{2}.
@@ -211,7 +211,7 @@ $$\begin{equation}
 
 A similar result holds for mappings of $\mathbb{R}^n$ into $\mathbb{R}^n$. This technique is sometimes referred to as the method of **change of variables**. 
 
-<div class="remark-block"><p><b>Example.<b> 
+<div class="remark-block"><p><b>Example.</b> 
 Suppose that 
 $$\begin{equation}
     X_{1}=a Y_{1}+b Y_{2}, \quad X_{2}=c Y_{1}+d Y_{2}
@@ -226,7 +226,7 @@ $$\begin{equation}
 ## Multivariate normal distribution
 (This section is the supplement of the lecture.)
 ### Definition and properties
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The vector $\mathbf{X} = (X_1 , X_2 , \dots , X_n )$ has the **multivariate normal distribution** (or **multinormal distribution**), written $N(\boldsymbol{\mu}, \mathbf{V})$, if its joint density function is 
 $$\begin{equation}
     f(\mathbf{x})=\frac{1}{\sqrt{(2 \pi)^{n}|\mathbf{V}|}} \exp \left[-\frac{1}{2}(\mathbf{x}-\boldsymbol{\mu})^T \mathbf{V}^{-1}(\mathbf{x}-\boldsymbol{\mu}) \right], \quad \mathbf{x} \in \mathbb{R}^{n}
@@ -234,7 +234,7 @@ $$\begin{equation}
 where $\mathbf{V}$ is a positive definite symmetric matrix. 
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 If $\mathbf{X}$ is $N(\boldsymbol{\mu}, \mathbf{V})$, then 
 <ol>[(a)]
     <li> $\mathbf{E}(\mathbf{X}) = \boldsymbol{\mu}$, which is to say that $\mathbf{E}(X_i) = \mu_i$ for all $i$,
@@ -242,11 +242,11 @@ If $\mathbf{X}$ is $N(\boldsymbol{\mu}, \mathbf{V})$, then
 </ol>
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 If $\mathbf{X}=\left(X_{1}, X_{2}, \dots, X_{n}\right)$ is $N(\boldsymbol{\mu}, \mathbf{V})$ and $\mathbf{Y}=\left(Y_{1}, Y_{2}, \dots, Y_{m}\right)$ is given by $\mathbf{Y} = \mathbf{XD}$ for some matrix $\mathbf{D}$ of rank $m \leq n$, then $\mathbf{Y}$ is $N\left(\mathbf{0}, \mathbf{D}^T \mathbf{V} \mathbf{D}\right)$.
 </p></div>
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The vector $\mathbf{X}=\left(X_{1}, X_{2}, \dots, X_{n}\right)$ of random variables is said to have the 
 **multivariate normal distribution** whenever, for all $\mathbf{a} \in \mathbb{R}^n$, the linear combination $\mathbf{Xa}^T = a_1 X_1 + \dots + a_n X_n$ has a normal distribution.
 </p></div>
@@ -255,7 +255,7 @@ The vector $\mathbf{X}=\left(X_{1}, X_{2}, \dots, X_{n}\right)$ of random variab
 Suppose that $X_1, X_2, \dots , X_n$ is a collection 
 of independent $N(\mu, \sigma^2)$ variables for some fixed but unknown values of $\mu$ and $\sigma^2$. We can use them to estimate $\mu$ and $\sigma^2$.
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **sample mean** of a sequence of random variables $X_1, X_2, \dots , X_n$ is 
 $$\begin{equation}
     \bar{X} = \frac{1}{n} \sum_{i=1}^n X_i.
@@ -263,7 +263,7 @@ $$\begin{equation}
 It is usually used as a guess at the value of $\mu$.
 </p></div>
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 The **sample variance** of a sequence of random variables $X_1, X_2, \dots , X_n$ is 
 $$\begin{equation}
     S^2 = \frac{1}{n-1}\sum_{i=1}^n (X_i - \bar{X})^2.
@@ -271,15 +271,15 @@ $$\begin{equation}
 It is usually used as a guess at the value of $\sigma^2$.
 </p></div>
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 The sample mean and the sample variance have the property of being 'unbiased' in that $\mathbf{E}(\bar{X}) = \mu$ and $\mathbf{E}(S^2) = \sigma^2$. Note that in some texts the sample variance is defined with $n$ in place of $(n - 1)$. 
 </p></div>
 
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 If $X_1, X_2, \dots , X_n$ are independent $N(\mu, \sigma^2)$ variables, then $\bar{X}$ and $S^2$ are independent. We have that $\bar{X}$ is $N(\mu, \sigma^2/n)$ and $(n-1)S^2 / \sigma^2$ is $\chi^{(n-1)}$.
 </p></div>
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 If $X_1, X_2, \dots , X_n$ are standard normal random variables, then the sum of their squares,
 $$\begin{equation}
     Q = \sum_{i=1}^n X_i^2
@@ -299,7 +299,7 @@ $$\begin{equation}
 
 ### Sampling from a distribution
 A basic way of generating a random variable with given distribution function is to use the following theorem. 
-<div class="theorem-block"><p><b>Theorem.<b> [Inverse transform technique]
+<div class="theorem-block"><p><b>Theorem.</b> [Inverse transform technique]
 Let $F$ be a distribution function, and let $U$ be uniformly distributed on the interval $[0, 1]$. 
 <ol>[(a)]
     <li> If $F$ is a continuous function, the random variable $X = F^{-1} (U)$ has distribution function $F$.

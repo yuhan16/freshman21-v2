@@ -16,19 +16,19 @@
 One of the simplest random processes is so-called ``simple 
 random walk". 
 
-<div class="theorem-block"><p><b>Definition.<b> 
+<div class="theorem-block"><p><b>Definition.</b> 
 Let $\{X_k\}_{k=1}^\infty$ be a sequence of i.i.d. discrete random variables with finite outcomes. For each positive integer $n$, we let $S_n$ denote the sum $X_1 +X_2 + \cdots + X_n$. The sequence $\{S_n\}_{n=1}^\infty$ is called a **random walk**.
 </p></div>
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 If the common range of the $X_k$’s is $\mathbb{R}^m$, then we say that $\{S_n\}$ is a random walk in $\mathbb{R}^m$.
 </p></div>
 
-<div class="remark-block"><p><b>Remark.<b> 
+<div class="remark-block"><p><b>Remark.</b> 
 Sometimes we set $S_0 = a$ for some number $a$ as the **start value** of the random walk. This is common in the gambling analysis.
 </p></div>
 
-<div class="theorem-block"><p><b>Lemma.<b> 
+<div class="theorem-block"><p><b>Lemma.</b> 
 The simple random walk has the Markov property ; that is
 $$\begin{equation}
     \mathbf{P}\left(S_{m+n}=j | S_{0}, S_{1}, \ldots, S_{m}\right)=\mathbf{P}\left(S_{m+n}=j | S_{m}\right), \quad n \geq 0.
@@ -41,7 +41,7 @@ If one knows the value of $S_m$ , then the distribution of $S_{m+n}$ depends onl
 
 The random walk has two main applications: gambling analysis and investment decision making. For example, in the gambling, we gamble at each step, $S_i$ is the total stack we have at step $i$, and we are interested in when there will be a **return** or \text{equalization}, i.e., what is the probability that $S_0 = a = S_n$.
 
-<div class="remark-block"><p><b>Example.<b> [Random walks on the real line]
+<div class="remark-block"><p><b>Example.</b> [Random walks on the real line]
 We shall first consider the simplest non-trivial case of a random walk in $\mathbb{R}^1$, namely the case where the common distribution function of the random variables $X_n$ is given by
 $$$$$$$$\begin{equation}
     \label{eq:9.1}
@@ -71,7 +71,7 @@ $$\begin{equation}
     \binom{2m}{m} = \frac{(2m)!}{m! m!}.
 \end{equation}$$
 Since each path has probability $2^{-2m}$, we have the following theorem.
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 The probability of a return to the origin at time $2m$ is given by
 $$\begin{equation}
     u_{2 m}= \binom{2m}{m} 2^{-2 m}.
@@ -81,7 +81,7 @@ The probability of a return to the origin at an odd time is 0.
 
 A random walk is said to have a **first return** to the origin at time $2m$ if $m > 0$, and $S_{2k} = 0$ for all $k < m$. We define $f_{2m}$ to be the probability of this event. (We also define $f_0 = 0$.) One can think
 of the expression $f_{2m}2^{2m}$ as the number of paths of length $2m$ between the points $(0, 0)$ and $(2m, 0)$ that do not touch the horizontal axis except at the endpoints. We have the following theorem.
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 For $n \geq 1$, the probabilities $\{u_{2k}\}$ and $\{f_{2k}\}$ are related by the equation
 $$\begin{equation}
     u_{2 n}=f_{0} u_{2 n}+f_{2} u_{2 n-2}+\cdots+f_{2 n} u_{0},
@@ -103,7 +103,7 @@ Dividing both sides of this equation by $2^{2n}$ completes the proof.
 \end{proof}
 
 Using the generating functions, we have following theorem.
-<div class="theorem-block"><p><b>Theorem.<b> 
+<div class="theorem-block"><p><b>Theorem.</b> 
 For $m \geq 1$, the probability of a first return to the origin at time
 $2m$ is given by
 $$\begin{equation}
