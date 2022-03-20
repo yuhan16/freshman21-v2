@@ -4,7 +4,6 @@
 @charset "utf-8";
 
 
-
 // Our variables
 $base-font-family: 'Roboto', sans-serif;
 //$base-font-family: 'Lato', 'Open Sans', Helvetica, Arial, sans-serif !important;
@@ -39,6 +38,10 @@ $page-width:       1050px;
 $on-palm:          600px;
 $on-laptop:        800px;
 
+$nyu-indigo: rgb(87,6,140);
+$penn-carmine: rgb(149,0,26);
+$penn-blue: rgb(1,40,113);
+$iros-eggplant: rgb(98,64,92);
 
 
 // Using media queries with like this:

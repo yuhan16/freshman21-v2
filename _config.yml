@@ -5,7 +5,7 @@ author: Yuhan Zhao
 email: yuhan-zhao@outlook.com
 description: "HuskDev is Yuhan's personal blog." # It will appear in your document head meta and in your feed.xml site description
 keywords: ["Yuhan", "HuskyDev"]
-baseurl: "/freshman21-v1" # the subpath of your site, e.g. /blog/
+baseurl: "/freshman21-v2" # the subpath of your site, e.g. /blog/
 #url: "https://yulijia.net/freshman21" # the base hostname & protocol for your site
 
 ### Personal info and site tools info:
