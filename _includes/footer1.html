@@ -1,10 +1,30 @@
-<div class="wrapper">
-    <div class="site-footer">
-        <p>Copyright &copy; <a href="{{ site.baseurl }}/">{{site.title}}</a></p>
-        <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> on <a href="https://github.com/">Github</a> | Design by Yuhan</p>
+<footer class="wrapper-through">
     
-        <!--display menu-->
-        <a>Home</a> <a>Blog</a> <a>Topics</a> <a>Research</a> <a>Projects</a> 
-        <!--display contact icon: linkedin github, mail, rss-->
+    <div class="newfooter">
+        
+        <div class="footer-half-col" style="text-align: left;">
+            <p>Copyright &copy; <a href="{{ site.baseurl }}/">{{site.title}}</a></p>
+            <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> on 
+                <a href="https://github.com/">Github</a>
+                | Design by Yuhan</p>  
+        </div>
+        
+        <div class="footer-half-col" style="text-align: right;">
+            <!--display menu-->
+            <span>
+                <a href="{{site.baseurl}}/">Home</a> | 
+                <a href="{{site.baseurl}}/blog">Blog</a> | 
+                <a href="{{site.baseurl}}/categories">Topics</a> | 
+                <a href="{{site.baseurl}}/research">Research</a> | 
+                <a href="{{site.baseurl}}/projects">Projects</a>
+            </span>
+            <!--display contact icons-->
+            <span>
+                <a href="{{site.linkedin_page}}" title="LinkedIn: {{site.linkedin_page}}"><i class="fa fa-linkedin"></i></a>
+                <a href="https://github.com/{{site.github_username}}" title="GithubID: {{site.github_username}}"><i class="fa fa-github"></i></a>
+                <a href="mailto:{{site.email}}" title="mailto: {{site.email}}"><i class="fa fa-envelope"></i></a>
+                <a href="{{page.url | prepend: site.baseurl}}feed.xml" title="RSS feed"><i class="fa fa-rss"></i></a> 
+            </span>
+        </div>
     </div>
-</div>
+</footer>

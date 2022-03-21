@@ -1,10 +1,12 @@
-<header class="site-header">
-    <img src="{{ site.baseurl }}/assets/images/husky_logo_crop.png">
-    <nav>
+<header class="navbar-all">
+    <nav class="navbar" id="navbar">
+        <a href="{{site.baseurl}}/"><img src="{{ site.baseurl }}/assets/images/huskydev_logo.png" class="navbar-logo" id="navbar-logo"></a>
+        
+        <div class="navbar-right" id="navbar-right">
         <ul class="main-menu">
-            <li><a class="page-link" href="{{site.baseurl}}/">Home</a></li>
-            <li><a class="page-link" href="{{site.baseurl}}/blog">Blog</a></li>
-            <li class="menu-item-dropdown"><a class="page-link" href="javascript:void(0)">Topics &#9662;</a>
+            <li><a href="{{site.baseurl}}/">Home</a></li>
+            <li><a href="{{site.baseurl}}/blog">Blog</a></li>
+            <li class="menu-item-dropdown"><a href="javascript:void(0)">Topics &#9662;</a>
                 <ul class="sub-menu">
                     <li><a href="{{site.baseurl}}/topics/probability">Probability</a></li>
                     <li><a href="{{site.baseurl}}/topics/optimization">Optimization</a></li>
@@ -14,16 +16,36 @@
                     <li><a href="{{site.baseurl}}/topics/miscellaneous">Miscellaneous</a></li>
                 </ul>
             </li>
-            <li><a class="page-link" href="{{site.baseurl}}/research">Research</a></li>
-            <li><a class="page-link" href="{{site.baseurl}}/projects">Projects</a></li>
-            <li class="menu-item-dropdown"><a class="page-link" href="javascript:void(0)">Contact</a>
-                <ul class="sub-menu">
-                    <li>linkedin</li>
-                    <li>github</li>
-                    <li>mail</li>
-                    <li>rss</li>
-                </ul>
+            <li><a href="{{site.baseurl}}/research">Research</a></li>
+            <li><a href="{{site.baseurl}}/projects">Projects</a></li>
+            <li class="menu-item-dropdown"><a href="javascript:void(0)">Contact</a>
+                <div class="sub-menu-contact">
+                    <a href="{{site.linkedin_page}}" title="LinkedIn: {{site.linkedin_page}}"><i class="fa fa-linkedin"></i></a>
+                    <a href="https://github.com/{{site.github_username}}" title="GithubID: {{site.github_username}}"><i class="fa fa-github"></i></a>
+                    <a href="mailto:{{site.email}}" title="mailto: {{site.email}}"><i class="fa fa-envelope"></i></a>
+                    <a href="{{page.url | prepend: site.baseurl}}feed.xml" title="RSS feed"><i class="fa fa-rss"></i></a>
+                </div>
             </li>
+            <li><a href="javascript:void(0)"><i class="fa fa-search"></i></a></li>
         </ul>
+        </div>
+
     </nav>
 </header>
+
+<script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementById("navbar").style.padding = "20px 10px";
+        document.getElementById("navbar-logo").style.height = "55px";
+        document.getElementById("navbar-right").style.height = "55px";
+      } else {
+        document.getElementById("navbar").style.padding = "40px 10px";
+        document.getElementById("navbar-logo").style.height = "80px";
+        document.getElementById("navbar-right").style.height = "80px";
+      }
+    }
+</script>

@@ -1,0 +1,167 @@
+.site-header {
+    //Positioning context for the mobile navigation icon
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    img {
+      margin-left:5px;
+      margin-right: 15px;
+      float: left;
+      height: 70px;
+    }
+  }
+
+.main-menu {
+    list-style-type: none;
+    background-color: antiquewhite;
+    margin: 0;
+    padding: 0px;
+    & > li {
+        display: inline-block;
+        padding: 10px;
+    }
+    & > li > a {
+        font-size: 18px;
+        color: $iros-eggplant;
+    }
+}
+
+.sub-menu {
+    list-style-type: none;
+    text-align: left;
+	padding: 0;
+	margin: 0;
+	min-width: 200px;
+  	background-color: #fff;
+	z-index: 1;
+	//display: none;
+  	visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.8s ease 0s ;
+    
+    & > li {
+        padding: 5px 15px; 
+    }
+    
+    & > li > a {
+        font-size: 16px;
+        font-weight: 100;
+        color: $iros-eggplant;
+    }
+
+}
+
+.menu-item-dropdown {
+	position: relative;
+  
+  	&:hover > .sub-menu {
+        //display: block;
+        visibility: visible;
+        opacity: 1;
+        //background-color: aqua;
+  	}
+    
+    &:hover > .sub-menu-contact {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.sub-menu-contact {
+    padding: 8px 10px;
+	margin: 0;
+    min-width: 190px;
+    background-color: #fff;
+    z-index: 1;
+    opacity: 0;
+  	visibility: hidden;
+    position: absolute;
+    transition: all 0.8s ease 0s ;
+ 
+    & > a {
+        padding: 10px;
+    }
+
+    i.fa {
+        color: $grey-color;
+        font-size: 22px;
+    
+        &:hover {
+          color: $grey-color-dark;
+        }
+    }
+}
+
+
+.wrapper-through {
+    margin: 0;
+    padding: 0;
+    background-color: $nyu-indigo;
+    border-bottom: 1px solid $grey-color;
+    min-height: 1px;
+    //position: fixed;
+    @extend %clearfix;
+}
+
+/*
+* navbar-all crosses the entire page
+*/
+.navbar-all {
+    margin: 0;
+    margin-top: -30px;
+    padding: 0;
+    width: 100%;
+    background-color: $nyu-indigo;
+    border-bottom: 1px solid $grey-color;
+    z-index: 99;
+    position: fixed;
+    transition: 0.4s;
+    @extend %clearfix
+
+}
+
+.navbar{
+    max-width: $content-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 10px;
+    //position: fixed;
+    @extend %clearfix;
+}
+
+.navbar-logo {
+    margin-left:5px;
+    margin-right: 15px;
+    float: left;
+    height: 80px;
+}
+
+.navbar .navbar-logo{
+    transition: 0.4s;
+}
+
+.navbar-right {
+    float: right;
+    height: 80px;
+    background-color: aqua;
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+}
+
+.newfooter {
+    background-color: red;
+    max-width: $content-width;
+    min-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    @extend %clearfix;
+}
+
+.footer-half-col {
+    width: 50%;
+    position: relative;
+    float: left;
+    color: #fff;
+}
