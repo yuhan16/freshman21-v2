@@ -82,6 +82,12 @@ excerpt_separator: <!--more-->
 The second methods displays the post content before `<!--more-->`.
 
 
+### margin collaps
+when we use `container-all` with 0 margin and 0 padding to cover the background, we may encounter a margin collapse. The container will automatically have margin. We can use a fack padding to solve this problem `padding: 0.1px`. 
+
+See [Collapsing Margins of Block Elements](https://cmichel.io/css-margin-top-not-working)
+
+
 ### For testing
 <i class="fa fa-car" style="font-size:48px;"></i>
 

@@ -1,4 +1,4 @@
-<header class="navbar-all">
+<header class="header-container" id="header-container">
     <nav class="navbar" id="navbar">
         <a href="{{site.baseurl}}/"><img src="{{ site.baseurl }}/assets/images/huskydev_logo.png" class="navbar-logo" id="navbar-logo"></a>
         
@@ -39,11 +39,11 @@
     
     function scrollFunction() {
       if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.getElementById("navbar").style.padding = "20px 10px";
+        document.getElementById("header-container").style.padding = "20px 10px";
         document.getElementById("navbar-logo").style.height = "55px";
         document.getElementById("navbar-right").style.height = "55px";
       } else {
-        document.getElementById("navbar").style.padding = "40px 10px";
+        document.getElementById("header-container").style.padding = "40px 10px";
         document.getElementById("navbar-logo").style.height = "80px";
         document.getElementById("navbar-right").style.height = "80px";
       }
