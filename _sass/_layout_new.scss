@@ -27,7 +27,7 @@
     z-index: 99;
     position: fixed;
     transition: 0.4s;
-    @extend %clearfix
+    //@extend %clearfix
 }
 
 .navbar{
@@ -220,8 +220,9 @@
     min-height:100%;
     margin: 0;
     padding: 0;
-    background-color: #fff;
-    @extend %clearfix;
+    //background-color: #fff;
+    background-color: aqua;
+    //@extend %clearfix;
 }
 
 .page-xxx {
@@ -231,5 +232,14 @@
     margin-left: auto;
     margin-right: auto;
     padding: 30px 10px;
+    background-color: #c4661f;
     @extend %clearfix;
+}
+
+.container-all {
+    min-height:100%;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+
 }
