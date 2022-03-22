@@ -175,3 +175,19 @@
         padding: 0 5px;
     }
 }
+
+.icon-background {
+    visibility: hidden;
+    color: greenyellow;
+    opacity: 0;
+    padding: 0 0px;
+}
+
+.fa-stack, .icon-background {
+    transition: 0.5s all ease 0s;
+}
+
+.fa-stack:hover .icon-background {
+    visibility: visible;
+    opacity: 1;
+}

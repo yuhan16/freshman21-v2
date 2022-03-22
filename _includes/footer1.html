@@ -20,12 +20,38 @@
             </span>
             <span style="padding-left:20px"></span>
             <!--display contact icons-->
+            <span class="fa-stack">
+                <a href="{{site.linkedin_page}}" title="LinkedIn: {{site.linkedin_page}}">
+                    <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                    <i class="fa fa-linkedin fa-stack-1x"></i>
+                </a>
+            </span>
+            <span class="fa-stack">
+                <a href="https://github.com/{{site.github_username}}" title="Github ID: {{site.github_username}}">
+                    <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                    <i class="fa fa-github fa-stack-1x"></i> 
+                </a>
+            </span>
+            <span class="fa-stack">
+                <a href="mailto:{{site.email}}" title="mailto: {{site.email}}">
+                    <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                    <i class="fa fa-envelope fa-stack-1x"></i> 
+                </a>
+            </span>
+            <span class="fa-stack">
+                <a href="{{page.url | prepend: site.baseurl}}feed.xml" title="RSS feed">
+                    <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                    <i class="fa fa-rss fa-stack-1x"></i> 
+                </a>
+            </span>
+            <!--
             <span>
-                <a href="{{site.linkedin_page}}" title="LinkedIn: {{site.linkedin_page}}"><i class="fa fa-linkedin"></i></a>
-                <a href="https://github.com/{{site.github_username}}" title="GithubID: {{site.github_username}}"><i class="fa fa-github"></i></a>
+                <a href="{{site.linkedin_page}}" title="LinkedIn: {{site.linkedin_page}}"><i class="fa fa-circle fa-stack-2x icon-background"></i></a>
+                <a href="https://github.com/{{site.github_username}}" title="Github ID: {{site.github_username}}"><i class="fa fa-github"></i></a>
                 <a href="mailto:{{site.email}}" title="mailto: {{site.email}}"><i class="fa fa-envelope"></i></a>
                 <a href="{{page.url | prepend: site.baseurl}}feed.xml" title="RSS feed"><i class="fa fa-rss"></i></a> 
             </span>
+            -->
         </div>
     </div>
 </footer>
