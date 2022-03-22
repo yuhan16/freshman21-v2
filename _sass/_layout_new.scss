@@ -1,3 +1,6 @@
+/*
+* site header and navigation bar
+*/
 .site-header {
     //Positioning context for the mobile navigation icon
     position: relative;
@@ -11,6 +14,51 @@
     }
   }
 
+/*
+* navbar-all crosses the entire page
+*/
+.navbar-all {
+    margin: 0;
+    margin-top: -30px;
+    padding: 0;
+    width: 100%;
+    background-color: $nyu-indigo;
+    border-bottom: 1px solid $grey-color;
+    z-index: 99;
+    position: fixed;
+    transition: 0.4s;
+    @extend %clearfix
+}
+
+.navbar{
+    max-width: $page-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 10px;
+    //position: fixed;
+    @extend %clearfix;
+}
+
+.navbar-logo {
+    margin-left:5px;
+    margin-right: 15px;
+    float: left;
+    height: 80px;
+}
+
+.navbar .navbar-logo{
+    transition: 0.4s;
+}
+
+.navbar-right {
+    float: right;
+    height: 80px;
+    background-color: aqua;
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+}
+
 .main-menu {
     list-style-type: none;
     background-color: antiquewhite;
@@ -23,6 +71,9 @@
     & > li > a {
         font-size: 18px;
         color: $iros-eggplant;
+        &:hover {
+            text-decoration: none;
+        }
     }
 }
 
@@ -86,61 +137,18 @@
     i.fa {
         color: $grey-color;
         font-size: 22px;
+        transition: color 0.4s ease 0s;
     
         &:hover {
-          color: $grey-color-dark;
+          color: $iros-eggplant;
         }
     }
 }
 
 
 /*
-* navbar-all crosses the entire page
+* site footer layout
 */
-.navbar-all {
-    margin: 0;
-    margin-top: -30px;
-    padding: 0;
-    width: 100%;
-    background-color: $nyu-indigo;
-    border-bottom: 1px solid $grey-color;
-    z-index: 99;
-    position: fixed;
-    transition: 0.4s;
-    @extend %clearfix
-
-}
-
-.navbar{
-    max-width: $page-width;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 40px 10px;
-    //position: fixed;
-    @extend %clearfix;
-}
-
-.navbar-logo {
-    margin-left:5px;
-    margin-right: 15px;
-    float: left;
-    height: 80px;
-}
-
-.navbar .navbar-logo{
-    transition: 0.4s;
-}
-
-.navbar-right {
-    float: right;
-    height: 80px;
-    background-color: aqua;
-    display: flex;
-    //justify-content: center;
-    align-items: center;
-}
-
-
 .footer-all {
     margin: 0;
     padding: 0;
@@ -167,6 +175,7 @@
     position: relative;
     float: left;
     color: #fff;
+    //padding: 0 10px;
     p, a {
         font-size: $small-font-size;
         color: #fff;
@@ -178,7 +187,7 @@
 
 .icon-background {
     visibility: hidden;
-    color: greenyellow;
+    color: #c4661f;
     opacity: 0;
     padding: 0 0px;
 }
@@ -187,7 +196,40 @@
     transition: 0.5s all ease 0s;
 }
 
-.fa-stack:hover .icon-background {
-    visibility: visible;
-    opacity: 1;
+.fa-stack { 
+    .icon-footer {
+        font-size: 15px;
+        color: #fff;
+    }
+    .icon-background {
+        font-size: 34px;
+    }
+
+    &:hover .icon-background {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+/*
+* Body layout
+*/
+
+.body-container {
+    min-height:100%;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    @extend %clearfix;
+}
+
+.page-xxx {
+    min-height:100%;
+    max-width: $page-width;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 10px;
+    @extend %clearfix;
 }

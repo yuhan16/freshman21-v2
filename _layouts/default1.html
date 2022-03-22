@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+{% include head.html %}
+
+<body style="background-color: rgb(98,64,92);">
+
+    {% include header1.html %}
+
+    <div class="body-container">
+
+    {% if page.single_col_layout %}  
+    
+        <div class="page-xxx">
+            <p>12345</p>
+            {{ content }}
+        </div>
+
+    {% else %}
+
+        <div class="page-content col-sm-8">
+            {{ content }}
+        </div>
+        {% include sidebar.html %}
+
+    {% endif %}
+
+    </div>
+
+    {% include footer1.html %}
+
+</body>
+
+</html>
