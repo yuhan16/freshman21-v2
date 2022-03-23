@@ -234,6 +234,8 @@
     background-color: $iros-eggplant;
     //border-bottom: 1px solid $grey-color;
     min-height: 1px;
+    padding-top: 20px;
+    padding-bottom: 10px;
     //position: fixed;
     //@extend %clearfix;
     //opacity: 0;
@@ -245,8 +247,6 @@
     //min-width: 100px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 20px;
-    padding-bottom: 10px;
     @extend %clearfix;
 }
 
