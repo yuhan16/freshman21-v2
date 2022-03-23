@@ -156,25 +156,26 @@
 /**
  * Topic Archive header
 */
+/*
 .topic-archive-header {
   border-bottom: 1px solid $grey-color-light;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   h3{
     font-size: 18px;
     font-weight: bold;
     color: $text-color;
-    line-height: 1;
+    //line-height: 1;
   }
 }
-
+*/
 
 /**
  * Sidebar
  */
-
+/*
 .sidebar-module {
-  padding: 0 15px 15px 15px;
-  margin: 0 -20px 15px;
+  padding: 5px 5px 15px 5px;
+  //margin: 0px;
   font-size: 14px;
   h4{
     font-size: $base-font-size;
@@ -184,9 +185,8 @@
   li{
     list-style: none; 
   }
-
 }
-
+*/
 
 /**
  * Site footer
@@ -208,8 +208,8 @@
  * Page content
  */
 .page-content {
-  margin: 30px 0;
-  padding: 0 10px;
+  margin: 10px 0;
+  padding: 20px 20px;
   strong { font-weight: bold; }
 
 }
@@ -228,7 +228,6 @@
   //font-size: 38px;//42px;
   color: $text-color;
 }
-
 
 
 /**
@@ -435,7 +434,7 @@ time{
  */
 
 .about{
-  padding-top: 10px;
+  padding: 20px 10px 20px 10px;
   img{
     float: left;
     height: 300px;

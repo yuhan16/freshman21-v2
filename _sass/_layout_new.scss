@@ -1,8 +1,55 @@
+/**
+ * main page style
+ */
+
+ .container-all {
+    min-height: 10px;
+    background-color: #fff;
+    margin: 0;
+    padding: 0.1px;     // prevent margin collapse
+    //@extend %clearfix;
+}
+
+/*two columns layout*/
+.col-sm-8,.col-sm-2{
+    position: relative;
+    min-height: 1px;
+    //margin: 0px 20px;
+    //padding-top: 20px;
+  }
+  
+.col-sm-8 {
+    float:left;
+    width:70%;
+    background-color: #777;
+}
+  
+.col-sm-2 {
+    float:right;
+    width:30%;
+    background-color: #ccc;
+}
+  
 /*
-* header-container crosses the entire page
+@media screen and (min-width : $on-palm) {
+    .col-sm-8 {
+      float:left;
+      width:67%;
+    }
+  
+    .col-sm-2 {
+      float:right;
+      width:24%;
+    }
+}*/
+
+
+
+/*
+* site header layout
 */
+
 .header-container {
-    overflow: hidden;
     margin: 0;
     //margin-top: 0px;
     padding: 40px 10px;
@@ -10,7 +57,7 @@
     width: 100%;
     background-color: $nyu-indigo;
     border-bottom: 1px solid $grey-color;
-    z-index: 99;
+    z-index: 90;
     position: fixed;
     transition: 0.4s;
     //opacity: 0;
@@ -51,7 +98,6 @@
 .navbar .navbar-right {
     transition: 0.4s;
 }
-
 
 .main-menu {
     list-style-type: none;
@@ -94,7 +140,6 @@
         font-weight: 100;
         color: $iros-eggplant;
     }
-
 }
 
 .menu-item-dropdown {
@@ -104,6 +149,7 @@
         //display: block;
         visibility: visible;
         opacity: 1;
+        //z-index: 1;
         //background-color: aqua;
   	}
     
@@ -129,7 +175,7 @@
     }
 
     i.fa {
-        color: $grey-color;
+        color: $grey-color-light;
         font-size: 22px;
         transition: color 0.4s ease 0s;
     
@@ -140,9 +186,48 @@
 }
 
 
+
+/*
+* site body layout
+*/
+
+.body-container {
+    min-height:100%;
+    margin-top: 160px;
+    padding: 0px;
+    //background-color: #fff;
+    background-color: aqua;
+    //@extend %clearfix;
+    //opacity: 0;
+}
+
+.page-container-content {
+    min-height:100%;
+    max-width: $page-width;
+    
+    //margin-top: 100px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding-top: 45px;
+    padding-bottom: 30px;
+    padding-left: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
+    padding-left:         calc( (#{$page-width} - #{$content-width}) / 2);
+    padding-right: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
+    padding-right:         calc( (#{$page-width} - #{$content-width}) / 2);
+    
+    background-color: #c4661f;
+    @extend %clearfix;
+}
+
+
+
 /*
 * site footer layout
 */
+
 .footer-container {
     margin: 0;
     padding: 0;
@@ -154,7 +239,7 @@
     //opacity: 0;
 }
 
-.newfooter {
+.footer-content {
     background-color: red;
     max-width: $page-width;
     //min-width: 100px;
@@ -170,7 +255,7 @@
     position: relative;
     float: left;
     color: #fff;
-    background-color: antiquewhite;
+    background-color: #111;
     //padding: 0 10px;
     p, a {
         font-size: $small-font-size;
@@ -208,37 +293,38 @@
 }
 
 
-/*
-* Body layout
+
+/**
+ * Sidebar
+ */
+
+ .sidebar-module {
+    padding: 0px 5px 20px 5px;
+    //margin: 0px;
+    font-size: $small-font-size;
+    h4{
+      font-size: $base-font-size;
+      font-weight: bold;
+      color: $grey-color-dark;
+    }
+    li{
+      list-style: none; 
+    }
+}
+
+
+/**
+ * Topic Archive header
 */
 
-.body-container {
-    min-height:100%;
-    margin-top: 160px;
-    padding: 0px;
-    //background-color: #fff;
-    background-color: aqua;
-    //@extend %clearfix;
-    //opacity: 0;
+.topic-archive-header {
+    border-bottom: 1px solid $grey-color-light;
+    margin-bottom: 10px;
+    h3{
+      font-size: 18px;
+      font-weight: bold;
+      color: $text-color;
+      //line-height: 1;
+    }
 }
-
-.page-xxx {
-    min-height:100%;
-    max-width: $page-width;
-    //margin-top: 100px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 30px 10px;
-    background-color: #c4661f;
-    @extend %clearfix;
-}
-
-.container-all {
-    min-height: 10px;
-    background-color: #fff;
-    margin: 0;
-    padding: 0.1px;     // prevent margin collapse
-    //@extend %clearfix;
-}
+  

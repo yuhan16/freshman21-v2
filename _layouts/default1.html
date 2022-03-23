@@ -4,32 +4,30 @@
 {% include head.html %}
 
 <body>
-    <div class="container-all">
+<div class="container-all">
         
     {% include header1.html %}
 
     <div class="body-container">
+        <div class="page-container-content">
+            {% if page.single_col_layout %}  
+            
+                {{ content }}
+            
+            {% else %}
+            
+                <div class="col-sm-8">
+                    {{ content }}
+                </div>
+                {% include sidebar.html %}
 
-    {% if page.single_col_layout %}  
-    
-        <div class="page-xxx">
-            {{ content }}
+            {% endif %}
         </div>
-
-    {% else %}
-
-        <div class="page-content col-sm-8">
-            {{ content }}
-        </div>
-        {% include sidebar.html %}
-
-    {% endif %}
-
     </div>
 
     {% include footer1.html %}
-    </div>
 
+</div>
 </body>
 
 </html>

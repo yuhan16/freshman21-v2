@@ -23,8 +23,13 @@ $hover-color:      #669900;
 //$hover-color:      #DD1144;
 
 $grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color-light: lighten($grey-color, 25%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$nyu-indigo: rgb(87,6,140);
+$penn-carmine: rgb(149,0,26);
+$penn-blue: rgb(1,40,113);
+$iros-eggplant: rgb(98,64,92);
 
 //$code-backgroud-color: #29281e;
 //$code-font-color:  #eee;  
@@ -37,11 +42,6 @@ $page-width:       1050px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
-
-$nyu-indigo: rgb(87,6,140);
-$penn-carmine: rgb(149,0,26);
-$penn-blue: rgb(1,40,113);
-$iros-eggplant: rgb(98,64,92);
 
 
 // Using media queries with like this:
