@@ -1,0 +1,16 @@
+<section class="post-index">
+    <ul>
+        {% if page.previous %}
+            <li class="previous"><a href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
+        {% else %}
+            <li class="disabled"><a>&laquo; Previous</a></li>
+        {% endif %}
+        
+        {% if page.next %}
+            <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
+        {% else %}
+            <li class="disabled"><a>Next &raquo;</a></li>
+        {% endif %}
+    </ul>
+</section>
+  

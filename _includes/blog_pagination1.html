@@ -1,0 +1,20 @@
+<!--using JS for implementation-->
+<div class="page-index">
+
+    <div class="page-index-half-col" style="text-align: left;">
+      	<p>Page {{paginator.page}} of {{paginator.total_pages}}</p>
+    </div>
+  
+    <div class="page-index-half-col" id="page-index-icon-col", style="text-align: right;">
+      	<script src="{{site.baseurl}}/assets/js/page-index.js"></script>
+      	<script>
+        	curr_page, total_pages, pageurl, base
+        	var curr_page = parseInt('{{paginator.page}}');
+        	var total_pages = parseInt('{{paginator.total_pages}}');
+        	var pageurl = '{{page.url}}';
+        	var base = '{{site.baseurl}}';
+        	create_page_index_icon_list(curr_page, total_pages, pageurl, base);
+      	</script> 
+    </div>
+
+</div>

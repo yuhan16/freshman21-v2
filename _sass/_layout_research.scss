@@ -3,16 +3,18 @@
 */
 
 .theorem {
-    border-left: 5px solid #2583ad;
-    border-radius: 3px;
-    color: $grey-color;
-    background: #f9f9f9;
+    background: $background-color;
+    border: 1px solid $grey-color;
     margin: 10px 0;
     padding: 10px 15px;
-    p {margin: 0;}
-    ol {
-        list-style-type:none;
-    }
+  
+    font-family: Times, "Times New Roman", Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    color: $grey-color-dark;
+
+    p { margin: 0; }
+    ol { list-style-type:none; }
   
     li:before {
         content:"(" counter(section, decimal) ")  ";
@@ -24,17 +26,33 @@
 }
 
 .remark {
-    border-left: 5px solid rgb(151, 151, 151);
-    border-radius: 3px;
-    color: $grey-color;
     background: #f9f9f9;
+    border-left: 4px solid rgb(151, 151, 151);
+    //border-radius: 3px;
     margin: 10px 0;
     padding: 10px 15px;
+
+    font-family: Times, "Times New Roman", Georgia, serif;
+    color: $grey-color-dark;
+
+    p {margin: 0;}
+}
+
+.note {
+    background: #f9f9f9;
+    border-left: 4px solid rgb(151, 151, 151);
+    //border-radius: 3px;
+    margin: 10px 0;
+    padding: 10px 15px;
+    color: $grey-color-dark;
+
     p {margin: 0;}
 }
 
 .example {
-    border-left: 5px solid rgb(151, 151, 151);;
+    //border: 1px solid $grey-color;
+    margin: 10px 0;
+    padding: 10px 30px;
 }
 
 .quote-source {

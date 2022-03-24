@@ -138,6 +138,7 @@ figcaption {
  */
 ul, ol {
   margin-left: $spacing-unit;
+  list-style-position: inside;    // default value is outside
 }
 
 li {
@@ -350,7 +351,7 @@ table tr th :last-child, table tr td :last-child { margin-bottom: 0; }
  */
 
 hr{
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   border: 0;
   border-bottom: 1px solid #ccc;
   //border-bottom: 1px dotted #ccc;
@@ -361,3 +362,6 @@ cite{
   text-decoration: underline;
 }
 
+.p1 {
+    font-family: "Times New Roman", Times, serif;
+}
