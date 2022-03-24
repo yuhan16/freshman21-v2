@@ -1,9 +1,59 @@
-<footer class="site-footer">
-
-  <p>Copyright &copy; <a href="{{ site.baseurl }}/">{{site.title}}</a></p>
-  <p>Powered by <a href="https://github.com/jekyll/jekyll">Jekyll</a> 
-  on 
-  <a href="https://github.com/">Github</a>
-  | Inspired by Theme <a href="https://github.com/yulijia/freshman21/">Freshman21</a> 
-  | Design by <a href="{{site.baseurl}}/">Yuhan</a>  
+<footer class="footer-container">
+    
+    <div class="footer-content">
+        
+        <div class="footer-half-col" style="text-align: left;">
+            <p>
+                Copyright &copy; <a href="{{ site.baseurl }}/">{{site.title}}</a> 
+                <span style="padding-left:30px"></span>
+                Powered by <a href="https://github.com/jekyll/jekyll"><b>Jekyll</b></a> on <a href="https://github.com/"><b>Github</b></a>
+                | Design by Yuhan
+            </p>
+        </div>
+        
+        <div class="footer-half-col" style="text-align: right;">
+            <!--display menu-->
+            <span>
+                <a href="{{site.baseurl}}/">Home</a> | 
+                <a href="{{site.baseurl}}/blog">Blog</a> | 
+                <a href="{{site.baseurl}}/categories">Topics</a> | 
+                <a href="{{site.baseurl}}/research">Research</a> | 
+                <a href="{{site.baseurl}}/projects">Projects</a>
+            </span>
+            <span style="padding-left:15px"></span>
+            <!--display contact icons-->
+            <span class="fa-stack">
+                <a href="{{site.linkedin_page}}" title="LinkedIn: {{site.linkedin_page}}">
+                    <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                    <i class="fa fa-linkedin fa-stack-1x icon-footer"></i>
+                </a>
+            </span>
+            <span class="fa-stack">
+                <a href="https://github.com/{{site.github_username}}" title="Github ID: {{site.github_username}}">
+                    <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                    <i class="fa fa-github fa-stack-1x icon-footer"></i> 
+                </a>
+            </span>
+            <span class="fa-stack">
+                <a href="mailto:{{site.email}}" title="mailto: {{site.email}}">
+                    <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                    <i class="fa fa-envelope fa-stack-1x icon-footer"></i> 
+                </a>
+            </span>
+            <span class="fa-stack">
+                <a href="{{page.url | prepend: site.baseurl}}feed.xml" title="RSS feed">
+                    <i class="fa fa-circle fa-stack-2x icon-background"></i>
+                    <i class="fa fa-rss fa-stack-1x icon-footer"></i> 
+                </a>
+            </span>
+            <!--
+            <span>
+                <a href="{{site.linkedin_page}}" title="LinkedIn: {{site.linkedin_page}}"><i class="fa fa-circle fa-stack-2x icon-background"></i></a>
+                <a href="https://github.com/{{site.github_username}}" title="Github ID: {{site.github_username}}"><i class="fa fa-github"></i></a>
+                <a href="mailto:{{site.email}}" title="mailto: {{site.email}}"><i class="fa fa-envelope"></i></a>
+                <a href="{{page.url | prepend: site.baseurl}}feed.xml" title="RSS feed"><i class="fa fa-rss"></i></a> 
+            </span>
+            -->
+        </div>
+    </div>
 </footer>

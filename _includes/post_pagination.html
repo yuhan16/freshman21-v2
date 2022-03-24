@@ -1,20 +1,16 @@
-<!--using JS for implementation-->
-<div class="pager-container">
-
-  <div class="pager-text-col">
-    <p>Page {{paginator.page}} of {{paginator.total_pages}}</p>
-  </div>
-
-  <div class="pager-icon-col" id="pager-icon-col">
-    <script src="{{site.baseurl}}/assets/js/pagination.js"></script>
-    <script>
-      curr_page, total_pages, pageurl, base
-      var curr_page = parseInt('{{paginator.page}}');
-      var total_pages = parseInt('{{paginator.total_pages}}');
-      var pageurl = '{{page.url}}';
-      var base = '{{site.baseurl}}';
-      mytest(curr_page, total_pages, pageurl, base);
-    </script>
-    
-  </div>
-</div>
+<section class="post-index">
+    <ul>
+        {% if page.previous %}
+            <li class="previous"><a href="{{ site.baseurl }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
+        {% else %}
+            <li class="disabled"><a>&laquo; Previous</a></li>
+        {% endif %}
+        
+        {% if page.next %}
+            <li class="next"><a href="{{ site.baseurl }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
+        {% else %}
+            <li class="disabled"><a>Next &raquo;</a></li>
+        {% endif %}
+    </ul>
+</section>
+  
