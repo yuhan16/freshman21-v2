@@ -8,6 +8,7 @@ excerpt_separator: <!--more-->
 ---
 
 This notes documents the usage of css classes.
+<!--more-->
 
 ```bash
 container-all  # entire body
