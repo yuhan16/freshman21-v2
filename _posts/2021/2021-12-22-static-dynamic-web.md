@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Static vs Dynamic Web Pages
-modified: 2014-12-19
+modified: 2021-12-22
 categories: [Web]
 tags: [tutorial, static web, dynamic web, php]
 comments: true
