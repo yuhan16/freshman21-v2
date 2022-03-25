@@ -110,6 +110,12 @@ We can also change the math font size with `HTML-CSS` option: [Changing mathjax'
 Note that we need `.` for different settings in `MathJax.Hub.Config`.
 
 
+### github pages
+In order to use the github page domain name `yuhan16.github.io`, we need to create a repo with the name `yuhan16.github.io`. Then we go to the GitHub page settings. The page will be automatically published to this domain.
+
+See [About GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)
+
+
 ### For testing
 <i class="fa fa-car" style="font-size:48px;"></i>
 
