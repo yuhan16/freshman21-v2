@@ -7,7 +7,7 @@ function toggle_proof(pf_id){
         var d = document.getElementById(pf_id+'-content');
 		if (d.style.maxHeight == 0 || d.style.maxHeight == "0px"){
             x.innerHTML = "Proof &#9662;";
-            d.style.maxHeight = "1000px";
+            d.style.maxHeight = "5000px";
         }
         else{
             x.innerHTML = "Proof &#9656;";
