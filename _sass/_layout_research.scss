@@ -80,17 +80,41 @@
     transition: max-height 0.5s ease;
 }
 
+.pub {
+    h4 {font-size: 18px;}
+    a {
+        color: $text-color;
+        &:hover {
+            color: red;
+            & > .pub-icon {
+                border: 1px solid red;
+            }
+        }
+    }
+}
+
 .pub-icon {
-    margin: 0 5px;
-    padding: 5px;
+    margin: 5px 5px;
+    padding: 2px 5px;
     border: 1px solid #111;
     border-radius: 3px;
+    width: 50px;
+    display: inline-block;
+    text-align: center;
 }
 
 .pub-content {
     margin: 0 5px;
-    padding: 5px;
+    //padding: 5px;
     background-color: $grey-color;
-    border: 1px dashed #111;
-    border-radius: 3px;
+    //border: 1px dashed #111;
+    //border-radius: 3px;
+    outline: 1px dashed $text-color;
+    outline-offset: -1px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+.pub-content-1 {
+    padding: 5px;
 }

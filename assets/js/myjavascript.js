@@ -15,3 +15,17 @@ function toggle_proof(pf_id){
         }
 	});
 }
+
+
+function toggle_pub_content(pub_id){
+    var x = document.getElementById(pub_id);
+    x.addEventListener('click', function(e) {
+        var d = document.getElementById(pub_id+'-content');
+        if (d.style.maxHeight == 0 || d.style.maxHeight == "0px"){
+            d.style.maxHeight = "1000px";
+        }
+        else{
+            d.style.maxHeight = 0;
+        }
+    });
+}
