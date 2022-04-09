@@ -1,5 +1,5 @@
 ---
-layout: page-list
+layout: page
 title: Guestbook
 comments: yes
 permalink: /guestbook/
