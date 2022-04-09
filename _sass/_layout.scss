@@ -66,7 +66,7 @@
 }
 
 .navbar{
-    max-width: $page-width;
+    max-width: $navbar-width;
     margin-left: auto;
     margin-right: auto;
     //padding: 40px 10px;
@@ -163,7 +163,7 @@
 .sub-menu-contact {
     padding: 8px 10px;
 	margin: 0;
-    min-width: 190px;
+    min-width: 170px;
     background-color: #fff;
     z-index: 1;
     opacity: 0;
@@ -214,15 +214,23 @@
     
     padding-top: 60px;
     padding-bottom: 30px;
-    padding-left: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
-    padding-left:         calc( (#{$page-width} - #{$content-width}) / 2);
-    padding-right: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
-    padding-right:         calc( (#{$page-width} - #{$content-width}) / 2);
+    //padding-left: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
+    //padding-left:         calc( (#{$page-width} - #{$content-width}) / 2);
+    //padding-right: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
+    //padding-right:         calc( (#{$page-width} - #{$content-width}) / 2);
     
     background-color: #c4661f;
     @extend %clearfix;
 }
 
+.page-content-single-col {  // only for single col content purpose
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
+    padding-left:         calc( (#{$page-width} - #{$content-width}) / 2);
+    padding-right: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
+    padding-right:         calc( (#{$page-width} - #{$content-width}) / 2);
+}
 
 /*
 * post layout
@@ -333,7 +341,7 @@
 
 .footer-content {
     background-color: red;
-    max-width: $page-width;
+    max-width: $navbar-width;
     min-height: 30px;
     margin-left: auto;
     margin-right: auto;

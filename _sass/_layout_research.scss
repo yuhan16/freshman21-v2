@@ -83,7 +83,7 @@
 .pub {
     margin: 25px 0;
     //background-color: red;
-    h4 {font-size: 18px;}
+    //h4 {font-size: 18px;}
     a {
         color: $text-color;
         &:hover {
@@ -95,19 +95,35 @@
     }
 }
 
+.pub-title {
+    font-size: 18px;
+}
+
+.pub-meta {
+    line-height: 1.2em;
+    color: $grey-color;
+    b {
+        color: $text-color;
+        font-weight: normal;
+    }
+}
+
 .pub-icon {
     margin: 5px 5px;
-    padding: 2px 5px;
+    //padding: 0 5px;
     border: 1px solid #111;
     border-radius: 3px;
-    width: 50px;
+    width: 40px;
     display: inline-block;
     text-align: center;
+    font-size: $tiny-font-size;
 }
 
 .pub-content {
     margin: 0 5px;
     background-color: $grey-color;
+    font-size: $small-font-size;
+    line-height: 1.4em;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
