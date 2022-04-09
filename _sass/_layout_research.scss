@@ -81,6 +81,8 @@
 }
 
 .pub {
+    margin: 25px 0;
+    //background-color: red;
     h4 {font-size: 18px;}
     a {
         color: $text-color;
@@ -105,16 +107,14 @@
 
 .pub-content {
     margin: 0 5px;
-    //padding: 5px;
     background-color: $grey-color;
-    //border: 1px dashed #111;
-    //border-radius: 3px;
-    outline: 1px dashed $text-color;
-    outline-offset: -1px;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
 }
-.pub-content-1 {
-    padding: 5px;
+
+.pub-content-pad {    // only for padding and border purpose 
+    padding: 10px 15px;
+    border: 1px dashed #111;
+    border-radius: 3px;
 }
