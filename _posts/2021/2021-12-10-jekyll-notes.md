@@ -124,3 +124,56 @@ See [About GitHub Pages](https://docs.github.com/en/pages/getting-started-with-g
 <a href="javascript:void(0)">testlink</a>
 
 {{"Deep Learning" | remove: " " | downcase}}
+
+
+### markup text in div and mathjax
+<div> This is a paragraph without &lt p &gt.
+This is a paragraph without &lt p &gt.
+</div>
+
+<div>
+	<p>This is a paragraph without &lt;p&gt;.</p>
+	<p>This is a paragraph without &lt;p&gt;.</p>
+</div>
+
+the mathjax may not always need \$\$ to display an equation. We can directly an equation environment.
+
+\begin{equation}
+\begin{split}
+	f(x) &= ax^2 + \log(x) \\ 
+	g(x) &= kx+b
+\end{split}
+\end{equation}
+Another example.
+$$
+\begin{split}
+	f(x) &= ax^2 + \log(x) \\ 
+	g(x) &= kx+b
+\end{split}
+$$
+Therefore, the \$\$ is equivalent equation environment.
+
+Let's see how \$\$ behaves in &lt;p&gt;
+
+<p>
+I have an equation here
+$$
+	f(x) = ax^2 + \log(x)
+$$
+and this is a line after the equation.
+</p>
+
+<p>
+I have an equation here
+\begin{equation}
+	f(x) = ax^2 + \log(x)
+\end{equation}
+and this is a line after the equation.
+</p>
+Therefore, there is no need to add a blank line before and after \$\$ or equation environment.
+
+```latex
+\begin{equation}
+	f(x) = ax^2 + \log(x)
+\end{equation}
+```
