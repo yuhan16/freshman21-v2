@@ -22,13 +22,13 @@
 .col-sm-8 {
     float:left;
     width:70%;
-    background-color: #777;
+    //background-color: #777;
 }
   
 .col-sm-2 {
     float:right;
     width:30%;
-    background-color: #ccc;
+    //background-color: #ccc;
 }
   
 /*
@@ -53,11 +53,12 @@
 .header-container {
     margin: 0;
     //margin-top: 0px;
-    padding: 40px 10px;
+    padding: 20px 10px;
     //padding: 0;
     width: 100%;
-    background-color: $nyu-indigo;
-    border-bottom: 1px solid $grey-color;
+    //background-color: $nyu-indigo;
+    background-color: #fff;
+    border-bottom: 1px solid $grey-color-light;
     z-index: 90;
     position: fixed;
     transition: 0.4s;
@@ -71,7 +72,7 @@
     margin-right: auto;
     //padding: 40px 10px;
     //padding: 0;
-    background-color: #aaa;
+    //background-color: #aaa;
     //position: fixed;
     @extend %clearfix;
 }
@@ -86,7 +87,7 @@
 .navbar-right {
     float: right;
     height: 80px;
-    background-color: aqua;
+    //background-color: aqua;
     display: flex;
     //justify-content: center;
     align-items: center;
@@ -102,7 +103,7 @@
 
 .main-menu {
     list-style-type: none;
-    background-color: antiquewhite;
+    //background-color: antiquewhite;
     margin: 0;
     padding: 0px;
     & > li {
@@ -125,6 +126,7 @@
 	margin: 0;
 	min-width: 210px;
   	background-color: #fff;
+    box-shadow: 0 0 3px $grey-color-light;
 	z-index: 1;
 	//display: none;
   	visibility: hidden;
@@ -165,6 +167,7 @@
 	margin: 0;
     min-width: 170px;
     background-color: #fff;
+    box-shadow: 0 0 3px $grey-color-light;
     z-index: 1;
     opacity: 0;
   	visibility: hidden;
@@ -194,10 +197,9 @@
 
 .body-container {
     min-height:100%;
-    margin-top: 140px;
+    margin-top: 110px;
     padding: 0px;
-    //background-color: #fff;
-    background-color: aqua;
+    //background-color: aqua;
     //@extend %clearfix;
     //opacity: 0;
 }
@@ -219,7 +221,7 @@
     //padding-right: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
     //padding-right:         calc( (#{$page-width} - #{$content-width}) / 2);
     
-    background-color: #c4661f;
+    //background-color: #c4661f;
     @extend %clearfix;
 }
 
@@ -340,7 +342,7 @@
 }
 
 .footer-content {
-    background-color: red;
+    //background-color: red;
     max-width: $navbar-width;
     min-height: 30px;
     margin-left: auto;
@@ -355,7 +357,7 @@
     position: relative;
     float: left;
     color: #fff;
-    background-color: #111;
+    //background-color: #111;
     //padding: 0 10px;
     p, a {
         font-size: $small-font-size;
@@ -517,7 +519,7 @@ time{
 
 .post-index {
     //margin-bottom: 30px;
-    background-color: red;
+    //background-color: red;
     text-align: center;
     ul { 
         display: block; 

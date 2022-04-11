@@ -12,7 +12,7 @@
     font-family: Times, "Times New Roman", Georgia, serif;
     font-size: 18px;
     font-style: italic;
-    color: $grey-color-dark;
+    color: $text-color;
 
     p { margin: 0; }
     ol { list-style-type:none; }
@@ -34,7 +34,7 @@
     padding: 5px 15px;
 
     font-family: Times, "Times New Roman", Georgia, serif;
-    color: $grey-color-dark;
+    color: $text-color;
 
     p {margin: 0;}
 }
@@ -73,7 +73,7 @@
 
 .proof-content {
     max-height: 0;
-    background-color: red;
+    //background-color: red;
     overflow: hidden;
     padding: 0 30px;
     margin-top: 10px;
