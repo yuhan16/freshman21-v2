@@ -1,11 +1,15 @@
 ---
 layout: post
 title: "jekyll notes"
-date: 2021-12-10 
+date: 2021-11-02 
 category: Miscellaneous
 tags: jekyll html
 excerpt_separator: <!--more-->
 ---
+
+This blog collects quick notes in developing jekyll notes. We also perform different general tests in this notes.
+
+<!--more-->
 
 ## Some notes
 
@@ -16,8 +20,6 @@ Make entire Div Clickable:
 </a>
 ```
 This is perfectly valid HTML.
-
-<!--more-->
 
 In liquid, we can use composite filter. The exection order is from left to right. For example.
 {%raw%}
@@ -88,26 +90,7 @@ when we use `container-all` with 0 margin and 0 padding to cover the background,
 See [Collapsing Margins of Block Elements](https://cmichel.io/css-margin-top-not-working)
 
 
-### mathjax
-in jekyll we can use mathjax to nicely display latex math formula. Here is how to use mathjax: [Use MathJax to write Equations in Jekyll blogs](http://zjuwhw.github.io/2017/06/04/MathJax.html)
 
-Note that we need to add inline math `$ $` so that mathjax can recognize it. `$ $` is not recognized by default.
-
-We can also change the math font size with `HTML-CSS` option: [Changing mathjax's font size](https://stackoverflow.com/questions/19086152/changing-mathjaxs-font-size)
-
-```html
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      tex2jax: {
-        inlineMath: [['$','$'], ['\\(','\\)']],
-        processEscapes: true
-      },
-      "HTML-CSS": { scale: 90 }
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-```
-Note that we need `.` for different settings in `MathJax.Hub.Config`.
 
 
 ### github pages
@@ -136,44 +119,3 @@ This is a paragraph without &lt p &gt.
 	<p>This is a paragraph without &lt;p&gt;.</p>
 </div>
 
-the mathjax may not always need \$\$ to display an equation. We can directly an equation environment.
-
-\begin{equation}
-\begin{split}
-	f(x) &= ax^2 + \log(x) \\ 
-	g(x) &= kx+b
-\end{split}
-\end{equation}
-Another example.
-$$
-\begin{split}
-	f(x) &= ax^2 + \log(x) \\ 
-	g(x) &= kx+b
-\end{split}
-$$
-Therefore, the \$\$ is equivalent equation environment.
-
-Let's see how \$\$ behaves in &lt;p&gt;
-
-<p>
-I have an equation here
-$$
-	f(x) = ax^2 + \log(x)
-$$
-and this is a line after the equation.
-</p>
-
-<p>
-I have an equation here
-\begin{equation}
-	f(x) = ax^2 + \log(x)
-\end{equation}
-and this is a line after the equation.
-</p>
-Therefore, there is no need to add a blank line before and after \$\$ or equation environment.
-
-```latex
-\begin{equation}
-	f(x) = ax^2 + \log(x)
-\end{equation}
-```
