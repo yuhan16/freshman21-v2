@@ -1,407 +1,433 @@
 @charset "utf-8";
-
 /**
- * Site header
+ * main page style
  */
-.site-header {
-  //Positioning context for the mobile navigation icon
-  position: relative;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  img {
+
+ .container-all {
+    min-height: 10px;
+    background-color: #fff;
+    margin: 0;
+    padding: 0.1px;     // prevent margin collapse
+    //@extend %clearfix;
+}
+
+/*two columns layout*/
+.col-sm-8,.col-sm-2{
+    position: relative;
+    min-height: 1px;
+    //margin: 0px 20px;
+    //padding-top: 20px;
+  }
+  
+.col-sm-8 {
+    float:left;
+    width:70%;
+    //background-color: #777;
+}
+  
+.col-sm-2 {
+    float:right;
+    width:30%;
+    //background-color: #ccc;
+}
+  
+/*
+@media screen and (min-width : $on-palm) {
+    .col-sm-8 {
+      float:left;
+      width:67%;
+    }
+  
+    .col-sm-2 {
+      float:right;
+      width:24%;
+    }
+}*/
+
+
+
+/*
+* site header layout
+*/
+
+.header-container {
+    margin: 0;
+    //margin-top: 0px;
+    padding: 20px 10px;
+    //padding: 0;
+    width: 100%;
+    //background-color: $nyu-indigo;
+    background-color: #fff;
+    border-bottom: 1px solid $grey-color-light;
+    z-index: 90;
+    position: fixed;
+    transition: 0.4s;
+    //opacity: 0;
+    //@extend %clearfix
+}
+
+.navbar{
+    max-width: $navbar-width;
+    margin-left: auto;
+    margin-right: auto;
+    //padding: 40px 10px;
+    //padding: 0;
+    //background-color: #aaa;
+    //position: fixed;
+    @extend %clearfix;
+}
+
+.navbar-logo {
     margin-left:5px;
     margin-right: 15px;
     float: left;
-    height: 70px;
-  }
+    height: 80px;
 }
 
-.site-title {
-  font-size: 30px;
-  font-weight: bold;
-  letter-spacing: 0px;
-  padding-top:8px;
-  //margin-top: 5px;
-  //margin-bottom: 0;
-  text-align: left;
-  a{
-    &,
-    &:hover {
-      color: $grey-color-dark; //$brand-top-color;
-      //border-bottom: 1px dotted;
-      text-decoration: none;
-    }
-  }
+.navbar-right {
+    float: right;
+    height: 80px;
+    //background-color: aqua;
+    display: flex;
+    //justify-content: center;
+    align-items: center;
 }
 
-.site-title-tagline{
-  font-size: 18px;
-  letter-spacing: 0px;
-  margin-top: 15px;
-  margin-bottom: 0;
-  text-align: left; 
-  color: $grey-color;
-  //background-color: green;
+.navbar .navbar-logo{
+    transition: 0.4s;
 }
 
-.nav-container {
-  min-height: 100%;
-  margin: 15px 0;
-  border-top: 1px solid $grey-color-light;
-  border-bottom: 1px solid $grey-color-light;
-  //background-color: bisque;
-
-  .page-link {
-    color: $grey-color;
-    font-size: $nav-font-size;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  a{
-    text-decoration: none;
-
-    &:hover {
-      color: $text-color;
-      text-decoration: none;
-      //font-weight: bold;
-    }
-  }
-
-  .icon-link {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  i.fa {
-    color: $grey-color;
-    font-size: 26px;
-
-    &:hover {
-      color: $grey-color-dark;
-      //color: $brand-top-color;
-    }
-  }
+.navbar .navbar-right {
+    transition: 0.4s;
 }
 
-.nav-text-col, .nav-icon-col{
-  position: relative;
-  min-height: 1px;
-  //margin: 0px 20px;
-  padding: 15px 0;
-}
-.nav-text-col{
-  float: left;
-  width: 80%;
-}
-.nav-icon-col{
-  float: right;
-  width: 20%;
-}
-
-.dropdown {
-  z-index: 1;
-  position: relative;
-  display: inline-block;
-  // use page-link class for "Topic" display 
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  background-color: #fff;
-  //border: 1px solid $grey-color-light;
-  
-  ul{
+.main-menu {
     list-style-type: none;
-    border: 1px solid $grey-color-light;
-    margin: 18px 0 0 0;
-    padding: 0;
-    li {
-      //border: 1px solid $grey-color-light;
-      padding: 8px 20px;
+    //background-color: antiquewhite;
+    margin: 0;
+    padding: 0px;
+    & > li {
+        display: inline-block;
+        padding: 10px;
     }
-  }
-  a{
-    color: $grey-color;
-    //padding: 8px 20px;
+    & > li > a {
+        font-size: 18px;
+        color: $iros-eggplant;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+.sub-menu {
+    list-style-type: none;
+    text-align: left;
+	padding: 0;
+	margin: 0;
+	min-width: 210px;
+  	background-color: #fff;
+    box-shadow: 0 0 3px $grey-color-light;
+	z-index: 1;
+	//display: none;
+  	visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.8s ease 0s ;
+    
+    & > li {
+        padding: 5px 15px; 
+    }
+    
+    & > li > a {
+        font-size: 16px;
+        font-weight: 100;
+        color: $iros-eggplant;
+    }
+}
+
+.menu-item-dropdown {
+	position: relative;
   
-    &:hover {
-    color: $text-color;
+  	&:hover > .sub-menu {
+        //display: block;
+        visibility: visible;
+        opacity: 1;
+        //z-index: 1;
+        //background-color: aqua;
+  	}
+    
+    &:hover > .sub-menu-contact {
+        visibility: visible;
+        opacity: 1;
     }
-  }
+}
+
+.sub-menu-contact {
+    padding: 8px 10px;
+	margin: 0;
+    min-width: 170px;
+    background-color: #fff;
+    box-shadow: 0 0 3px $grey-color-light;
+    z-index: 1;
+    opacity: 0;
+  	visibility: hidden;
+    position: absolute;
+    transition: all 0.8s ease 0s ;
+ 
+    & > a {
+        padding: 10px;
+    }
+
+    i.fa {
+        color: $grey-color-light;
+        font-size: 22px;
+        transition: color 0.4s ease 0s;
+    
+        &:hover {
+          color: $iros-eggplant;
+        }
+    }
 }
 
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
-// clear floats after the text- and icon- columns
-.site-nav-container:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 /*
-.dropdown:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+* site body layout
 */
+
+.body-container {
+    min-height:100%;
+    margin-top: 110px;
+    padding: 0px;
+    //background-color: aqua;
+    //@extend %clearfix;
+    //opacity: 0;
+}
+
+.page-content {
+    min-height:100%;
+    max-width: $page-width;
+    
+    //margin-top: 100px;
+    //margin-top: 0;
+    //margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    
+    padding-top: 60px;
+    padding-bottom: 30px;
+    //padding-left: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
+    //padding-left:         calc( (#{$page-width} - #{$content-width}) / 2);
+    //padding-right: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
+    //padding-right:         calc( (#{$page-width} - #{$content-width}) / 2);
+    
+    //background-color: #c4661f;
+    @extend %clearfix;
+}
+
+.page-content-single-col {  // only for single col content purpose
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
+    padding-left:         calc( (#{$page-width} - #{$content-width}) / 2);
+    padding-right: -webkit-calc( (#{$page-width} - #{$content-width}) / 2);
+    padding-right:         calc( (#{$page-width} - #{$content-width}) / 2);
+}
+
+/*
+* post layout
+*/
+
+/* 
+  post-title class controls the post title font style in all pages.
+  It does not affect the titles in the post contents.
+  */
+.post-title { 
+    font-size: 28px;
+  //  letter-spacing: -1px;
+    line-height: 1;
+}
+
+.post-header {
+    margin-bottom: $spacing-unit;
+    time{
+        margin-left: 0px;
+        font-style: normal;
+        //border-bottom: 1px dotted;
+        text-decoration: underline dotted;
+    }
+}
+  
+.post-meta {
+    font-size: $small-font-size;
+    color: $grey-color;
+}
+  
+.post-link {
+    //display: block;
+    //font-size: 38px;//42px;
+    color: $text-color;
+}  
+  
+.post-content {
+    //p { padding:$spacing-unit/5 0; } 
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: $spacing-unit;
+    h1 { 
+      font-size: 28px;
+      line-height:1em;
+      @include media-query($on-laptop){
+        font-size: 26px;
+      }
+  
+    }
+    h2 {
+      font-size: 24px;
+      line-height:1em;
+      padding: 10px 0 2px 0;
+      @include media-query($on-laptop) {
+        font-size: 22px;
+      }
+    }
+    h3 {
+        font-size: 20px;
+        padding: 10px 0 2px 0;
+        line-height:1em;
+  
+        @include media-query($on-laptop) {
+            font-size: 18px;
+        }
+    }
+    h4 {
+        font-size: 16px;
+        line-height:1em;
+  
+        @include media-query($on-laptop) {
+            font-size: 16px;
+        }
+    }
+    h1, h2, h3, h4 {
+        margin-top: 15px;
+        margin-bottom: 8px;
+    }
+}
+  
+.post-content a{
+    color: $brand-color;    
+    text-decoration: none;  
+    &:hover {               
+      color: $hover-color;
+      text-decoration: underline;
+    }  
+}
+
+
+/*
+* site footer layout
+*/
+
+.footer-container {
+    margin: 0;
+    padding: 0;
+    background-color: $iros-eggplant;
+    //border-bottom: 1px solid $grey-color;
+    min-height: 1px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    //position: fixed;
+    //@extend %clearfix;
+    //opacity: 0;
+}
+
+.footer-content {
+    //background-color: red;
+    max-width: $navbar-width;
+    min-height: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    @extend %clearfix;
+}
+
+.footer-half-col {
+    width: 50%;
+    position: relative;
+    float: left;
+    color: #fff;
+    //background-color: #111;
+    //padding: 0 10px;
+    p, a {
+        font-size: $small-font-size;
+        color: #fff;
+    }
+    & > span > a {
+        padding: 0 5px;
+    }
+}
+
+.icon-background {
+    visibility: hidden;
+    color: #c4661f;
+    opacity: 0;
+    padding: 0 0px;
+}
+
+.fa-stack, .icon-background {
+    transition: 0.5s all ease 0s;
+}
+
+.fa-stack { 
+    .icon-footer {
+        font-size: 15px;
+        color: #fff;
+    }
+    .icon-background {
+        font-size: 34px;
+    }
+
+    &:hover .icon-background {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+
+/**
+ * Sidebar
+*/
+
+.sidebar-module {
+    padding: 0px 5px 20px 10px;
+    //margin: 0px;
+    font-size: $small-font-size;
+    h4{
+      font-size: $base-font-size;
+      font-weight: bold;
+      color: $grey-color-dark;
+    }
+    li{
+      list-style: none; 
+    }
+}
 
 
 /**
  * Topic Archive header
 */
-/*
+
 .topic-archive-header {
-  border-bottom: 1px solid $grey-color-light;
-  margin-bottom: 10px;
-  h3{
-    font-size: 18px;
-    font-weight: bold;
-    color: $text-color;
-    //line-height: 1;
-  }
-}
-*/
-
-/**
- * Sidebar
- */
-/*
-.sidebar-module {
-  padding: 5px 5px 15px 5px;
-  //margin: 0px;
-  font-size: 14px;
-  h4{
-    font-size: $base-font-size;
-    font-weight: bold;
-    color: $grey-color-dark;
-  }
-  li{
-    list-style: none; 
-  }
-}
-*/
-
-/**
- * Site footer
- */
-
-.site-footer {
-  clear: both;
-  text-align: center;
-  background-color: #f9f9f9;
-  border-top: 1px solid $grey-color-light;
-  margin: $spacing-unit 0; 
-  padding: $spacing-unit 0;
-  font-size: $small-font-size;
-}
-
-
-
-/**
- * Page content
- */
-.page-content {
-  margin: 10px 0;
-  padding: 20px 20px;
-  strong { font-weight: bold; }
-
-}
-
-.page-heading {
-  font-size: 20px;
-}
-
-.post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
-}
-
-.post-link {
-  //display: block;
-  //font-size: 38px;//42px;
-  color: $text-color;
-}
-
-
-/**
- * Posts
- */
-.post-header {
-  margin-bottom: $spacing-unit;
-  time{
-      margin-left: 0px;
-      font-style: normal;
-      //border-bottom: 1px dotted;
-      text-decoration: underline dotted;
-  }
-}
-
-/* 
-post-title class controls the post title font style in all pages.
-It does not affect the titles in the post contents.
-*/
-.post-title { 
-  font-size: 28px;
-//  letter-spacing: -1px;
-  line-height: 1;
-}
-
-
-
-#markdown-toc{
-  float: right;
-  width:50%;
-  background:#f4f7f8;
-  padding:20px 15px;
-  li{
-    padding-top:10px;
-    position:relative; 
-    list-style-type:none;  
-  }
-}
-
-#markdown-toc:before{
-  content:"Table of Contents";
-  font-weight: 700;
-  padding-left:10px;
-  border-bottom:5px solid $grey-color-light !important;
-  display:block;
-  font-size:18px
-}
-
-
-
-.post-content {
-  p { padding:$spacing-unit/5 0; } 
-  margin-bottom: $spacing-unit;
-  h1 { 
-    font-size: 28px;
-    line-height:1em;
-    @include media-query($on-laptop){
-      font-size: 26px;
+    border-bottom: 1px solid $grey-color-light;
+    margin-bottom: 10px;
+    h3 {
+        font-size: 18px;
+        font-weight: bold;
+        color: $text-color;
+        //line-height: 1;
     }
-
-  }
-  h2 {
-    font-size: 24px;
-    line-height:1em;
-    padding: 10px 0 2px 0;
-    @include media-query($on-laptop) {
-      font-size: 22px;
-    }
-  }
-
-  h3 {
-    font-size: 20px;
-    padding: 10px 0 2px 0;
-    line-height:1em;
-
-    @include media-query($on-laptop) {
-      font-size: 18px;
-    }
-  }
-
-  h4 {
-    font-size: 16px;
-    line-height:1em;
-
-    @include media-query($on-laptop) {
-      font-size: 16px;
-    }
-  }
-}
-
-
-/**
- * Pagination Style
- */
-
-.pager{
-  margin-bottom: 60px;
-  text-align: center;
-  ul { display: block; margin: 20px 0; }
-  li{list-style: none;}
-  li.previous a{float:left;}
-  li.next a{float:right;}
-  li.disabled {display:none;}
-}
-
-.pager-container{
-  min-height: 100%;
-  margin: 0;
-  border-top: 1px solid $grey-color-light;
-  border-bottom: 1px solid $grey-color-light;
-  p {font-size: $small-font-size;}
-  
-  a{
-    text-decoration: none;
-    color: $text-color;
-    font-size: $small-font-size;
-    &:hover{
-      color: darken(rgb(172, 197, 243), 25%);
-      text-decoration: none;
-    }
-  }
-
-  ul {
-    list-style-type: none;
-    float: right;
-    margin: 0;
-    padding: 0;
-    li {
-      padding: 0 5px;
-      display: inline;
-    }
-  }
-}
-
-.pager-container:after {
-  content: "";
-  display: block;
-  clear: both;
-}
-
-.pager-text-col, .pager-icon-col{
-  position: relative;
-  min-height: 1px;
-  padding-top: 10px;
-  padding-bottom: 5px;
-}
-.pager-text-col{
-  float: left;
-  width: 30%;
-}
-.pager-icon-col{
-  float: right;
-  width: 70%;
-}
-
-.number-circle{
-  width: 30px;
-  border-radius: 50%;
-  border-style: solid;
-  border-width: 2px;
-  border-color: $grey-color-light;
-  text-align: center;
-}
-
-.selected{
-  background-color: $grey-color-light;
-}
-
-.unselected{
-  background-color: #fff;
-  &:hover{
-    background-color: rgb(172, 197, 243);
-    color: #fff;
-  }
 }
 
 
@@ -409,149 +435,148 @@ It does not affect the titles in the post contents.
  * Tags and Categories Style
  */
 
-.tags-box{
-  li {
-    list-style: none;
-    font-weight: bold;
-    margin-top:10px;
-  }
-  .size{
-    font-size: 0.7em; font-weight: bold; vertical-align: super;
-  }
+ .tags-box{
+    li {
+      list-style: none;
+      font-weight: bold;
+      margin-top:10px;
+    }
+    .size{
+        font-size: 0.7em; font-weight: bold; vertical-align: super;
+    }
 }
-
-
+  
+  
 /*time style of tages and categories*/
-
+  
 time{
-  margin-left: 15px;
-  font-style: italic;
+    margin-left: 15px;
+    font-style: italic;
 }
 
+
+/*
+* page index layout, for blog, topic (multiple pages required)
+*/
+
+.page-index {
+    padding: 10px 0;
+    border-top: 1px solid $grey-color-light;
+    border-bottom: 1px solid $grey-color-light;
+
+    display: flex;
+    align-items: center;
+    @extend %clearfix;
+
+    p, a {
+        font-size: $small-font-size;
+        color: $text-color;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    li {
+        list-style: none;
+        display: inline;
+        padding: 0 5px;
+    }
+}
+
+.page-index-half-col{
+    width: 50%;
+    position: relative;
+    min-height: 1px;
+    float: left;
+    background-color: #fff;
+}
+
+.page-index-icon{
+    //height:30px;
+    width: 25px;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $grey-color-light;
+    text-align: center;
+}
+  
+.selected{
+    background-color: $grey-color-light;
+    color: $text-color;
+}
+  
+.unselected{
+    background-color: #fff;
+    &:hover {
+        background-color: rgb(172, 197, 243);
+        color: #fff;
+    }
+}
+
+/*
+* post index layout, for each post (only previous and next)
+*/
+
+.post-index {
+    //margin-bottom: 30px;
+    //background-color: red;
+    text-align: center;
+    ul { 
+        display: block; 
+        margin: 0 10px;
+    }
+    li { list-style: none; }
+    li.previous a { float:left; }
+    li.next a { float:right; }
+    li.disabled { display:none; }
+    @extend %clearfix;
+}
+
+
+
+
+  #markdown-toc{
+    float: right;
+    width:50%;
+    background:#f4f7f8;
+    padding:20px 15px;
+    li{
+      padding-top:10px;
+      position:relative; 
+      list-style-type:none;  
+    }
+  }
+  
+  #markdown-toc:before{
+    content:"Table of Contents";
+    font-weight: 700;
+    padding-left:10px;
+    border-bottom:5px solid $grey-color-light !important;
+    display:block;
+    font-size:18px
+  }
+  
 
 /**
  * Aboutme photo and icon Style
  */
 
 .about{
-  padding: 20px 10px 20px 10px;
-  img {
-    float: left;
-    height: 300px;
+  	padding: 20px 10px 20px 10px;
+  	img {
+    	float: left;
+    	height: 300px;
     //margin-top: 20px;
     //margin-left: auto;
-    margin-right: 45px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    padding: 5px;
-  }
-  i.fa {
+    	margin-right: 45px;
+    	border: 1px solid #ddd;
+    	border-radius: 4px;
+    	padding: 5px;
+  	}
+  	i.fa {
     color: $brand-color;
     &:hover {
       color: $hover-color;
-    }
-  }
-}
-
-
-/**
- * New style for quotation.
- */
-
-q:before {
-  content: '『';
-  color: #DD1144;
-  font-weight:bold;
-}
-q:after {
-  content:'』';
-  color: #DD1144;
-  font-weight:bold;
-}
-
-
-/**
-* New style for theorem and remark blocks
-*/
-
-.theorem-block{
-  border-left: 5px solid #2583ad;
-  border-radius: 3px;
-  color: $grey-color;
-  background: #f9f9f9;
-  margin: 10px 0;
-  padding: 10px 15px;
-  p {margin: 0;}
-  ol{
-    list-style-type:none;
-  }
-
-  li:before {
-    content:"(" counter(section, decimal) ")  ";
-  }
-
-  li {
-    counter-increment:section;
-  }
-}
-
-.remark-block{
-  border-left: 5px solid rgb(151, 151, 151);
-  border-radius: 3px;
-  color: $grey-color;
-  background: #f9f9f9;
-  margin: 10px 0;
-  padding: 10px 15px;
-  p {margin: 0;}
-}
-
-.quote-source{
-  text-align: right;
-  font-size: $small-font-size;
-  margin: 0;
-}
-
-.theorem {
-  //border-left: 5px solid #2583ad;
-  //border-radius: 3px;
-  background: $background-color;
-  border: 1px solid $grey-color;
-  margin: 10px 0;
-  padding: 10px 15px;
-
-  font-family: Times, "Times New Roman", Georgia, serif;
-  font-size: 18px;
-  font-style: italic;
-  color: $grey-color-dark;
-
-  ol {
-      list-style-type:none;
-  }
-
-  li:before {
-      content:"(" counter(section, decimal) ")  ";
-  }
-
-  li {
-      counter-increment:section;
-  }
-}
-
-.remark {
-  background: #f9f9f9;
-  border-left: 4px solid rgb(151, 151, 151);
-  //border-radius: 3px;
-  margin: 10px 0;
-  padding: 10px 15px;
-
-  font-family: Times, "Times New Roman", Georgia, serif;
-  color: $grey-color-dark;
-
-  p {margin: 0;}
-}
-
-.example {
-  //border: 1px solid $grey-color;
-  margin: 10px 0;
-  padding: 10px 30px;
+    	}
+  	}
 }

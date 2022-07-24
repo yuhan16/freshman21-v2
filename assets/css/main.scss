@@ -8,7 +8,6 @@
 $base-font-family: 'Roboto', sans-serif;
 //$base-font-family: 'Lato', 'Open Sans', Helvetica, Arial, sans-serif !important;
 $base-font-size:   16px;
-$nav-font-size:    18px;
 $small-font-size:  $base-font-size * 0.875;  //14px
 $tiny-font-size:   $base-font-size * 0.75;  //10px
 $base-line-height: 1.6em;
@@ -37,8 +36,9 @@ $code-backgroud-color: rgb(246,248,250);
 $code-font-color: rgb(59,59,59);
 
 // Width of the content area
-$content-width:    960px;
-$page-width:       1050px;
+$content-width:    800px;//960px;
+$page-width:       960px;//1050px;
+$navbar-width:     1100px;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -63,12 +63,11 @@ $on-laptop:        800px;
 @import
         "base",
         "layout",
-        "layout_new"
+        "layout_research"
         //"_syntax-highlighting-native" // "syntax-highlighting"
 ;
 
 @import url('http://fonts.googleapis.com/css?family=Roboto:wght@100;300&display=swap');
 //@import url('http://fonts.googleapis.com/css?family=Open+Sans');
 //@import url('http://fonts.googleapis.com/css?family=Lato');
-//@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');

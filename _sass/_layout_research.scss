@@ -1,3 +1,4 @@
+@charset "utf-8";
 /**
 * theorem, remark, example, quote
 */
@@ -11,7 +12,7 @@
     font-family: Times, "Times New Roman", Georgia, serif;
     font-size: 18px;
     font-style: italic;
-    color: $grey-color-dark;
+    color: $text-color;
 
     p { margin: 0; }
     ol { list-style-type:none; }
@@ -30,10 +31,10 @@
     border-left: 4px solid rgb(151, 151, 151);
     //border-radius: 3px;
     margin: 10px 0;
-    padding: 10px 15px;
+    padding: 5px 15px;
 
     font-family: Times, "Times New Roman", Georgia, serif;
-    color: $grey-color-dark;
+    color: $text-color;
 
     p {margin: 0;}
 }
@@ -61,3 +62,75 @@
     margin: 0;
 }
 
+.proof {
+    a { 
+        color: $text-color;
+        text-decoration: none; 
+    }
+    border: 2px solid gray;
+    margin: 10px 0;
+}
+
+.proof-content {
+    max-height: 0;
+    //background-color: red;
+    overflow: hidden;
+    padding: 0 30px;
+    margin-top: 10px;
+    transition: max-height 0.5s ease;
+}
+
+.pub {
+    margin: 25px 0;
+    //background-color: red;
+    //h4 {font-size: 18px;}
+    a {
+        color: $text-color;
+        &:hover {
+            color: red;
+            & > .pub-icon {
+                border: 1px solid red;
+            }
+        }
+    }
+}
+
+.pub-title {
+    font-size: 18px;
+}
+
+.pub-meta {
+    line-height: 1.2em;
+    color: $grey-color;
+    b {
+        color: $text-color;
+        font-weight: normal;
+    }
+}
+
+.pub-icon {
+    margin: 5px 5px;
+    //padding: 0 5px;
+    border: 1px solid #111;
+    border-radius: 3px;
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+    font-size: $tiny-font-size;
+}
+
+.pub-content {
+    margin: 0 5px;
+    background-color: $grey-color;
+    font-size: $small-font-size;
+    line-height: 1.4em;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.pub-content-pad {    // only for padding and border purpose 
+    padding: 10px 15px;
+    border: 1px dashed #111;
+    border-radius: 3px;
+}

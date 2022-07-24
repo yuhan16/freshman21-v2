@@ -5,7 +5,7 @@ author: Yuhan Zhao
 email: yuhan-zhao@outlook.com
 description: "HuskDev is Yuhan's personal blog." # It will appear in your document head meta and in your feed.xml site description
 keywords: ["Yuhan", "HuskyDev"]
-baseurl: "/freshman21-v2" # the subpath of your site, e.g. /blog/
+baseurl: "/freshman21-v2"       # the subpath of your site, e.g. /blog/. It should be the same as the repo name
 #url: "https://yulijia.net/freshman21" # the base hostname & protocol for your site
 
 ### Personal info and site tools info:
@@ -13,11 +13,11 @@ rss_page: true  # enable rss
 github_username:  yuhan16
 linkedin_page: "https://www.linkedin.com/in/yhzhao"
 favicon:     "/assets/images/favicon.ico"
-google_analytics_key: UA-57979084-1 # put YOUR key here to enable tracking! (blank to disable)
+#google_analytics_key: UA-57979084-1 # put YOUR key here to enable tracking! (blank to disable)
 defualt_logo: "/assets/image/default-logo.png"
 
 ### Site setting:
-nav_pages: ["home", "blog", "categories", "research", "projects", "topics"] # pages displayed in navigation bar
+#nav_pages: ["home", "blog", "categories", "publications", "projects", "topics"] # pages displayed in navigation bar
 nav_topics: ["Probability", "Optimization", "Web", "Programming", "Miscellaneous"] # existing topics
 
 
@@ -40,6 +40,6 @@ pagination:
   per_page: 5
   sort_reverse: true
   title: ':title -page:num'
-  trail:
-    before: 2
-    after: 2 
+  #trail:
+  #  before: 2
+  #  after: 2 

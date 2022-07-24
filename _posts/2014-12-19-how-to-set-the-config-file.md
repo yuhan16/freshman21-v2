@@ -82,4 +82,8 @@ paginate: 5  # how many post can seen in the main page
    { % include Archives.html % }
 </div>
 ``` 
-
+```bibtex
+@article{fdkfjdk,
+ journal = {fjkdjfkd},
+ code = {fd}}
+```
