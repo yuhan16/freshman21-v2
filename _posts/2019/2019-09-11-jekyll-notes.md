@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "jekyll notes"
-date: 2021-11-02 
+title: "jekyll test notes"
+date: 2019-09-11 
 category: Miscellaneous
 tags: jekyll html
 excerpt_separator: <!--more-->

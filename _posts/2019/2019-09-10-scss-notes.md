@@ -1,13 +1,13 @@
 ---
 layout: post
 title:  "Notes on CSS files"
-date:   2021-11-01
+date:   2019-09-10
 category: Miscellaneous
 tags: css
 excerpt_separator: <!--more-->
 ---
 
-This notes documents the usage of css classes.
+This notes documents the usage of css classes for the personal website.
 <!--more-->
 
 ```bash

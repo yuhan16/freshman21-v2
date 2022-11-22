@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Mathjax in Jekyll Notes"
-date: 2021-11-03
+date: 2019-11-03
 category: Miscellaneous
 tags: jekyll html mathjax
 logo: https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/MathJax.svg/1024px-MathJax.svg.png
