@@ -19,7 +19,7 @@ favicon:     "/assets/images/favicon.ico"
 
 ### Site setting:
 #nav_pages: ["home", "blog", "categories", "publications", "projects", "topics"] # pages displayed in navigation bar
-nav_topics: ["Probability", "Reinforcement Learning", "Web", "Programming", "Miscellaneous"] # existing topics
+nav_topics: ["Probability", "Optimization", "Reinforcement Learning", "Web", "Programming", "Miscellaneous"] # existing topics
 
 
 ### Build settings

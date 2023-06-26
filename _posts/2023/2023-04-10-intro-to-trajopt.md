@@ -15,6 +15,6 @@ I have summarized some mathematical background and common computational approach
 [TrajectOpt slides]({{ site.baseurl | append: "/assets/pdf/Trajopt_intro.pdf" }})
 
 <figure>
-    <img src="{{site.baseurl}}/assets/images/blog/2023/2023-04-10-traj_intro_outline.png" height="350">
+    <img src="{{site.baseurl}}/assets/images/blog/2023/2023-04-10-trajopt_intro_outline.png" height="350">
     <figcaption>Fig. 1: Outline of trajectory optimization slides.</figcaption>
 </figure>
