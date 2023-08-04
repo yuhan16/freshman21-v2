@@ -1,15 +1,15 @@
 ---
 layout: post
 title: Static Site Generators
-modified: 2021-12-23
+modified: 2019-12-03
 categories: Web
 tags: [SSG, static site generator, html, css, github pages]
 comments: true
-logo:
+logo: https://icons.veryicon.com/png/o/miscellaneous/collection-1/instruction-configuration-1.png
 excerpt_separator: <!--more-->
 ---
 
-I have discussed the difference between static and dynamic web pages in [xxx]. In this post, I will write some of my understanding of Jekyll and static site generators.
+I have discussed the difference between static and dynamic web pages in the previous post. In this post, I will write some of my understanding of Jekyll and static site generators.
 
 <!--more-->
 

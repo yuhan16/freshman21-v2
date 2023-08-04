@@ -1,11 +1,11 @@
 ---
 layout: post
 title: "Learning Jelly Part 1: Basic Elements"
-modified: 2021-12-24
+modified: 2019-10-24
 categories: [Programming, Web]
 tags: [web programming, jekyll, templating language]
 comments: true
-logo: https://andrejgajdos.com/wp-content/uploads/2019/09/custom-select-dropdown-html-730x350.png
+logo: https://avatars.githubusercontent.com/u/3083652?s=280&v=4
 excerpt_separator: <!--more-->
 ---
 

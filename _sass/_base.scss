@@ -10,7 +10,7 @@ dl, dd, ol, ul, figure {
  
  
  
- /**
+/**
   * Basic styling
   */
 body {
@@ -22,15 +22,26 @@ body {
     background-color: $background-color;
     -webkit-text-size-adjust: 100%;
 }
- 
- /**
+
+/**
+ * Set `margin-bottom` to maintain vertical rhythm
+ */
+  h1, h2, h3, h4, 
+  p, blockquote, pre,
+  ul, ol, dl, figure,
+  %vertical-rhythm {
+    margin-bottom: $spacing-unit / 2;
+}
+
+
+/**
   * Images
   */
- img {
-   max-width: 100%;
-   vertical-align: middle;
- }
- 
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
  
  
  /**
